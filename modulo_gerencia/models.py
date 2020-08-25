@@ -119,5 +119,27 @@ class Actividades(models.Model):
 		return '%s - %s' % (self.identificador,self.descripcion)
 
 
+class IndObjetivos(models.Model):
+	proyecto = models.ForeignKey(Proyecto,on_delete=models.CASCADE)
+	indicador = ChainedForeignKey(IndicadoresObjetivos,
+								chained_field="proyecto",
+        						chained_model_field="objetivo",)
 
+	class Meta:
+		verbose_name_plural = "Indicadores objetivo"
+		verbose_name = "Indicador objetivo"
 
+	def __str__(self):
+		return '%s - %s' % (self.indicador.identificador,self.indicador)
+
+SEMESTRE_CHOICES = ((1,'I'),(2,'II'))
+
+class Registro1(models.Model):
+	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE) 
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	numero_productores = models.IntegerField('Número de productores')
+	ingreso_saf = models.FloatField('Ingreso de SAF USD/ha')
+	aumento_ingreso_saf = models.FloatField('Aumento de Ingreso SAF (%)')
+	fuente = models.CharField(max_length=300)
+	archivo = models.FileField(upload_to='registro1/')

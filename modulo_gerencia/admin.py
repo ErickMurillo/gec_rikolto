@@ -26,8 +26,16 @@ class IndicadoresProductos_Inline(admin.TabularInline):
 class ProductoAdmin(admin.ModelAdmin):
 	inlines = [IndicadoresProductos_Inline,]
 
+class Registro1_Inline(admin.TabularInline):
+	model = Registro1
+	extra = 1
+
+class IndObjetivosAdmin(admin.ModelAdmin):
+	inlines = [Registro1_Inline,]
+
 admin.site.register(Proyecto,ProyectoAdmin)
 admin.site.register(Objetivo,ObjetivoAdmin)
 admin.site.register(Efecto,EfectoAdmin)
 admin.site.register(Producto,ProductoAdmin)
 admin.site.register(Actividades)
+admin.site.register(IndObjetivos,IndObjetivosAdmin)
