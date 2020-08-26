@@ -26,12 +26,27 @@ class IndicadoresProductos_Inline(admin.TabularInline):
 class ProductoAdmin(admin.ModelAdmin):
 	inlines = [IndicadoresProductos_Inline,]
 
-class Registro1_Inline(admin.TabularInline):
-	model = Registro1
+class ObjInd1_Inline(admin.TabularInline):
+	model = ObjInd1
+	extra = 1
+
+class ObjInd2_Inline(admin.TabularInline):
+	model = ObjInd2
+	extra = 1
+
+class ObjInd3_Inline(admin.TabularInline):
+	model = ObjInd3
+	extra = 1
+
+class ObjInd4_Inline(admin.TabularInline):
+	model = ObjInd4
 	extra = 1
 
 class IndObjetivosAdmin(admin.ModelAdmin):
-	inlines = [Registro1_Inline,]
+	inlines = [ObjInd1_Inline,ObjInd2_Inline,ObjInd3_Inline,ObjInd4_Inline,]
+	
+	class Media:
+		js = ('js/admin.js',)
 
 admin.site.register(Proyecto,ProyectoAdmin)
 admin.site.register(Objetivo,ObjetivoAdmin)

@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="panel panel-primary">
+    <div class="panel-body index-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                
+                <!--<ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active update" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Productores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link update" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Organizaciones</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div id="gmaps-markers" class="gmaps"></div>
+                  </div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div id="gmaps-markers2" class="gmaps"></div>
+                    </div>
+                </div>-->
+                <h3>Nombre del proyecto: {{proyecto.0}}</h3>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr class="warning">
+                        <th scope="col">Niveles</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Identificador</th>
+                        <th scope="col">Indicadores</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for obj in objetivos %}
+                        <tr class="warning">
+                          <th rowspan="{{obj.indicadoresobjetivos_set.count}}">Objetivo del proyecto</th>
+                          <td rowspan="{{obj.indicadoresobjetivos_set.count}}">{{obj.descripcion}}</td> 
+                          {% for indicador_obj in obj.indicadoresobjetivos_set.all|slice:"1" %}
+                            <td>{{indicador_obj.identificador}}</td>
+                            <td>{{indicador_obj.descripcion}}</td>
+                          {% endfor %}   
+                      </tr>
+                        {% for indicador_obj in obj.indicadoresobjetivos_set.all|slice:"1:"  %}
+                        <tr class="warning">
+                          <td>{{indicador_obj.identificador}}</td>
+                          <td>{{indicador_obj.descripcion}}</td>
+                        </tr>
+                        {% endfor %}
+                      
+                      {% endfor %}
+                      
+                      
+                    </tbody>
+                  </table>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Niveles</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Identificador</th>
+                        <th scope="col">Indicadores</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for obj in efectos %}
+                      {% with forloop.counter as outer_counter %}
+                        <tr class="{% if outer_counter == 1 %}info{% else %}success{% endif %}">
+                          <th rowspan="{{obj.indicadoresefectos_set.count}}">Efecto {{obj.identificador}}</th>
+                          <td rowspan="{{obj.indicadoresefectos_set.count}}">{{obj.descripcion}}</td> 
+                          {% for indicador_efecto in obj.indicadoresefectos_set.all|slice:"1" %}
+                            <td>{{indicador_efecto.identificador}}</td>
+                            <td>{{indicador_efecto.descripcion}}</td>
+                          {% endfor %}   
+                      </tr>
+                        {% for indicador_efecto in obj.indicadoresefectos_set.all|slice:"1:"  %}
+                        <tr class="{% if outer_counter == 1 %}info{% else %}success{% endif %}">
+                          <td>{{indicador_efecto.identificador}}</td>
+                          <td>{{indicador_efecto.descripcion}}</td>
+                        </tr>
+                        {% endfor %}
+
+                        {% for producto in obj.producto_set.all %}
+                          <tr class="{% if outer_counter == 1 %}info{% else %}success{% endif %}">
+                            <td rowspan="{{producto.indicadoresproductos_set.count}}">Producto {{producto.identificador}}</td>
+                            <td rowspan="{{producto.indicadoresproductos_set.count}}">{{producto.descripcion}}</td>
+                            {% for indicador_producto in producto.indicadoresproductos_set.all|slice:"1" %}
+                              <td>{{indicador_producto.identificador}}</td>
+                              <td>{{indicador_producto.descripcion}}</td>
+                            {% endfor %}   
+                          </tr>
+                          {% for indicador_producto in producto.indicadoresproductos_set.all|slice:"1:"  %}
+                            <tr class="{% if outer_counter == 1 %}info{% else %}success{% endif %}">
+                              <td>{{indicador_producto.identificador}}</td>
+                              <td>{{indicador_producto.descripcion}}</td>
+                            </tr>
+                        {% endfor %}
+                        {% endfor %}
+                      
+                      {% endwith %}
+                      {% endfor %}
+    
+                    </tbody>
+                  </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
