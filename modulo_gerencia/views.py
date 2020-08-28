@@ -9,5 +9,6 @@ def index(request,template='index.html'):
 	return render(request, template, locals())
 
 
-def indicadores_objetivo(request,template='indicadores_obj.html'):
+def indicadores_objetivo(request,id=None,template='indicadores_obj.html'):
+	object = IndObjetivos.objects.filter(proyecto = id)
 	return render(request, template, locals())

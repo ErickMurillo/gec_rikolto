@@ -6,6 +6,144 @@
     <div class="panel-body index-body">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            	 <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				  	{% for obj in object %}
+				  		<li role="presentation" class="{% if forloop.first %}active{% endif %}"><a href="#{{obj.id}}" aria-controls="{{obj.id}}" role="tab" data-toggle="tab">{{obj.indicador}}</a></li>
+				  	{% endfor %}
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				  	{% for obj in object %}
+				  		<div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{obj.id}}">
+				  			{% if obj.objind1_set.all %}
+				  				<div class="table-responsive">
+				                    <table class="table">
+				                    	<thead>
+					                      <tr>
+					                        <th scope="col">Año de registro</th>
+					                        <th scope="col">Semestre</th>
+					                        <th scope="col">Número de productores</th>
+					                        <th scope="col">Ingreso de SAF USD/ha</th>
+					                        <th scope="col">Aumento de Ingreso SAF (%)</th>
+					                        <th scope="col">Fuente</th>
+					                        <th scope="col">Archivo</th>
+					                      </tr>
+				                    	</thead>
+				                    	<tbody>
+				                    		{% for x in obj.objind1_set.all %}
+								  				<tr>
+								  					<td>{{x.anio}}</td>
+								  					<td>{{x.get_semestre_display}}</td>
+								  					<td>{{x.numero_productores}}</td>
+								  					<td>{{x.ingreso_saf}}</td>
+								  					<td>{{x.aumento_ingreso_saf}}</td>
+								  					<td>{{x.fuente}}</td>
+								  					<td><a href="{{x.archivo}}" download>Descargar</a></td>
+								  				</tr>
+								  			{% endfor %}
+				                    	</tbody>
+				                   </table>
+				                </div>
+				  			{% endif %}
+				  			
+				  			
+				  			{% if obj.objind2_set.all %}
+				  				<div class="table-responsive">
+				                    <table class="table">
+				                    	<thead>
+					                      <tr>
+					                        <th scope="col">Año de registro</th>
+					                        <th scope="col">Semestre</th>
+					                        <th scope="col">Número de productores</th>
+					                        <th scope="col">Productividad cacao kg/ha</th>
+					                        <th scope="col">Aumento de productividad (%)</th>
+					                        <th scope="col">Fuente</th>
+					                        <th scope="col">Archivo</th>
+					                      </tr>
+				                    	</thead>
+				                    	<tbody>
+				                    		{% for x in obj.objind2_set.all %}
+								  				<tr>
+								  					<td>{{x.anio}}</td>
+								  					<td>{{x.get_semestre_display}}</td>
+								  					<td>{{x.numero_productores}}</td>
+								  					<td>{{x.productividad_cacao}}</td>
+								  					<td>{{x.aumento_productividad_cacao}}</td>
+								  					<td>{{x.fuente}}</td>
+								  					<td><a href="{{x.archivo}}" download>Descargar</a></td>
+								  				</tr>
+								  			{% endfor %}
+				                    	</tbody>
+				                   </table>
+				                </div>
+				  			{% endif %}
+
+				  			{% if obj.objind3_set.all %}
+				  				<div class="table-responsive">
+				                    <table class="table">
+				                    	<thead>
+					                      <tr>
+					                        <th scope="col">Año de registro</th>
+					                        <th scope="col">Semestre</th>
+					                        <th scope="col">Nombre de Pólitica Regional</th>
+					                        <th scope="col">Descripción</th>
+					                        <th scope="col">Estado de esfuerzo</th>
+					                        <th scope="col">Fuente</th>
+					                        <th scope="col">Archivo</th>
+					                      </tr>
+				                    	</thead>
+				                    	<tbody>
+				                    		{% for x in obj.objind3_set.all %}
+								  				<tr>
+								  					<td>{{x.anio}}</td>
+								  					<td>{{x.get_semestre_display}}</td>
+								  					<td>{{x.nombre_politica_regional}}</td>
+								  					<td>{{x.descripcion}}</td>
+								  					<td>{{x.estado_esfuerzo}}</td>
+								  					<td>{{x.fuente}}</td>
+								  					<td><a href="{{x.archivo}}" download>Descargar</a></td>
+								  				</tr>
+								  			{% endfor %}
+				                    	</tbody>
+				                   </table>
+				                </div>
+				  			{% endif %}
+
+				  			{% if obj.objind4_set.all %}
+				  				<div class="table-responsive">
+				                    <table class="table">
+				                    	<thead>
+					                      <tr>
+					                        <th scope="col">Año de registro</th>
+					                        <th scope="col">Semestre</th>
+					                        <th scope="col">Nombre de Plataforma</th>
+					                        <th scope="col">Descripción</th>
+					                        <th scope="col">Estado de Plataforma</th>
+					                        <th scope="col">Fuente</th>
+					                        <th scope="col">Archivo</th>
+					                      </tr>
+				                    	</thead>
+				                    	<tbody>
+				                    		{% for x in obj.objind4_set.all %}
+								  				<tr>
+								  					<td>{{x.anio}}</td>
+								  					<td>{{x.get_semestre_display}}</td>
+								  					<td>{{x.nombre_plataforma}}</td>
+								  					<td>{{x.descripcion}}</td>
+								  					<td>{{x.estado_plataforma}}</td>
+								  					<td>{{x.fuente}}</td>
+								  					<td><a href="{{x.archivo}}" download>Descargar</a></td>
+								  				</tr>
+								  			{% endfor %}
+				                    	</tbody>
+				                   </table>
+				                </div>
+				  			{% endif %}
+				  		</div>
+				  	{% endfor %}
+				  </div>
              </div>
 		</div>
 	</div>

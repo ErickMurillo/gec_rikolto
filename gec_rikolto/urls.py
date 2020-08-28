@@ -25,5 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('chaining/', include('smart_selects.urls')),
     path('', index),
-    path('indicadores-objetivo/', indicadores_objetivo),
+    path('indicadores-objetivo/<int:id>', indicadores_objetivo, name='indicadores-objetivo'),
 ]
