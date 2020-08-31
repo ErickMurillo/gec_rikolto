@@ -23,9 +23,10 @@
                     <div id="gmaps-markers2" class="gmaps"></div>
                     </div>
                 </div>-->
-                <h3>Nombre del proyecto: {{proyecto.0}}</h3>
-                <div class="table-responsive">
-                  <table class="table">
+                <h3>Nombre del proyecto: {{proyecto}}</h3>
+                <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a>
+                <div class="table-responsive" id="tabla1">
+                  <table class="table table-bordered">
                     <thead>
                       <tr class="warning">
                         <th scope="col">Niveles</th>
@@ -38,7 +39,7 @@
                       {% for obj in objetivos %}
                         <tr class="warning">
                           <th rowspan="{{obj.indicadoresobjetivos_set.count}}">Objetivo del proyecto</th>
-                          <td rowspan="{{obj.indicadoresobjetivos_set.count}}">{{obj.descripcion}}</td> 
+                          <td style="width: 20%;" rowspan="{{obj.indicadoresobjetivos_set.count}}">{{obj.descripcion}}</td> 
                           {% for indicador_obj in obj.indicadoresobjetivos_set.all|slice:"1" %}
                             <td>{{indicador_obj.identificador}}</td>
                             <td>{{indicador_obj.descripcion}}</td>
@@ -52,12 +53,6 @@
                         {% endfor %}
                       
                       {% endfor %}
-                      <tr class="warning">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="{% url 'indicadores-objetivo' proyecto.0.id %}">Ver registros de los indicadores</a></td>
-                      </tr>
                       
                       
                     </tbody>
@@ -65,13 +60,12 @@
                 </div>
 
                 <br>
-                <br>
-                <br>
-                
-                <div class="table-responsive">
-                  <table class="table">
+                <hr>
+                <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a>
+                <div class="table-responsive" id="tabla2">
+                  <table class="table table-bordered">
                     <thead>
-                      <tr>
+                      <tr class="info">
                         <th scope="col">Niveles</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Identificador</th>
@@ -83,7 +77,7 @@
                       {% with forloop.counter as outer_counter %}
                         <tr class="{% if outer_counter == 1 %}info{% else %}success{% endif %}">
                           <th rowspan="{{obj.indicadoresefectos_set.count}}">Efecto {{obj.identificador}}</th>
-                          <td rowspan="{{obj.indicadoresefectos_set.count}}">{{obj.descripcion}}</td> 
+                          <td style="width: 20%;" rowspan="{{obj.indicadoresefectos_set.count}}">{{obj.descripcion}}</td> 
                           {% for indicador_efecto in obj.indicadoresefectos_set.all|slice:"1" %}
                             <td>{{indicador_efecto.identificador}}</td>
                             <td>{{indicador_efecto.descripcion}}</td>
@@ -116,6 +110,39 @@
                       {% endwith %}
                       {% endfor %}
     
+                    </tbody>
+                  </table>
+                </div>
+
+                <br>
+                <hr>
+                <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a>
+                <div class="table-responsive" id="tabla3">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Niveles</th>
+                        <th scope="col">Identificador</th>
+                        <th scope="col">Actividades</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for obj in productos %}
+                      <tr>
+                        <td style="width: 30%;" rowspan="{{obj.actividades_set.count}}">Producto {{forloop.counter}}: {{obj.descripcion}}</td>
+                        {% for actividad in obj.actividades_set.all|slice:"1" %}
+                            <td>{{actividad.identificador}}</td>
+                            <td>{{actividad.descripcion}}</td>
+                          {% endfor %}   
+                         </tr>
+                         {% for actividad in obj.actividades_set.all|slice:"1:" %}
+                         <tr>
+                            <td>{{actividad.identificador}}</td>
+                            <td>{{actividad.descripcion}}</td>
+                         </tr>
+                          {% endfor %}   
+                      {% endfor %}
+
                     </tbody>
                   </table>
                 </div>

@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="/static/nuevo/logo_veco_mesoamerica.png" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/static/img/logo_veco_mesoamerica.png" alt=""></a>
             </div>
     
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,12 +38,16 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="inicio {% if request.path == '/' %}active{% endif %}">
-                        <a href="/" id="" class="waves-effect  profile">Marco lógico</a>
+                        <a href="/" class="waves-effect  profile">Marco lógico</a>
                     </li>
-
-                    <!--<li class="inicio {% if request.path == '/indicadores-objetivo/' %}active{% endif %}">
-                        <a href="/indicadores-objetivo/" id="" class="waves-effect  profile">Indicadores objetivo</a>
-                    </li>-->
+                    <li class="dropdown {% if '/indicadores-objetivo/' in request.path %}active{% endif %}">
+                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Monitoreo de indicadores<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'indicadores-objetivo' id %}"> Objetivo</a></li>
+                            <li><a href=""> Efectos</a></li>
+                            <li><a href=""> Productos</a></li>
+                        </ul>
+                    </li>
 
                     <li class="prod">
                         <a href="http://plasystem.net/" target="_blank" class="waves-effect  profile">Plasystem</a>
@@ -86,7 +90,8 @@
         <script src="/static/js/app.js"></script>
         <!-- google maps api -->
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-
+        <script src="/static/js/jquery.cookie.js"></script>
+        <script src="/static/js/table.exporting.js"></script>
         {% block extra_js %}{% endblock %}
     </body>
 </html>

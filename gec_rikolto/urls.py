@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from modulo_gerencia.views import *
+from monitoreo_indicadores.views import *
 
 
 admin.site.site_header = "Administración GEC"
@@ -24,6 +25,7 @@ admin.site.site_title = "Administración GEC"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('chaining/', include('smart_selects.urls')),
+    path('xls/', save_as_xls, name='xls'),
     path('', index),
-    path('indicadores-objetivo/<int:id>', indicadores_objetivo, name='indicadores-objetivo'),
+    path('indicadores-objetivo/<int:id>/', indicadores_objetivo, name='indicadores-objetivo'),
 ]
