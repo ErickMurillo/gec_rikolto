@@ -76,3 +76,47 @@ class ObjInd4(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 4"
 		verbose_name = "Indicador 4"
+
+#efectos -----------------------------------------------------------------
+class IndEfectos(models.Model):
+	proyecto = models.ForeignKey(Proyecto,on_delete=models.CASCADE)
+	efecto = ChainedForeignKey(Efecto,
+								chained_field="proyecto",
+        						chained_model_field="proyecto",)
+	indicador = ChainedForeignKey(IndicadoresEfectos,
+								chained_field="efecto",
+        						chained_model_field="efecto",)
+
+	class Meta:
+		verbose_name_plural = "Efectos"
+		verbose_name = "Efectos"
+
+	def __str__(self):
+		return '%s' % (self.indicador)
+
+
+class IndEfecto1_1(models.Model):
+	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE) 
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	numero_productores = models.IntegerField('Número de productores adoptando BPA',null=True,blank=True)
+	porcentaje_mujeres = models.IntegerField('% de mujeres adoptando BPA',null=True,blank=True)
+	porentaje_jovenes = models.IntegerField('% de Jovenes adoptando BPA',null=True,blank=True)
+	fuente = models.CharField(max_length=300,null=True,blank=True)
+	archivo = models.FileField(upload_to='ind-efecto-1-1/',null=True,blank=True)
+
+	class Meta:
+		verbose_name_plural = "Indicador 1.1"
+		verbose_name = "Indicador 1.1"
+
+class IndEfecto1_2(models.Model):
+	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE) 
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	numero_empresas = models.IntegerField('Número de empresas implementando MNC',null=True,blank=True)
+	fuente = models.CharField(max_length=300,null=True,blank=True)
+	archivo = models.FileField(upload_to='ind-efecto-1-2/',null=True,blank=True)
+
+	class Meta:
+		verbose_name_plural = "Indicador 1.2"
+		verbose_name = "Indicador 1.2"

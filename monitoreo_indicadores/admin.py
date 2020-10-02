@@ -41,3 +41,17 @@ class IndObjetivosAdmin(admin.ModelAdmin):
 		js = ('js/admin.js',)
 
 admin.site.register(IndObjetivos,IndObjetivosAdmin)
+
+#efectos
+class IndEfecto1_1_Inline(admin.TabularInline):
+	model = IndEfecto1_1
+	extra = 1
+
+class IndEfecto1_2_Inline(admin.TabularInline):
+	model = IndEfecto1_2
+	extra = 1
+
+class IndEfectosAdmin(admin.ModelAdmin):
+	inlines = [IndEfecto1_1_Inline,IndEfecto1_2_Inline]
+
+admin.site.register(IndEfectos,IndEfectosAdmin)
