@@ -40,12 +40,12 @@
                     <li class="inicio {% if request.path == '/' %}active{% endif %}">
                         <a href="/" class="waves-effect  profile">Marco lógico</a>
                     </li>
-                    <li class="dropdown {% if '/indicadores-objetivo/' in request.path %}active{% endif %}">
+                    <li class="dropdown {% if '/indicadores-objetivo/' in request.path or '/indicadores-efectos/' in request.path or '/indicadores-productos/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Monitoreo de indicadores<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'indicadores-objetivo' id %}"> Objetivo</a></li>
-                            <li><a href=""> Efectos</a></li>
-                            <li><a href=""> Productos</a></li>
+                            <li><a href="{% url 'indicadores-efectos' id %}"> Efectos</a></li>
+                            <li><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
                         </ul>
                     </li>
 
