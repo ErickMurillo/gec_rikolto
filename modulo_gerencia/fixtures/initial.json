@@ -1,0 +1,597 @@
+[
+{
+  "model": "modulo_gerencia.proyecto",
+  "pk": 1,
+  "fields": {
+    "nombre": "GEC",
+    "org_implementador": 1,
+    "anio_inicio": "2020-08-24",
+    "anio_fin": "2021-08-24",
+    "financiadores": [
+      1
+    ],
+    "aliados": [
+      1
+    ],
+    "paises": [
+      1
+    ],
+    "org_socias": [
+      1
+    ]
+  }
+},
+{
+  "model": "modulo_gerencia.objetivo",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "identificador": "1",
+    "descripcion": "Aumentar la competitividad y sostenibilidad del sector cacaotero regional a trav\u00e9s de la incidencia en pol\u00edticas nacionales y regionales y gesti\u00f3n de conocimiento."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 1,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "1",
+    "descripcion": "1500 productores de cacao incrementan ingresos el al menos 20%, por la implementaci\u00f3n de SAF."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 2,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "2",
+    "descripcion": "1500 productores de cacao incrementan la productividad en al menos 20%."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 3,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "3",
+    "descripcion": "Una Pol\u00edtica Regional que favorece la competitividad de la cadena de valor del cacao Centroamericano."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 4,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "4",
+    "descripcion": "Una Plataforma \u201cComit\u00e9 de Integraci\u00f3n Centroamericana de Cacao, SICACAO, establecida, funcionando y auto sostenible con la participaci\u00f3n de al menos 4 pa\u00edses."
+  }
+},
+{
+  "model": "modulo_gerencia.efecto",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "objetivo": 1,
+    "identificador": "1",
+    "descripcion": "Actores de la Cadena de Valor del Cacao en CA, con base en nuevos conocimientos adquiridos y generaci\u00f3n de evidencias, ajustan sus modelos productivos y de negocios para ser m\u00e1s competitivo y sostenibles."
+  }
+},
+{
+  "model": "modulo_gerencia.efecto",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "objetivo": 1,
+    "identificador": "2",
+    "descripcion": "Actores p\u00fablicos y privados implementan Pol\u00edtica/Estrategia Regional del Cacao Centroamericano y adecuan las pol\u00edticas nacionales para la competitividad y resiliencia del subsector."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresefectos",
+  "pk": 1,
+  "fields": {
+    "efecto": 1,
+    "identificador": "1.1",
+    "descripcion": "1500 productores (30% j\u00f3venes y mujeres) adoptan buenas pr\u00e1cticas ambientales (manejo de agua, suelo, biodiversidad y diversificaci\u00f3n)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresefectos",
+  "pk": 2,
+  "fields": {
+    "efecto": 1,
+    "identificador": "1.2",
+    "descripcion": "Veinte (20) empresas y asociaciones de productores de cacao implementan modelos de negocios competitivos (costo, rendimiento, calidad, certificaci\u00f3n, rendici\u00f3n de cuentas.)"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresefectos",
+  "pk": 3,
+  "fields": {
+    "efecto": 2,
+    "identificador": "2.1",
+    "descripcion": "Al menos tres (3) Pol\u00edticas/estrategias nacionales han sido actualizadas sobre la base de la Pol\u00edtica/Estrategia Regional de cacao centroamericano."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.1",
+    "descripcion": "Nuevos conocimientos basados en evidencia para producir y comercializar cacao de calidad, rentable y proveniente de modelos de SAF de cacao."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.2",
+    "descripcion": "Aplicaci\u00f3n de nuevos conocimientos para fomentar iniciativas de producci\u00f3n   y comercializaci\u00f3n inclusiva de cacao de calidad, resiliente a cambio clim\u00e1tico."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 3,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.3",
+    "descripcion": "Uso de herramientas de comunicaci\u00f3n para el desarrollo y Tics mejoran la gesti\u00f3n de la informaci\u00f3n y de aprendizaje, entre actores regionales e internacionales para el posicionamiento de la regi\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 4,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.4",
+    "descripcion": "Directrices regionales para la inversi\u00f3n y el fomento de sistemas agroforestales para cacao m\u00e1s sostenible."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 5,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 2,
+    "identificador": "2.5",
+    "descripcion": "El comit\u00e9 de integraci\u00f3n del cacao de Centroam\u00e9rica y Rep\u00fablica Dominicana SICACAO, consolidado y reconocido por los actores del SICA y nivel internacional para el   posicionamiento y la articulaci\u00f3n de iniciativas para el desarrollo competitivo y resiliente del sector cacaotero."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 6,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 2,
+    "identificador": "2.6",
+    "descripcion": "Pol\u00edtica y/o la Estrategia Regional del Cacao bajo una visi\u00f3n compartida que incorpora elementos de adaptaci\u00f3n al cambio clim\u00e1tico."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 1,
+  "fields": {
+    "producto": 1,
+    "identificador": "1.1.1",
+    "descripcion": "Cuatro (4) estudios que demuestren que los SAF y modelos de negocios de la cadena cacao son rentables y competitivos"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 2,
+  "fields": {
+    "producto": 1,
+    "identificador": "1.1.2",
+    "descripcion": "Un plan de desarrollo de capacidades con inclusi\u00f3n de j\u00f3venes y mujeres, elaborado e implementado."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 3,
+  "fields": {
+    "producto": 1,
+    "identificador": "1.1.3",
+    "descripcion": "Al menos tres (3) comunidades de pr\u00e1ctica establecidas con temas priorizados, en al menos 60 fincas pilotos y 10 negocios inclusivos (SAF, Pol\u00edticas e incidencias, mecanismos de comercializaci\u00f3n\u2026)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 4,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.1",
+    "descripcion": "Al menos diez (10) Iniciativas de inversi\u00f3n con modelos de negocio inclusivo, identificadas e implementadas."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 5,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.2",
+    "descripcion": "Seis (6) modelos de negocio de SAF efectivos para la r\u00e9plica, identificados y validados."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 6,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.3",
+    "descripcion": "Dos (2) modelos de inversi\u00f3n factible en cacao para la banca y/o inversionistas para la validaci\u00f3n y adopci\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 7,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.4",
+    "descripcion": "Una oferta de servicios t\u00e9cnicos en la cadena de valor de cacao Identificada, homologada y difundida."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 8,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.5",
+    "descripcion": "Un estudio de an\u00e1lisis cr\u00edtico del efecto de los modelos de inversi\u00f3n, negocios inclusivos y SAF en ingreso y empleo en la regi\u00f3n en el 2020"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 9,
+  "fields": {
+    "producto": 3,
+    "identificador": "1.3.1",
+    "descripcion": "Al menos 3000 participantes entre productores y actores de la cadena conocen y hacen uso de los documentos, videos entre otros materiales de comunicaci\u00f3n (25 eventos)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 10,
+  "fields": {
+    "producto": 3,
+    "identificador": "1.3.2",
+    "descripcion": "Al menos tres (3) experiencias y casos de \u00e9xito sistematizados (Modelos de inversi\u00f3n factibles, estrategia de cacao clim\u00e1ticamente inteligente a nivel regional, modelos de SAF, etc.)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 11,
+  "fields": {
+    "producto": 3,
+    "identificador": "1.3.3",
+    "descripcion": "Actores claves de la cadena que usan Tics y plataformas digitales para dinamizar el intercambio de conocimientos y el posicionamiento del sector, se han fortalecido."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 12,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.1",
+    "descripcion": "Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 13,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.2",
+    "descripcion": "Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 14,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.3",
+    "descripcion": "Cinco (5) directrices regionales para el fomento de modelos de Negocios Inclusivos en cacao (NI)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 15,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.4",
+    "descripcion": "Un estudio sobre el nivel de conocimiento, uso de directrices de inversi\u00f3n para el fomento de SAF y modelos de negocios inclusivos en cacao."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 16,
+  "fields": {
+    "producto": 5,
+    "identificador": "2.5.1",
+    "descripcion": "Un Comit\u00e9 de Integraci\u00f3n del Cacao de Centroam\u00e9rica y Rep\u00fablica Dominicana \u2013 SICACAO fortalecido con estrategia de sostenibilidad en los aspectos organizativo e institucional a nivel regional."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 17,
+  "fields": {
+    "producto": 5,
+    "identificador": "2.5.2",
+    "descripcion": "Cuatro (4) plataformas nacionales  funcionando como referentes de la plataforma SICACAO."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 18,
+  "fields": {
+    "producto": 6,
+    "identificador": "2.6.1",
+    "descripcion": "Un documento de pol\u00edtica en implementaci\u00f3n en el marco del Consejo Agropecuario Centroamericano (CAC)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 19,
+  "fields": {
+    "producto": 6,
+    "identificador": "2.6.2",
+    "descripcion": "Instrumentos y mecanismos para la implementaci\u00f3n y seguimiento de la pol\u00edtica/estrategia por los miembros de la plataforma SICACAO y el SECAC."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.1",
+    "descripcion": "L\u00ednea base en los 4 pa\u00edses y ajuste del sistema de monitoreo y seguimiento."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.2",
+    "descripcion": "Establecer las tres comunidades de practica (SAF, Pol\u00edtica e incidencias, mecanismo de comercializaci\u00f3n.)"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 3,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.3",
+    "descripcion": "Realizar estudios de an\u00e1lisis cr\u00edtico que demuestran los efectos de los modelos de inversi\u00f3n, negocios inclusivos y los modelos SAF de cacao sostenible son m\u00e1s competitivos, generan empleo e ingreso"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 4,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.4",
+    "descripcion": "Elaborar e implementar el plan de desarrollo de capacidades de negocio, calidad y mercado con inclusi\u00f3n de j\u00f3venes y mujeres."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 5,
+  "fields": {
+    "proyecto": 1,
+    "producto": 2,
+    "identificador": "2.1.1",
+    "descripcion": "Identificar, validar iniciativas de inversi\u00f3n, modelos de negocios inclusivos."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 6,
+  "fields": {
+    "proyecto": 1,
+    "producto": 2,
+    "identificador": "2.1.2",
+    "descripcion": "Identificar, validar iniciativas de inversi\u00f3n, modelos SAF."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 7,
+  "fields": {
+    "proyecto": 1,
+    "producto": 2,
+    "identificador": "2.1.3",
+    "descripcion": "Dise\u00f1ar las herramientas y metodolog\u00edas para la difusi\u00f3n de la oferta de servicios de apoyo t\u00e9cnico y empresarial en la cadena de valor de cacao."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 8,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "3.1.1",
+    "descripcion": "Documentar y difundir la informaci\u00f3n did\u00e1ctica al servicio de los actores de cadena de valor por medio de materiales de comunicaci\u00f3n sistematizando experiencias, modelos de inversi\u00f3n factibles, estrategia de cacao clim\u00e1ticamente inteligente a nivel regional, modelos de SAF."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 9,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "3.1.3",
+    "descripcion": "Utilizaci\u00f3n de las TICs y otras herramientas digitales para dinamizar el intercambio de conocimientos y el posicionamiento del sector."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 10,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "3.1.4",
+    "descripcion": "Dinamizar el intercambio de conocimientos y el posicionamiento del sector, a trav\u00e9s del uso de TICs y plataformas digitales"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 11,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.1",
+    "descripcion": "Analizar la exposici\u00f3n a la variabilidad clim\u00e1tica de las zonas cacaoteras y riesgo de las cadenas de la regi\u00f3n Mesoam\u00e9rica en alianza con el CIAT."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 12,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.2",
+    "descripcion": "Elaborar de un documento sobre impacto de cambio clim\u00e1tico en zonas cacaoteras y riesgos de las cadenas y potenciales medidas de adaptaci\u00f3n para la regi\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 13,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.3",
+    "descripcion": "An\u00e1lisis de estrategias nacionales de inversi\u00f3n para fomento de SAF cacao adaptado a CC y VC."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 14,
+  "fields": {
+    "proyecto": 1,
+    "producto": 5,
+    "identificador": "5.1.1",
+    "descripcion": "Formalizar y fortalecer el Comit\u00e9 de Integraci\u00f3n del Cacao de Centroam\u00e9rica SICACAO en lo organizativo e institucional a nivel regional."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 15,
+  "fields": {
+    "proyecto": 1,
+    "producto": 6,
+    "identificador": "6.1.1",
+    "descripcion": "Realizar el an\u00e1lisis de las pol\u00edticas y estrategias nacionales para la elaboraci\u00f3n pol\u00edtica regional de cacao sostenible gestionada e implementada a partir de las pol\u00edticas/estrategias de cacao de los pa\u00edses de la regi\u00f3n"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 16,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "3.1.2",
+    "descripcion": "Actualizar la estrategia de comunicaci\u00f3n para dinamizar el quehacer del proyecto en la regi\u00f3n de acuerdo con los objetivos."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 17,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.4",
+    "descripcion": "An\u00e1lisis de estrategias nacionales de inversi\u00f3n para fomento de SAF cacao adaptado a CC y VC."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 18,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.5",
+    "descripcion": "Analizar los modelos de negocios inclusivos de actores claves de la cadena de valor para fomento de cacao en SAF adaptado a CC y VC."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 19,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.6",
+    "descripcion": "Realizar eventos regionales virtuales para reflexionar sobre directrices regionales de inversi\u00f3n para el fomento de cacao resiliente."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 20,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.7",
+    "descripcion": "Elaborar un documento de directrices regionales sobre modelos de negocios inclusivos para el fomento de cacao SAF adaptado a CC y VC"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 21,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.8",
+    "descripcion": "Realizar estudios sobre el nivel de conocimiento y el uso de 10 directrices regionales por parte de 80 actores tomadores de decisi\u00f3n"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 22,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.9",
+    "descripcion": "Realizar de eventos regionales virtuales para reflexionar sobre directrices regionales de modelos de negocios inclusivos para el fomento de cacao en SAF adaptado a CC y VC."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 23,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "4.1.10",
+    "descripcion": "Realizar estudio sobre el nivel de conocimiento y el uso de 10 directrices regionales por parte de 80 actores tomadores de decisi\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 24,
+  "fields": {
+    "proyecto": 1,
+    "producto": 5,
+    "identificador": "5.1.2",
+    "descripcion": "Definir y aprobar la propuesta de funcionamiento de la SICACAO y plan de acci\u00f3n consensuado entre actores de la plataforma y tomadores de decisi\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 25,
+  "fields": {
+    "proyecto": 1,
+    "producto": 6,
+    "identificador": "6.1.2",
+    "descripcion": "Elaborar e implementar un plan de acci\u00f3n para la Pol\u00edtica y/o Estrategia de cacao sostenible"
+  }
+}
+]

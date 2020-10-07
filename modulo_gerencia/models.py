@@ -114,6 +114,7 @@ class Actividades(models.Model):
 	class Meta:
 		verbose_name_plural = "Actividades"
 		verbose_name = "Actividad"
+		# ordering = ['identificador']
 
 	def __str__(self):
 		return '%s - %s' % (self.identificador,self.descripcion)

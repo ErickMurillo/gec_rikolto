@@ -24,12 +24,13 @@
                     </div>
                 </div>-->
                 <h3>Nombre del proyecto: {{proyecto}}</h3>
-                <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a>
+                {% comment %} <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> {% endcomment %}
                 <div class="table-responsive" id="tabla1">
                   <table class="table table-bordered">
+                  <caption><h4>Objetivos</h4></caption>
                     <thead>
                       <tr class="warning">
-                        <th scope="col">Niveles</th>
+                        <th scope="col" style="width: 10%;">Niveles</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Identificador</th>
                         <th scope="col">Indicadores</th>
@@ -61,12 +62,13 @@
 
                 <br>
                 <hr>
-                <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a>
+                {% comment %} <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a> {% endcomment %}
                 <div class="table-responsive" id="tabla2">
                   <table class="table table-bordered">
+                  <caption><h4>Efectos y Productos</h4></caption>
                     <thead>
                       <tr class="info">
-                        <th scope="col">Niveles</th>
+                        <th scope="col" style="width: 10%;">Niveles</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Identificador</th>
                         <th scope="col">Indicadores</th>
@@ -116,9 +118,10 @@
 
                 <br>
                 <hr>
-                <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a>
+                {% comment %} <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> {% endcomment %}
                 <div class="table-responsive" id="tabla3">
                   <table class="table table-bordered">
+                  <caption><h4>Actividades</h4></caption>
                     <thead>
                       <tr class="danger">
                         <th scope="col">Niveles</th>

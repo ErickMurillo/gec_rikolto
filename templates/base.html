@@ -15,7 +15,11 @@
         <link href="/static/css/icons.css" rel="stylesheet" type="text/css">
         <link href="/static/css/style.css" rel="stylesheet" type="text/css">
         {% block extra_css %}{% endblock %}
-
+        <style>
+            .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+                background-color: #b4bc14 !important;
+            }
+        </style>
     </head>
 
 
@@ -43,9 +47,9 @@
                     <li class="dropdown {% if '/indicadores-objetivo/' in request.path or '/indicadores-efectos/' in request.path or '/indicadores-productos/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Monitoreo de indicadores<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'indicadores-objetivo' id %}"> Objetivo</a></li>
-                            <li><a href="{% url 'indicadores-efectos' id %}"> Efectos</a></li>
-                            <li><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
+                            <li {% if '/indicadores-objetivo/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-objetivo' id %}"> Objetivo</a></li>
+                            <li {% if '/indicadores-efectos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-efectos' id %}"> Efectos</a></li>
+                            <li {% if '/indicadores-productos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
                         </ul>
                     </li>
                     <li class="inicio">

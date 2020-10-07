@@ -1,0 +1,42 @@
+[
+{
+  "model": "listas.orgimplementador",
+  "pk": 1,
+  "fields": {
+    "nombre": "Organizacion imp 1",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.finaciadores",
+  "pk": 1,
+  "fields": {
+    "nombre": "Financiador 1",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.aliados",
+  "pk": 1,
+  "fields": {
+    "nombre": "Aliado 1",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.pais",
+  "pk": 1,
+  "fields": {
+    "nombre": "Nicaragua"
+  }
+},
+{
+  "model": "listas.orgsocias",
+  "pk": 1,
+  "fields": {
+    "nombre": "Org socia 1",
+    "logo": "",
+    "pais": 1
+  }
+}
+]
