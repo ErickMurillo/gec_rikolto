@@ -7,7 +7,7 @@ from django.http import HttpResponse
 # Create your views here.
 def indicadores_objetivo(request,id=None,template='indicadores/objetivo.html'):
 	proyecto = Proyecto.objects.get(id = id)
-	objetivos = IndObjetivos.objects.filter(proyecto = id).values_list('objetivo__identificador','objetivo__descripcion','objetivo').distinct('objetivo')
+	objetivos = IndObjetivos.objects.filter(proyecto = id).distinct()
 	dict = {}
 	for obj in objetivos:
 		indicadores = IndObjetivos.objects.filter(objetivo=obj[2])
@@ -17,21 +17,24 @@ def indicadores_objetivo(request,id=None,template='indicadores/objetivo.html'):
 
 def indicadores_efectos(request,id=None,template='indicadores/efecto.html'):
 	proyecto = Proyecto.objects.get(id = id)
-	efectos = IndEfectos.objects.filter(proyecto = id).values_list('efecto__identificador','efecto__descripcion','efecto').distinct('efecto')
+	efectos = IndEfectos.objects.filter(proyecto = id).order_by('efecto').distinct()
 	dict = {}
 	for obj in efectos:
-		indicadores = IndEfectos.objects.filter(efecto=obj[2])
-		dict[obj] = indicadores
+		indicadores = IndEfectos.objects.filter(efecto=obj.id).order_by('efecto')
+		if indicadores:
+			dict[obj] = indicadores
 
 	return render(request, template, locals())
 
 def indicadores_productos(request,id=None,template='indicadores/producto.html'):
 	proyecto = Proyecto.objects.get(id = id)
-	productos = IndProductos.objects.filter(proyecto = id).values_list('producto__identificador','producto__descripcion','producto').distinct('producto')
+	productos = IndProductos.objects.filter(proyecto = id).order_by('producto').distinct()
 	dict = {}
 	for obj in productos:
-		indicadores = IndProductos.objects.filter(producto=obj[2])
-		dict[obj] = indicadores
+		indicadores = IndProductos.objects.filter(producto=obj.id).order_by('producto')
+		if indicadores:
+			dict[obj] = indicadores
+
 	return render(request, template, locals())
 
 #ajax

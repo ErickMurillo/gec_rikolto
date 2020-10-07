@@ -9,8 +9,8 @@
 				<h3>Nombre del proyecto: {{proyecto}}</h3>
 				  {% for k,v in dict.items %}
 				  	<br>
-					<h4>Efecto: {{k.0}} - {{k.1}}</h4>
-				  	{% if v.0.indefecto1_1_set.all %}
+					<h4>Efecto: {{k}}</h4>
+				  	{% if v.0 %}
 					  	<br>
 				  		{% comment %} <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> {% endcomment %}
 		  				<div class="table-responsive" id="tabla1">
@@ -45,7 +45,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-		  			{% if v.1.indefecto1_2_set.all %}
+		  			{% if v.1 %}
 					  	<br>
 		  				{% comment %} <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a> {% endcomment %}
 		  				<div class="table-responsive" id="tabla2">
@@ -77,12 +77,13 @@
 		                </div>
 		  			{% endif %}
 
-		  			{% if v.0.indefecto2_1_set.all %}
+					{{indefecto2_1_set.all}}
+		  			{% if v.2 %}
 					  	<br>
 		  				{% comment %} <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> {% endcomment %}
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{v.0}}</caption>
+		                    	<caption>{{v.2}}</caption>
 		                    	<thead>
 			                      <tr>
 			                        <th scope="col">Año de registro</th>
