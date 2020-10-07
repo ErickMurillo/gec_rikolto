@@ -1,8 +1,14 @@
-from pathlib import Path
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '#tef4^2!u_egxl*4zaaat=%q+-pyc(9f5^n=u9&-&5*3-^z*5x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -10,7 +16,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
