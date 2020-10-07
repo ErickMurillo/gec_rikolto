@@ -4,7 +4,7 @@ from .models import *
 # Create your views here.
 def index(request,template='index.html'):
 	proyecto =  Proyecto.objects.first()
-	objetivos = Objetivo.objects.filter(proyecto = proyecto)
+	objetivos = Objetivo.objects.filter(proyecto = proyecto).order_by('id')
 	efectos = Efecto.objects.filter(proyecto = proyecto)
 	productos = Producto.objects.filter(proyecto = proyecto)
 	
