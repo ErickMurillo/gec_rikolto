@@ -38,7 +38,7 @@
 						  					<td>{{x.nombre_estudio|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -70,7 +70,7 @@
 						  					<td>{{x.nombre_plan|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -106,7 +106,7 @@
 						  					<td>{{x.numero_negocios|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -138,7 +138,7 @@
 						  					<td>{{x.numero_iniciativas|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -170,7 +170,7 @@
 						  					<td>{{x.numero_iniciativas|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -202,7 +202,7 @@
 						  					<td>{{x.numero_modelos|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -234,7 +234,7 @@
 						  					<td>{{x.numero_ofertas|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -266,7 +266,7 @@
 						  					<td>{{x.numero_estudio|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -300,7 +300,7 @@
                                             <td>{{x.numero_eventos|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -332,7 +332,7 @@
 						  					<td>{{x.numero_experiencias|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -364,7 +364,7 @@
 						  					<td>{{x.numero_actores|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -396,7 +396,7 @@
 						  					<td>{{x.numero_documentos|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -428,7 +428,7 @@
 						  					<td>{{x.numero_documentos|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -460,7 +460,7 @@
 						  					<td>{{x.numero_documentos|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -492,7 +492,7 @@
 						  					<td>{{x.numero_estudio|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -524,7 +524,7 @@
 						  					<td>{{x.numero_comite|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -556,7 +556,7 @@
 						  					<td>{{x.numero_plataformas|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -588,7 +588,7 @@
 						  					<td>{{x.numero_politica|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -620,7 +620,7 @@
 						  					<td>{{x.numero_politica|default:'---'}}</td>
 											  <td>{{x.fuente|default:'---'}}</td>
 											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>

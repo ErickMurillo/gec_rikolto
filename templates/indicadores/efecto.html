@@ -40,7 +40,7 @@
 						  					<td>{{x.porcentaje_jovenes|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -71,7 +71,7 @@
 						  					<td>{{x.numero_empresas|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -108,7 +108,7 @@
 						  					<td>{{x.estado_esfuerzo|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>

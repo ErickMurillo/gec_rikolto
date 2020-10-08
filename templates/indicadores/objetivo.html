@@ -40,7 +40,7 @@
 						  					<td>{{x.aumento_ingreso_saf|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -75,7 +75,7 @@
 						  					<td>{{x.aumento_productividad_cacao|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -111,7 +111,7 @@
 						  					<td>{{x.estado_esfuerzo|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
@@ -147,7 +147,7 @@
 						  					<td>{{x.estado_plataforma|default:'---'}}</td>
 						  					<td>{{x.fuente|default:'---'}}</td>
 											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="{{x.archivo}}" download>Descargar</a>{% else %}---{% endif %}</td>
+						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
 		                    	</tbody>
