@@ -7,34 +7,17 @@ from django.http import HttpResponse
 # Create your views here.
 def indicadores_objetivo(request,id=None,template='indicadores/objetivo.html'):
 	proyecto = Proyecto.objects.get(id = id)
-	objetivos = IndObjetivos.objects.filter(proyecto = id).distinct()
-	dict = {}
-	for obj in objetivos:
-		indicadores = IndObjetivos.objects.filter(objetivo=obj[2])
-		dict[obj] = indicadores
-
+	object = IndObjetivos.objects.filter(proyecto = id)
 	return render(request, template, locals())
 
 def indicadores_efectos(request,id=None,template='indicadores/efecto.html'):
 	proyecto = Proyecto.objects.get(id = id)
-	efectos = IndEfectos.objects.filter(proyecto = id).order_by('efecto').distinct()
-	dict = {}
-	for obj in efectos:
-		indicadores = IndEfectos.objects.filter(efecto=obj.id).order_by('efecto')
-		if indicadores:
-			dict[obj] = indicadores
-
+	object = IndEfectos.objects.filter(proyecto = id).order_by('efecto')
 	return render(request, template, locals())
 
 def indicadores_productos(request,id=None,template='indicadores/producto.html'):
 	proyecto = Proyecto.objects.get(id = id)
-	productos = IndProductos.objects.filter(proyecto = id).order_by('producto').distinct()
-	dict = {}
-	for obj in productos:
-		indicadores = IndProductos.objects.filter(producto=obj.id).order_by('producto')
-		if indicadores:
-			dict[obj] = indicadores
-
+	object = IndProductos.objects.filter(proyecto = id).order_by('indicador')
 	return render(request, template, locals())
 
 #ajax

@@ -7,15 +7,17 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3>Nombre del proyecto: {{proyecto}}</h3>
-				  {% for k,v in dict.items %}
+				{% for obj in object %}
 					<br>
-					<h4>Objetivo: {{k}}</h4>
-				  	{% if v.0 %}
+					{% ifchanged %}
+						<h4>Objetivo: {{obj.objetivo}}</h4>
+					  {% endifchanged  %}
+				  	{% if obj.objind1_set.all %}
 						<br>
 				  		{% comment %} <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> {% endcomment %}
 		  				<div class="table-responsive" id="tabla1">
 		                    <table class="table table-bordered">
-		                    	<caption>{{v.0}}</caption>
+		                    	<caption>{{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
 			                        <th scope="col">Año de registro</th>
@@ -29,7 +31,7 @@
 			                      </tr>
 		                    	</thead>
 		                    	<tbody>
-		                    		{% for x in v.0.objind1_set.all %}
+		                    		{% for x in obj.objind1_set.all %}
 						  				<tr>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
@@ -45,12 +47,12 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-		  			{% if v.1 %}
+		  			{% if obj.objind2_set.all %}
 					  	<br>
 		  				{% comment %} <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a> {% endcomment %}
 		  				<div class="table-responsive" id="tabla2">
 		                    <table class="table table-bordered">
-		                    	<caption>{{v.1}}</caption>
+		                    	<caption>{{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
 			                        <th scope="col">Año de registro</th>
@@ -64,7 +66,7 @@
 			                      </tr>
 		                    	</thead>
 		                    	<tbody>
-		                    		{% for x in v.1.objind2_set.all %}
+		                    		{% for x in obj.objind2_set.all %}
 						  				<tr>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
@@ -81,12 +83,12 @@
 		                </div>
 		  			{% endif %}
 
-		  			{% if v.2 %}
+		  			{% if obj.objind3_set.all %}
 					  	<br>
 		  				{% comment %} <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> {% endcomment %}
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{v.2}}</caption>
+		                    	<caption>{{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
 			                        <th scope="col">Año de registro</th>
@@ -100,7 +102,7 @@
 			                      </tr>
 		                    	</thead>
 		                    	<tbody>
-		                    		{% for x in v.2.objind3_set.all %}
+		                    		{% for x in obj.objind3_set.all %}
 						  				<tr>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
@@ -117,12 +119,12 @@
 		                </div>
 		  			{% endif %}
 
-		  			{% if v.3 %}
+		  			{% if obj.objind4_set.all %}
 					  	<br>
-		  				<a href="" onclick="exportarXLS('tabla4'); return false;">Exportar</a>
+		  				<!-- <a href="" onclick="exportarXLS('tabla4'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla4">
 		                    <table class="table table-bordered">
-		                    	<caption>{{v.3}}</caption>
+		                    	<caption>{{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
 			                        <th scope="col">Año de registro</th>
@@ -136,7 +138,7 @@
 			                      </tr>
 		                    	</thead>
 		                    	<tbody>
-		                    		{% for x in v.3.objind4_set.all %}
+		                    		{% for x in obj.objind4_set.all %}
 						  				<tr>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
