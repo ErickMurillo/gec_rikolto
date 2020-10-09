@@ -19,12 +19,12 @@
 				  		<!-- <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla1">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Nombre del estudio</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -33,11 +33,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_1_1_set.all %}
 						  				<tr>
+										  	<td>{{x.numero|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.nombre_estudio|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -51,12 +51,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla2">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Nombre del Plan</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -65,11 +65,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_1_2_set.all %}
 						  				<tr>
+										  	<td>{{x.numero|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.nombre_plan|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -83,10 +83,10 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
 			                        <th scope="col">Número de comunidades de práctica en marcha</th>
 			                        <th scope="col">Número de fincas pilotos en marcha</th>
@@ -119,12 +119,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Número</th>
+									<th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de iniciativas</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -133,11 +133,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_2_1_set.all %}
 						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
 						  					<td>{{x.numero_iniciativas|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.anio}}</td>
+						  					<td>{{x.get_semestre_display}}</td>
+						  					<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -151,12 +151,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Número</th>
+									<th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de iniciativas</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -165,11 +165,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_2_2_set.all %}
 						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
 						  					<td>{{x.numero_iniciativas|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.anio}}</td>
+						  					<td>{{x.get_semestre_display}}</td>
+						  					<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -183,12 +183,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Número</th>
+									<th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de modelos de inversión</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -197,11 +197,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_2_3_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_modelos|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_modelos|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -215,12 +215,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Número</th>
+									<th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de oferta de servicios</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -229,11 +229,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_2_4_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_ofertas|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_ofertas|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -247,12 +247,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Número</th>
+									<th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de estudio</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -261,11 +261,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_2_5_set.all %}
 						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
 						  					<td>{{x.numero_estudio|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.anio}}</td>
+						  					<td>{{x.get_semestre_display}}</td>
+						  					<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -279,10 +279,10 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
 			                        <th scope="col">Número de participantes</th>
 			                        <th scope="col">Numero de eventos o iniciativas</th>
@@ -313,12 +313,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+			                        <th scope="col">Número</th>
+									<th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de experiencias y casos de éxito sistematizado</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -327,11 +327,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_3_2_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_experiencias|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_experiencias|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -345,12 +345,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de actores claves</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -359,11 +359,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_3_3_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_actores|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_actores|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -377,12 +377,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								   	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de documentos</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -391,11 +391,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_4_1_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_documentos|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_documentos|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -409,12 +409,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de documentos</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -423,11 +423,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_4_2_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_documentos|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_documentos|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+						  					<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -441,12 +441,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de documentos</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -455,11 +455,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_4_3_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_documentos|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_documentos|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+						  					<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -473,12 +473,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de estudios</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -487,11 +487,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto1_4_4_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_estudio|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_estudio|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -505,12 +505,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de Comités</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -519,11 +519,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto2_5_1_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_comite|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_comite|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+						  					<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -537,12 +537,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de plataformas nacionales funcionando</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -551,11 +551,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto2_5_2_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_plataformas|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_plataformas|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -569,12 +569,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de póliticas</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -583,11 +583,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto2_6_1_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_politica|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_politica|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
@@ -601,12 +601,12 @@
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
 		  				<div class="table-responsive" id="tabla3">
 		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
+		                    	<caption>Indicador: {{obj.indicador}}</caption>
 		                    	<thead>
 			                      <tr>
-			                        <th scope="col">Año de registro</th>
+								  	<th scope="col">Número</th>
+			                        <th scope="col">Año</th>
 			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de Instrumentos</th>
 									<th scope="col">Título y Fuente</th>
 									<th scope="col">Url</th>
 			                        <th scope="col">Archivo</th>
@@ -615,11 +615,11 @@
 		                    	<tbody>
 		                    		{% for x in obj.indproducto2_6_2_set.all %}
 						  				<tr>
+										  	<td>{{x.numero_politica|default:'---'}}</td>
 						  					<td>{{x.anio}}</td>
 						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_politica|default:'---'}}</td>
-											  <td>{{x.fuente|default:'---'}}</td>
-											  <td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+											<td>{{x.fuente|default:'---'}}</td>
+											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
 						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
 						  				</tr>
 						  			{% endfor %}
