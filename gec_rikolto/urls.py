@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from modulo_gerencia.views import *
 from monitoreo_indicadores.views import *
+from poa.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -32,7 +33,7 @@ urlpatterns = [
     path('indicadores-objetivo/<int:id>/', indicadores_objetivo, name='indicadores-objetivo'),
     path('indicadores-efectos/<int:id>/', indicadores_efectos, name='indicadores-efectos'),
     path('indicadores-productos/<int:id>/', indicadores_productos, name='indicadores-productos'),
-
+    path('poa/<int:id>/', poa, name='poa'),
     #ajax admin
     path('ajax/admin/efecto/', efecto_admin, name='efecto-admin'),
     path('ajax/admin/producto/', producto_admin, name='producto-admin'),

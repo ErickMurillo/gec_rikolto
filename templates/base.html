@@ -52,6 +52,9 @@
                             <li {% if '/indicadores-productos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
                         </ul>
                     </li>
+                    <li class="inicio {% if '/poa/' in request.path %}active{% endif %}">
+                        <a href="{% url 'poa' id %}" class="waves-effect profile">POA</a>
+                    </li>
                     <li class="inicio">
                         <a href="/admin" class="waves-effect  profile">Administración</a>
                     </li>

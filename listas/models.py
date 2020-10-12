@@ -58,3 +58,9 @@ class OrgSocias(models.Model):
 
 	def __str__(self):
 		return self.nombre
+
+class ActoresPOA(models.Model):
+	nombre = models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.nombre

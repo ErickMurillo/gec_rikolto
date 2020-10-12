@@ -21,9 +21,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'modulo_gerencia',
     'listas',
     'monitoreo_indicadores',
+    'poa',
     #
     'sorl.thumbnail',
     'smart_selects',

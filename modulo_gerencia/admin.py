@@ -26,8 +26,11 @@ class IndicadoresProductos_Inline(admin.TabularInline):
 class ProductoAdmin(admin.ModelAdmin):
 	inlines = [IndicadoresProductos_Inline,]
 
+class ActividadesAdmin(admin.ModelAdmin):
+	search_fields = ['identificador','descripcion']
+
 admin.site.register(Proyecto,ProyectoAdmin)
 admin.site.register(Objetivo,ObjetivoAdmin)
 admin.site.register(Efecto,EfectoAdmin)
 admin.site.register(Producto,ProductoAdmin)
-admin.site.register(Actividades)
+admin.site.register(Actividades,ActividadesAdmin)
