@@ -52,8 +52,12 @@
                             <li {% if '/indicadores-productos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
                         </ul>
                     </li>
-                    <li class="inicio {% if '/poa/' in request.path %}active{% endif %}">
-                        <a href="{% url 'poa' id %}" class="waves-effect profile">POA</a>
+                    <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe/' in request.path %}active{% endif %}">
+                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">POA<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan</a></li>
+                            <li {% if '/poa/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe</a></li>
+                        </ul>
                     </li>
                     <li class="inicio">
                         <a href="/admin" class="waves-effect  profile">Administración</a>
