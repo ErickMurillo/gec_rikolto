@@ -60,7 +60,10 @@
                         </ul>
                     </li>
                     <li class="inicio">
-                        <a href="/admin" class="waves-effect  profile">Administración</a>
+                        <a href="/admin/" class="waves-effect  profile">Administración</a>
+                    </li>
+                    <li class="inicio">
+                        <a href="{% url 'logout_base' %}?next=/login/" class="waves-effect profile">Cerrar sesion</a>
                     </li>
                     <li class="prod">
                         <a href="http://plasystem.net/" target="_blank" class="waves-effect  profile">Plasystem</a>

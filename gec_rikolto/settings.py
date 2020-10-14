@@ -111,3 +111,9 @@ STATICFILES_DIRS = (
 USE_DJANGO_JQUERY = True
 
 FILE_UPLOAD_PERMISSIONS = 0o644
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+# LOGOUT_REDIRECT_URL = '/login/'
+
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'

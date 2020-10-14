@@ -20,6 +20,7 @@ from monitoreo_indicadores.views import *
 from poa.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 
 admin.site.site_header = "Administración GEC"
@@ -38,4 +39,7 @@ urlpatterns = [
     #ajax admin
     path('ajax/admin/efecto/', efecto_admin, name='efecto-admin'),
     path('ajax/admin/producto/', producto_admin, name='producto-admin'),
+    #login
+    path('login/', auth_views.LoginView.as_view(), {'template_name': 'login.html'}),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout_base'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from .models import *
 from modulo_gerencia.models import *
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
+@login_required
 def plan_poa(request,id=None,template='poa/plan.html'):
     proyecto = Proyecto.objects.get(id = id)
     anio_poa = Poa.objects.filter(proyecto = id).values_list('anio',flat=True).distinct()
@@ -27,6 +30,7 @@ def plan_poa(request,id=None,template='poa/plan.html'):
 
     return render(request, template, locals())
 
+@login_required
 def informe_poa(request,id=None,template='poa/informe.html'):
     proyecto = Proyecto.objects.get(id = id)
     anio_poa = Poa.objects.filter(proyecto = id).values_list('anio',flat=True).distinct()
