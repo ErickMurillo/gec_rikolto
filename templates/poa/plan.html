@@ -66,12 +66,12 @@
                                     </tr>
                                     {% for x,y in v.items %}
                                     <tr class="warning">
-                                        <td>Actividad {{x.identificador}}</td>
-                                        <td>{{x.descripcion}}</td>
+                                        <td>Actividad {{x.0.identificador}}</td>
+                                        <td>{{x.0.descripcion}}</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
+                                        <td>{{x.1|default:"---"|intcomma}}</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -85,8 +85,8 @@
                                             <td>{% if sub_act.semestre_2 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
                                             <td>{{sub_act.monto_presupuestado|intcomma}}</td>
                                             <td>{{sub_act.actores|default:"---"}}</td>
-                                            <td>{{sub_act.actores|default:"---"}}</td>
-                                            <td>{{sub_act.fecha_finalizacion}}</td>
+                                            <td>{{sub_act.responsable|default:"---"}}</td>
+                                            <td>{{sub_act.meses}}</td>
                                         </tr>
                                         {% endfor %}  
                                     {% endfor %}
