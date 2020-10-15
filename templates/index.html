@@ -132,13 +132,13 @@
                     <tbody>
                       {% for obj in productos %}
                       <tr class="danger">
-                        <td style="width: 30%;" rowspan="{{obj.actividades_set.count}}">Producto {{forloop.counter}}: {{obj.descripcion}}</td>
-                        {% for actividad in obj.actividades_set.all|slice:"1" %}
+                        <td style="width: 30%;" rowspan="{{obj.actividades_set.count}}">Producto {{obj.identificador}}: {{obj.descripcion}}</td>
+                        {% for actividad in obj.actividades_set.all|slice:"1"|dictsort:"identificador" %}
                             <td>{{actividad.identificador}}</td>
                             <td>{{actividad.descripcion}}</td>
                           {% endfor %}
                          </tr>
-                         {% for actividad in obj.actividades_set.all|slice:"1:" %}
+                         {% for actividad in obj.actividades_set.all|slice:"1:"|dictsort:"identificador"|dictsort:"id" %}
                          <tr class="danger">
                             <td>{{actividad.identificador}}</td>
                             <td>{{actividad.descripcion}}</td>

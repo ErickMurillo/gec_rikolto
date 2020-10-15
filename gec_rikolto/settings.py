@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     #
     'sorl.thumbnail',
     'smart_selects',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [

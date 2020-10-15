@@ -6,9 +6,10 @@ from .models import *
 class IndicadoresPOA_Inline(admin.TabularInline):
 	model = IndicadoresPOA
 	extra = 1
-	autocomplete_fields = ['indicador']
-
+	
 class PoaAdmin(admin.ModelAdmin):
 	inlines = [IndicadoresPOA_Inline]
+	autocomplete_fields = ['actividad']
+	list_display = ('anio', 'actividad')
 
 admin.site.register(Poa,PoaAdmin)
