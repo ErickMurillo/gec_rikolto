@@ -17,6 +17,6 @@ class SubActividadesPOAAdminForm(forms.ModelForm):
         super(SubActividadesPOAAdminForm, self).__init__(*args, **kwargs)
         self.fields['identificador'] = forms.CharField(widget=forms.TextInput(attrs={'size':'5'}))
         self.fields['monto_presupuestado'] = forms.IntegerField(widget=forms.TextInput(attrs={'size':'7'}))
-        self.fields['monto_semestre_1'] = forms.IntegerField(widget=forms.TextInput(attrs={'size':'7'}))
-        self.fields['monto_final_anio'] = forms.IntegerField(widget=forms.TextInput(attrs={'size':'7'}))
+        self.fields['monto_semestre_1'] = forms.IntegerField(required=False,widget=forms.TextInput(attrs={'size':'7'}))
+        self.fields['monto_final_anio'] = forms.IntegerField(required=False,widget=forms.TextInput(attrs={'size':'7'}))
         

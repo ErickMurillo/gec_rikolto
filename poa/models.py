@@ -36,7 +36,7 @@ class SubActividadesPOA(models.Model):
 	semestre_1 = models.BooleanField()
 	semestre_2 = models.BooleanField()
 	monto_presupuestado = models.FloatField()
-	monto_semestre_1 = models.FloatField(verbose_name='Monto ejecutado al final de I semestre',blank=True,null=True)
+	monto_semestre_1 = models.FloatField(verbose_name='Monto ejecutado al I semestre',blank=True,null=True)
 	monto_final_anio = models.FloatField(verbose_name='Monto ejecutado al final del año',blank=True,null=True)
 	insumos = models.CharField(max_length=250,blank=True,null=True)
 	actores = models.CharField(max_length=250,blank=True,null=True)
