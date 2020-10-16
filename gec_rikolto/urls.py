@@ -29,6 +29,7 @@ admin.site.site_title = "Administración GEC"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('chaining/', include('smart_selects.urls')),
+    path('_nested_admin/', include('nested_admin.urls')),
     path('xls/', save_as_xls, name='xls'),
     path('', index),
     path('indicadores-objetivo/<int:id>/', indicadores_objetivo, name='indicadores-objetivo'),

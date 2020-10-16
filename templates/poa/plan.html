@@ -42,13 +42,13 @@
                                     <tr>   
                                         <th></th>
                                         <th scope="col">Acciones</th>
-                                        <th scope="col">Insumos</th>
                                         <th scope="col">Semestre I</th>
                                         <th scope="col">Semestre II </th>
                                         <th scope="col">Monto presupestado</th>
+                                        <th scope="col">Insumos</th>
                                         <th scope="col">Actores</th>
                                         <th scope="col">Responsables</th>
-                                        <th scope="col">Meses</th>
+                                        <th scope="col">Meses planificado</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -70,8 +70,8 @@
                                         <td>{{x.0.descripcion}}</td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
                                         <td>{{x.1|default:"---"|intcomma}}</td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -80,10 +80,10 @@
                                         <tr>
                                             <td>{{sub_act.identificador}}</td>
                                             <td>{{sub_act.descripcion}}</td>
-                                            <td>{{sub_act.insumos|default:"---"}}</td>
                                             <td>{% if sub_act.semestre_1 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
                                             <td>{% if sub_act.semestre_2 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
                                             <td>{{sub_act.monto_presupuestado|intcomma}}</td>
+                                            <td>{{sub_act.insumos|default:"---"}}</td>
                                             <td>{{sub_act.actores|default:"---"}}</td>
                                             <td>{{sub_act.responsable|default:"---"}}</td>
                                             <td>{{sub_act.meses}}</td>

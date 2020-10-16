@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'smart_selects',
     'multiselectfield',
+    'nested_admin',
 ]
 
 MIDDLEWARE = [

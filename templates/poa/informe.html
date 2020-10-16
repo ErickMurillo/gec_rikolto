@@ -39,21 +39,28 @@
                         <div class="table-responsive" id="tabla1">
                             <table class="table table-bordered">
                                 <thead>
+                                    <tr>
+                                        <th colspan="2"></th>
+                                        <th colspan="2" class="text-center">Semestre</th>
+                                        <th colspan="3" class="text-center">Monto</th>
+                                        <th colspan="5"></th>
+                                        <th colspan="2" class="text-center">Meses</th>
+                                    </tr>
                                     <tr>   
                                         <th></th>
                                         <th scope="col">Acciones</th>
-                                        <th scope="col">Insumos</th>
-                                        <th scope="col">Semestre I</th>
-                                        <th scope="col">Semestre II </th>
-                                        <th scope="col">Monto presupestado</th>
-                                        <th scope="col">Monto ejecutado I Semestre</th>
-                                        <th scope="col">Monto ejecutado final de año</th>
+                                        <th scope="col">I</th>
+                                        <th scope="col">II </th>
+                                        <th scope="col">Presupestado</th>
+                                        <th scope="col">Ejecutado I Semestre</th>
+                                        <th scope="col">Ejecutado final de año</th>
                                         <th scope="col">% ejecución I Semestre</th>
                                         <th scope="col">% Ejecución anual</th>
+                                        <th scope="col">Insumos</th>
                                         <th scope="col">Actores</th>
-                                        <th scope="col">Responsables</th>
-                                        <th scope="col">Meses</th>
-                                        <th scope="col">Meses ejecución</th>
+                                        <th scope="col">Responsables</th>   
+                                        <th scope="col">Planificado</th>
+                                        <th scope="col">Ejecución</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -80,8 +87,8 @@
                                         <td>{{x.0.descripcion}}</td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
                                         <td>{{x.1|default:"---"|intcomma}}</td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -95,7 +102,6 @@
                                         <tr>
                                             <td>{{sub_act.identificador}}</td>
                                             <td>{{sub_act.descripcion}}</td>
-                                            <td>{{sub_act.insumos|default:"---"}}</td>
                                             <td>{% if sub_act.semestre_1 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
                                             <td>{% if sub_act.semestre_2 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
                                             <td>{{sub_act.monto_presupuestado|intcomma}}</td>
@@ -103,6 +109,7 @@
                                             <td>{{sub_act.monto_final_anio|default:"---"|intcomma}}</td>
                                             <td>{{sub_act.monto_semestre_1|porcentaje:sub_act.monto_presupuestado|default:"---"|intcomma}}</td>
                                             <td>{{sub_act.monto_final_anio|porcentaje:sub_act.monto_presupuestado|default:"---"|intcomma}}</td></td>
+                                            <td>{{sub_act.insumos|default:"---"}}</td>
                                             <td>{{sub_act.actores|default:"---"}}</td>
                                             <td>{{sub_act.responsables|default:"---"}}</td>
                                             <td>{{sub_act.meses}}</td>

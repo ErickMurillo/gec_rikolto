@@ -8,10 +8,9 @@ from multiselectfield import MultiSelectField
 class Poa(models.Model):
 	proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
 	anio = models.IntegerField(verbose_name="Año")
-	actividad = models.ForeignKey(Actividades, on_delete=models.CASCADE)
 
-	# def __str__(self):
-	# 	return '%s %s' % (str(self.anio),self.actividad)
+	def __str__(self):
+		return '%s' % (str(self.anio))
 	
 	class Meta:
 		verbose_name_plural = 'POA'
@@ -22,8 +21,16 @@ MESES_CHOICES = (('Enero','Enero'),('Febrero','Febrero'),('Marzo','Marzo'),('Abr
                 ('Septiembre','Septiembre'),('Octubre','Octubre'),('Noviembre','Noviembre'),
                 ('Diciembre','Diciembre'))
 
-class IndicadoresPOA(models.Model):
+class ActividadesPOA(models.Model):
 	poa = models.ForeignKey(Poa, on_delete=models.CASCADE)
+	actividad = models.ForeignKey(Actividades, on_delete=models.CASCADE)
+
+	class Meta:
+		verbose_name_plural = 'Actividades'
+		verbose_name = 'Actividad'
+
+class SubActividadesPOA(models.Model):
+	actividad_poa = models.ForeignKey(ActividadesPOA, on_delete=models.CASCADE)
 	identificador = models.CharField(max_length=20)
 	descripcion = models.CharField(max_length=250)
 	semestre_1 = models.BooleanField()
@@ -34,7 +41,7 @@ class IndicadoresPOA(models.Model):
 	insumos = models.CharField(max_length=250,blank=True,null=True)
 	actores = models.CharField(max_length=250,blank=True,null=True)
 	responsable = models.CharField(max_length=250,blank=True,null=True)
-	meses = MultiSelectField(choices=MESES_CHOICES)
+	meses = MultiSelectField(choices=MESES_CHOICES,verbose_name='Meses planificado')
 	meses_ejecucion = MultiSelectField(choices=MESES_CHOICES,blank=True,null=True)
 
 	class Meta:

@@ -1,15 +1,33 @@
 from django.contrib import admin
 from .models import *
+import nested_admin
+from django.forms import TextInput, Textarea, SelectMultiple
+from django.db import models
+from .forms import *
 
 # Register your models here.
 
-class IndicadoresPOA_Inline(admin.TabularInline):
-	model = IndicadoresPOA
+class SubActividadesPOA_Inline(nested_admin.NestedTabularInline):
+	model = SubActividadesPOA
 	extra = 1
+	formfield_overrides = {
+		models.CharField: {'widget': Textarea(
+						   attrs={'rows': 1,
+								  'cols': 30,
+								  'style': 'height: 100px;resize:none;',})},
+	}
+	form = SubActividadesPOAAdminForm
 	
-class PoaAdmin(admin.ModelAdmin):
-	inlines = [IndicadoresPOA_Inline]
+	
+
+class ActividadesPOA(nested_admin.NestedTabularInline):
+	model = ActividadesPOA
+	extra = 1
+	inlines = [SubActividadesPOA_Inline,]
 	autocomplete_fields = ['actividad']
-	list_display = ('anio', 'actividad')
+
+class PoaAdmin(nested_admin.NestedModelAdmin):
+	inlines = [ActividadesPOA]
+	# list_display = ('anio', 'actividad')
 
 admin.site.register(Poa,PoaAdmin)
