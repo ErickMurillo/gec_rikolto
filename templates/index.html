@@ -130,15 +130,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                      {% for obj in productos %}
+                      {% for key,value in dict.items %}
                       <tr class="danger">
-                        <td style="width: 30%;" rowspan="{{obj.actividades_set.count}}">Producto {{obj.identificador}}: {{obj.descripcion}}</td>
-                        {% for actividad in obj.actividades_set.all|slice:"1"|dictsort:"identificador" %}
+                        <td style="width: 30%;" rowspan="{{key.1}}">Producto {{key.0.identificador}}: {{key.0.descripcion}}</td>
+                        {% for actividad in value|slice:"1" %}
                             <td>{{actividad.identificador}}</td>
                             <td>{{actividad.descripcion}}</td>
                           {% endfor %}
                          </tr>
-                         {% for actividad in obj.actividades_set.all|slice:"1:"|dictsort:"identificador"|dictsort:"id" %}
+                         {% for actividad in value|slice:"1:"|dictsort:"identificador" %}
                          <tr class="danger">
                             <td>{{actividad.identificador}}</td>
                             <td>{{actividad.descripcion}}</td>
