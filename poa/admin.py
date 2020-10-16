@@ -18,16 +18,16 @@ class SubActividadesPOA_Inline(nested_admin.NestedTabularInline):
 	}
 	form = SubActividadesPOAAdminForm
 	
-	
 
-class ActividadesPOA(nested_admin.NestedTabularInline):
+class ActividadesPOA_Inline(nested_admin.NestedTabularInline):
 	model = ActividadesPOA
 	extra = 1
 	inlines = [SubActividadesPOA_Inline,]
 	autocomplete_fields = ['actividad']
+	form = ActividadesPOAForm
 
 class PoaAdmin(nested_admin.NestedModelAdmin):
-	inlines = [ActividadesPOA]
+	inlines = [ActividadesPOA_Inline]
 	# list_display = ('anio', 'actividad')
 
 admin.site.register(Poa,PoaAdmin)
