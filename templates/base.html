@@ -36,7 +36,7 @@
                 </button>
                 <a class="navbar-brand" href="/"><img src="/static/img/logo_veco_mesoamerica.png" alt=""></a>
             </div>
-    
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
 
@@ -56,7 +56,8 @@
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">POA<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan</a></li>
-                            <li {% if '/poa/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe</a></li>
+                            <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe semestral</a></li>
+                            <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' id %}"> Informe anual</a></li>
                         </ul>
                     </li>
                     <li class="inicio">

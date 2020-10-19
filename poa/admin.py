@@ -17,7 +17,9 @@ class SubActividadesPOA_Inline(nested_admin.NestedTabularInline):
 								  'style': 'height: 100px;resize:none;',})},
 	}
 	form = SubActividadesPOAAdminForm
-	
+	class Media:
+		css = {'all':('css/inlines.css',)}
+
 
 class ActividadesPOA_Inline(nested_admin.NestedTabularInline):
 	model = ActividadesPOA

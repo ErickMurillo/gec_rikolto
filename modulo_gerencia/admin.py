@@ -28,6 +28,7 @@ class ProductoAdmin(admin.ModelAdmin):
 
 class ActividadesAdmin(admin.ModelAdmin):
 	search_fields = ['identificador','descripcion']
+	ordering = ['identificador']
 
 admin.site.register(Proyecto,ProyectoAdmin)
 admin.site.register(Objetivo,ObjetivoAdmin)

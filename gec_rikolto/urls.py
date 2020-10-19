@@ -36,7 +36,8 @@ urlpatterns = [
     path('indicadores-efectos/<int:id>/', indicadores_efectos, name='indicadores-efectos'),
     path('indicadores-productos/<int:id>/', indicadores_productos, name='indicadores-productos'),
     path('poa/plan/<int:id>/', plan_poa, name='poa-plan'),
-    path('poa/informe/<int:id>/', informe_poa, name='poa-informe'),
+    path('poa/informe-semestral/<int:id>/', informe_poa, name='poa-informe'),
+    path('poa/informe-anual/<int:id>/', informe_poa_anual, name='poa-informe-anual'),
     #ajax admin
     path('ajax/admin/efecto/', efecto_admin, name='efecto-admin'),
     path('ajax/admin/producto/', producto_admin, name='producto-admin'),

@@ -1,0 +1,19 @@
+.field-meses ul li,  .field-meses_ejecucion ul li {
+  text-align: left;
+  list-style-type: none;
+  padding: 0 0;
+  width: 100px;
+ overflow-x: auto; /* change to hidden if that's what you want */
+ float: left;
+ margin-right: 0px;
+}
+
+.field-meses, .field-meses_ejecucion {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 5px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 5px; /* Firefox */
+    column-gap: 5px;
+    width: 49px;
+}
