@@ -12,8 +12,8 @@ class Poa(models.Model):
 		return '%s' % (str(self.anio))
 
 	class Meta:
-		verbose_name_plural = 'POA'
-		verbose_name = 'POA'
+		verbose_name_plural = 'Plan de actividades'
+		verbose_name = 'Plan de actividades'
 
 MESES_CHOICES = (('Enero','Enero'),('Febrero','Febrero'),('Marzo','Marzo'),('Abril','Abril'),
                 ('Mayo','Mayo'),('Junio','Junio'),('Julio','Julio'),('Agosto','Agosto'),

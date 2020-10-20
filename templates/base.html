@@ -56,9 +56,9 @@
                     <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">POA<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan</a></li>
-                            <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe semestral</a></li>
-                            <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' id %}"> Informe anual</a></li>
+                            <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan de actividades</a></li>
+                            <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe semestral de actividades</a></li>
+                            <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' id %}"> Informe anual de actividades</a></li>
                         </ul>
                     </li>
 
