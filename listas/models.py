@@ -68,3 +68,13 @@ class ActoresPOA(models.Model):
 	class Meta:
 		verbose_name_plural = "Actores POA"
 		verbose_name = "Actor POA"
+
+class ProyectoFinanciado(models.Model):
+	nombre = models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.nombre
+
+	class Meta:
+		verbose_name_plural = "Proyectos Financiados"
+		verbose_name = "Proyecto Financiado"

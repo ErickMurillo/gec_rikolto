@@ -52,6 +52,7 @@
                             <li {% if '/indicadores-productos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
                         </ul>
                     </li>
+
                     <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">POA<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -60,24 +61,24 @@
                             <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' id %}"> Informe anual</a></li>
                         </ul>
                     </li>
-                    <li class="inicio">
-                        <a href="/admin/" class="waves-effect  profile">Administración</a>
-                    </li>
-                    <li class="inicio">
-                        <a href="{% url 'logout_base' %}?next=/login/" class="waves-effect profile">Cerrar sesion</a>
-                    </li>
-                    <li class="prod">
-                        <a href="http://plasystem.net/" target="_blank" class="waves-effect  profile">Plasystem</a>
-                    </li>
-                    <!--<li class="dropdown">
-                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">
-                            {% if user.get_full_name %}<i class="fa fa-user" aria-hidden="true"> </i> {{user.get_full_name}}{% else %}<i class="fa fa-user" aria-hidden="true"> </i> {{ user.username }}{% endif %} <b class="caret"></b>
-                        </a>
+
+
+                    <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe/' in request.path %}active{% endif %}">
+                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Proyectos financiados<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/admin"> Administrador</a></li>
-                            <li><a href="/logout"> Cerrar sesion</a></li>
+                            <li {% if '/proyectos-financiados/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'plan-proyectos' id %}"> Plan</a></li>
+                            <li {% if '/proyectos-financiados/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'informe-proyectos' id %}"> Informe</a></li>
                         </ul>
-                    </li>-->
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">{{user.username}}<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/"> Administración</a></li>
+                            <li><a href="{% url 'logout_base' %}?next=/login/"> Cerrar sesion</a></li>
+                            <li><a href="http://plasystem.net/" target="_blank"> Plasystem</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

@@ -3,7 +3,6 @@ from modulo_gerencia.models import *
 from listas.models import *
 from multiselectfield import MultiSelectField
 
-
 # Create your models here.
 class Poa(models.Model):
 	proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
@@ -11,7 +10,7 @@ class Poa(models.Model):
 
 	def __str__(self):
 		return '%s' % (str(self.anio))
-	
+
 	class Meta:
 		verbose_name_plural = 'POA'
 		verbose_name = 'POA'
@@ -47,4 +46,3 @@ class SubActividadesPOA(models.Model):
 	class Meta:
 		verbose_name_plural = 'Sub Actividades'
 		verbose_name = 'Sub Actividad'
-		

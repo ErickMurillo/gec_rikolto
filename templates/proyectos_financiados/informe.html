@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% load extras %}
+
+{% block content %}
+<div class="panel panel-primary">
+    <div class="panel-body index-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-12">
+                <h3>Nombre del proyecto: {{proyecto}}</h3>
+            </div>
+            <br>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+             <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                {% for anio in dict_anios.keys %}
+                    <li role="presentation" class="{% if forloop.first %}active{% endif %}"><a href="#{{anio}}" aria-controls="{{anio}}" role="tab" data-toggle="tab">{{anio}}</a></li>
+                {% endfor %}
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    {% for anio,values in dict_anios.items %}
+                    <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{anio}}">
+                        <div class="table-responsive" id="">
+                          <br>
+                            <table class="table table-bordered">
+                              <caption>Implementación de los Proyectos financiados</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Proyectos financiados</th>
+                                        <th scope="col">Semestre I</th>
+                                        <th scope="col">Semestre II</th>
+                                        <th scope="col">Organización implementadora</th>
+                                        <th scope="col">Paises de influencia</th>
+                                        <th scope="col">Monto presupestado</th>
+                                        <th scope="col">Monto Ejecutado I semestre</th>
+                                        <th scope="col">% Ejecución semestral</th>
+                                        <th scope="col">Monto Ejecutado al final del año</th>
+                                        <th scope="col">% Ejecución anual</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for v in values.0 %}
+                                      <tr>
+                                          <td>{{v.proyecto}}</td>
+                                          <td>{% if v.semestre_1 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                          <td>{% if v.semestre_2 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                          <td>{{v.org_implementadora}}</td>
+                                          <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                          <td>{{v.monto_presupuestado|floatformat:2|intcomma}}</td>
+                                          <td>{{v.monto_semestre_1|default:"0.00"|floatformat:2|intcomma}}</td>
+                                          <td>{{v.monto_semestre_1|porcentaje:v.monto_presupuestado|default:"0.00"|floatformat:2|intcomma}}</td>
+                                          <td>{{v.monto_final_anio|default:"0.00"|floatformat:2|intcomma}}</td>
+                                          <td>{{v.monto_final_anio|porcentaje:v.monto_presupuestado|default:"0.00"|floatformat:2|intcomma}}</td>
+                                      </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <div class="table-responsive">
+                          <table class="table table-bordered">
+                            <caption>Generación de productos generados por Proyectos Financiados</caption>
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Proyectos financiados</th>
+                                      <th scope="col">Titulo de producto generado</th>
+                                      <th scope="col">Semestre I</th>
+                                      <th scope="col">Semestre II</th>
+                                      <th scope="col">Paises de influencia</th>
+                                      <th scope="col">Url</th>
+                                      <th scope="col">Archivo</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              {% for v in values.1 %}
+                                    <tr>
+                                        {% ifchanged %}
+                                        <td rowspan="{{values.1.count}}">{{v.inline_proyecto.proyecto}}</td>
+                                        {% endifchanged  %}
+                                        <td>{{v.titulo}}</td>
+                                        <td>{% if v.semestre == 'I' %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                        <td>{% if v.semestre == 'II' %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                        <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                        <td>{% if v.url %}<a href="{{v.url}}" target="_blank">{{v.url}}</a>{% else %}---{% endif %}</td>
+                                        <td>{% if v.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                    </tr>
+                                  {% endfor %}
+                              </tbody>
+                          </table>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
