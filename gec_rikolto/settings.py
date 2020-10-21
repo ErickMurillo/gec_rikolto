@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'monitoreo_indicadores',
     'poa',
     'proyectos_financiados',
+    'viajes',
+    'contrapartida',
     #
     'sorl.thumbnail',
     'smart_selects',

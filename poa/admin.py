@@ -32,4 +32,16 @@ class PoaAdmin(nested_admin.NestedModelAdmin):
 	inlines = [ActividadesPOA_Inline]
 	# list_display = ('anio', 'actividad')
 
+class InlineCostoAdmin_Inline(admin.TabularInline):
+	model = InlineCostoAdmin
+	extra = 1
+
+class InlineSalarioProgramatico_Inline(admin.TabularInline):
+	model = InlineSalarioProgramatico
+	extra = 1
+
+class FuncionamientoAdmin(admin.ModelAdmin):
+	inlines = [InlineCostoAdmin_Inline,InlineSalarioProgramatico_Inline]
+
 admin.site.register(Poa,PoaAdmin)
+admin.site.register(Funcionamiento,FuncionamientoAdmin)

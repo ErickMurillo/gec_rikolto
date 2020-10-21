@@ -78,3 +78,34 @@ class ProyectoFinanciado(models.Model):
 	class Meta:
 		verbose_name_plural = "Proyectos Financiados"
 		verbose_name = "Proyecto Financiado"
+
+class PersonasViajan(models.Model):
+	nombre = models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.nombre
+
+	class Meta:
+		verbose_name_plural = "Personas que viajan"
+		verbose_name = "Persona que viaja"
+
+
+class CostoAdministrativo(models.Model):
+	nombre = models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.nombre
+
+	class Meta:
+		verbose_name_plural = "Costo administrativo"
+		verbose_name = "Costo administrativo"
+
+class SalarioProgramatico(models.Model):
+	nombre = models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.nombre
+
+	class Meta:
+		verbose_name_plural = "Salario Programatico"
+		verbose_name = "Salario Programatico"

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% load extras %}
+
+{% block content %}
+<div class="panel panel-primary">
+    <div class="panel-body index-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-12">
+                <h3>Nombre del proyecto: {{proyecto}}</h3>
+                <br>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+             <!-- Nav tabs -->
+
+                <ul class="nav nav-tabs" role="tablist">
+                {% for anio in dict_anios.keys %}
+                    <li role="presentation" class="{% if forloop.first %}active{% endif %}"><a href="#{{anio}}" aria-controls="{{anio}}" role="tab" data-toggle="tab">{{anio}}</a></li>
+                {% endfor %}
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    {% for key,values in dict_anios.items %}
+                    <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{key}}">
+                        <div class="table-responsive" id="tabla1">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>COMPONENTE</th>
+                                        <th scope="col">Presupuesto aprobado</th>
+                                        <th scope="col">Ejecución I semestre</th>
+                                        <th scope="col">Ejecución II semestre</th>
+                                        <th scope="col">Gastos Acumulados</th>
+                                        <th scope="col">% Ejecución</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for k,v in values.items %}
+                                    <tr class="{% if k == 'Funcionamiento General' or k == 'Funcionamiento Programático' %}info
+                                                {% elif k == 'Costos Administrativos' %}bg-success
+                                                {% elif k == 'Salario Programático' %}bg-warning
+                                                {% elif k == 'ACTIVIDADES DEL PROGRAMA' %}bg-primary
+                                                {% elif 'Efecto' in k %}info
+                                                {% elif 'Producto' in k %}success
+                                                {% elif 'Actividad' in k %}warning
+                                                {% elif k == 'TOTAL GENERAL' %}danger
+                                                {% endif %}">
+                                        <td>{% if k == 'Funcionamiento General' or k == 'Costos Administrativos' or k == 'Salario Programático'  or k == 'ACTIVIDADES DEL PROGRAMA' or k == 'TOTAL GENERAL'%}<b>{{k}}</b>{% else %}{{k}}{% endif %}</td>
+                                        {% if k == 'Funcionamiento General' or k == 'Funcionamiento Programático' or k == 'ACTIVIDADES DEL PROGRAMA' and v|length == 0 or v|length == 0  %}
+                                        <td>{{v|default:"0.00"|floatformat:2|intcomma}}</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        {% else %}
+                                        <td>{{v.0|floatformat:2|intcomma}}</td>
+                                        <td>{{v.1|floatformat:2|intcomma}}</td>
+                                        <td>{{v.2|floatformat:2|intcomma}}</td>
+                                        <td>{{v.3|floatformat:2|intcomma}}</td>
+                                        <td>{{v.4|floatformat:2|intcomma}}</td>
+                                        {% endif %}
+
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+		</div>
+	</div>
+</div>
+{% endblock %}

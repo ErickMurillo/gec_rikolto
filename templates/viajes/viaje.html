@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% load extras %}
+
+{% block content %}
+<div class="panel panel-primary">
+    <div class="panel-body index-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-12">
+                <h3>Nombre del proyecto: {{proyecto}}</h3>
+            </div>
+            <br>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+             <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                {% for anio in dict_anios.keys %}
+                    <li role="presentation" class="{% if forloop.first %}active{% endif %}"><a href="#{{anio}}" aria-controls="{{anio}}" role="tab" data-toggle="tab">{{anio}}</a></li>
+                {% endfor %}
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    {% for anio,values in dict_anios.items %}
+                    <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{anio}}">
+                        <div class="table-responsive" id="">
+                          <br>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                      <th colspan="6"></th>
+                                      <th colspan="4" class="text-center">Gastos</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Proyectos financiados</th>
+                                        <th scope="col">Semestre</th>
+                                        <th scope="col">Fecha de inicio</th>
+                                        <th scope="col">Fecha de finalización</th>
+                                        <th scope="col">Personas que viajan</th>
+                                        <th scope="col">Países a que viajan</th>
+                                        <th scope="col">Boletos</th>
+                                        <th scope="col">Combustible</th>
+                                        <th scope="col">Alojamiento</th>
+                                        <th scope="col">Diarios</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for v in values %}
+                                      <tr>
+                                          <td>{{v.titulo}}</td>
+                                          <td>{{v.semestre}}</td>
+                                          <td>{{v.fecha_inicio}}</td>
+                                          <td>{{v.fecha_fin}}</td>
+                                          <td>{% for x in v.personas_viajan.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                          <td>{% for x in v.paises_viajan.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                          <td>{{v.gastos_boletos|floatformat:2|intcomma}}</td>
+                                          <td>{{v.gastos_combustibles|floatformat:2|intcomma}}</td>
+                                          <td>{{v.gastos_alojamiento|floatformat:2|intcomma}}</td>
+                                          <td>{{v.gastos_diarios|floatformat:2|intcomma}}</td>
+                                      </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

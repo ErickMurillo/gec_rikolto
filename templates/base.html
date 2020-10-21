@@ -59,16 +59,22 @@
                             <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan de actividades</a></li>
                             <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe semestral de actividades</a></li>
                             <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' id %}"> Informe anual de actividades</a></li>
+                            <li {% if '/poa/ejecucion-financiera/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-ejecucion-financiera' id %}"> Ejecución financiera</a></li>
+
                         </ul>
                     </li>
 
 
-                    <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe/' in request.path %}active{% endif %}">
+                    <li class="dropdown {% if '/proyectos-financiados/plan/' in request.path or '/proyectos-financiados/informe/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Proyectos financiados<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li {% if '/proyectos-financiados/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'plan-proyectos' id %}"> Plan</a></li>
                             <li {% if '/proyectos-financiados/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'informe-proyectos' id %}"> Informe</a></li>
                         </ul>
+                    </li>
+
+                    <li class="inicio {% if '/viajes/' in request.path %}active{% endif %}">
+                        <a href="{% url 'viajes' id %}" class="waves-effect  profile">Viajes</a>
                     </li>
 
                     <li class="dropdown">
