@@ -20,6 +20,7 @@ from monitoreo_indicadores.views import *
 from poa.views import *
 from proyectos_financiados.views import *
 from viajes.views import *
+from contrapartida.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
@@ -44,6 +45,7 @@ urlpatterns = [
     path('proyectos-financiados/plan/<int:id>/', plan_proyectos, name='plan-proyectos'),
     path('proyectos-financiados/informe/<int:id>/', informe_proyectos, name='informe-proyectos'),
     path('viajes/<int:id>/', viajes, name='viajes'),
+    path('contrapartida/<int:id>/', contrapartida, name='contrapartida'),
     #ajax admin
     path('ajax/admin/efecto/', efecto_admin, name='efecto-admin'),
     path('ajax/admin/producto/', producto_admin, name='producto-admin'),
