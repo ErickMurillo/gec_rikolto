@@ -11,8 +11,8 @@ class Viajes(models.Model):
         return '%s' % (str(self.anio))
 
     class Meta:
-        verbose_name_plural = 'Viajes'
-        verbose_name = 'Viaje'
+        verbose_name_plural = 'Movilización'
+        verbose_name = 'Movilización'
 
 SEMESTRE_CHOICES = (('I','I'),('II','II'))
 

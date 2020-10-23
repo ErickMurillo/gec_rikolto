@@ -19,6 +19,9 @@
             .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
                 background-color: #b4bc14 !important;
             }
+            .navbar-nav>li>a, .dropdown-menu > li > a {
+              font-size: 14px;
+          }
         </style>
     </head>
 
@@ -54,7 +57,7 @@
                     </li>
 
                     <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe/' in request.path %}active{% endif %}">
-                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">POA<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Plan Operativo Anual<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan de actividades</a></li>
                             <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe semestral de actividades</a></li>
@@ -74,7 +77,7 @@
                     </li>
 
                     <li class="inicio {% if '/viajes/' in request.path %}active{% endif %}">
-                        <a href="{% url 'viajes' id %}" class="waves-effect  profile">Viajes</a>
+                        <a href="{% url 'viajes' id %}" class="waves-effect  profile">Movilización</a>
                     </li>
 
                     <li class="inicio {% if '/contrapartida/' in request.path %}active{% endif %}">
