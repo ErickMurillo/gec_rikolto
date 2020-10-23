@@ -117,7 +117,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 
     dict_anios = collections.OrderedDict()
     for anio in list(sorted(set(years))):
-        dict = {}
+        dict = collections.OrderedDict()
         dict_anios[anio] = dict
         funcionamiento_costo = InlineCostoAdmin.objects.filter(funcionamiento__proyecto = id, funcionamiento__anio = anio)
         #funcionamiento general
