@@ -48,20 +48,12 @@
                                                 {% elif k == 'TOTAL GENERAL' %}danger
                                                 {% endif %}">
                                         <td>{% if k == 'Funcionamiento General' or k == 'Costos Administrativos' or k == 'Salario Programático'  or k == 'ACTIVIDADES DEL PROGRAMA' or k == 'TOTAL GENERAL'%}<b>{{k}}</b>{% else %}{{k}}{% endif %}</td>
-                                        {% if k == 'Funcionamiento General' or k == 'Funcionamiento Programático' or k == 'ACTIVIDADES DEL PROGRAMA' and v|length == 0 or v|length == 0  %}
-                                        <td>{{v|default:"0.00"|floatformat:2|intcomma}}</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        {% else %}
+
                                         <td>{{v.0|floatformat:2|intcomma}}</td>
                                         <td>{{v.1|floatformat:2|intcomma}}</td>
                                         <td>{{v.2|floatformat:2|intcomma}}</td>
                                         <td>{{v.3|floatformat:2|intcomma}}</td>
                                         <td>{{v.4|floatformat:2|intcomma}}</td>
-                                        {% endif %}
-
                                     </tr>
                                     {% endfor %}
                                 </tbody>

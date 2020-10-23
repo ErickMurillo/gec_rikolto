@@ -66,7 +66,7 @@
 
 
                     <li class="dropdown {% if '/proyectos-financiados/plan/' in request.path or '/proyectos-financiados/informe/' in request.path %}active{% endif %}">
-                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Proyectos financiados<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Convenios de Colaboración<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li {% if '/proyectos-financiados/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'plan-proyectos' id %}"> Plan</a></li>
                             <li {% if '/proyectos-financiados/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'informe-proyectos' id %}"> Informe</a></li>

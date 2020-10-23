@@ -11,8 +11,8 @@ class ProyectosFinanciados(models.Model):
         return '%s' % (str(self.anio))
 
     class Meta:
-        verbose_name_plural = 'Proyectos Financiados'
-        verbose_name = 'Proyecto Financiado'
+        verbose_name_plural = 'Convenios de Colaboración'
+        verbose_name = 'Convenio de Colaboración'
 
 class InlineProyecto(models.Model):
     proyectos_financiados = models.ForeignKey(ProyectosFinanciados, on_delete=models.CASCADE)
