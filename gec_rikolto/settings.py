@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'proyectos_financiados',
     'viajes',
     'contrapartida',
+    'documentos',
     #
     'sorl.thumbnail',
     'smart_selects',

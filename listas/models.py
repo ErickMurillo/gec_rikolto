@@ -109,3 +109,13 @@ class SalarioProgramatico(models.Model):
 	class Meta:
 		verbose_name_plural = "Salario Programatico"
 		verbose_name = "Salario Programatico"
+
+class FuenteDocumentos(models.Model):
+	nombre = models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.nombre
+
+	class Meta:
+		verbose_name_plural = "Fuente documentos"
+		verbose_name = "Fuente documentos"
