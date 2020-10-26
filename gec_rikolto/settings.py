@@ -123,3 +123,5 @@ LOGIN_REDIRECT_URL = '/'
 # LOGOUT_REDIRECT_URL = '/login/'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = None
