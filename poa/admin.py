@@ -11,10 +11,8 @@ class SubActividadesPOA_Inline(nested_admin.NestedTabularInline):
 	model = SubActividadesPOA
 	extra = 1
 	formfield_overrides = {
-		models.CharField: {'widget': Textarea(
-						   attrs={'rows': 1,
-								  'cols': 30,
-								  'style': 'height: 100px;resize:none;',})},
+		models.CharField: {'widget': Textarea(attrs={'rows': 1,'cols': 18,'style': 'height: 100px;resize:none;',})},
+		models.TextField: {'widget': Textarea(attrs={'rows':1, 'cols':40,'style': 'height: 100px;resize:none;',})},
 	}
 	form = SubActividadesPOAAdminForm
 	class Media:

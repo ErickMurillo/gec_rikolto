@@ -16,7 +16,7 @@ class ProyectosFinanciados(models.Model):
 
 class InlineProyecto(models.Model):
     proyectos_financiados = models.ForeignKey(ProyectosFinanciados, on_delete=models.CASCADE)
-    proyecto = models.ForeignKey(ProyectoFinanciado, on_delete=models.CASCADE)
+    proyecto = models.ForeignKey(ProyectoFinanciado, on_delete=models.CASCADE,verbose_name='Título')
     org_implementadora = models.ForeignKey(OrgImplementador, on_delete=models.CASCADE)
     semestre_1 = models.BooleanField()
     semestre_2 = models.BooleanField()
@@ -26,8 +26,8 @@ class InlineProyecto(models.Model):
     monto_final_anio = models.FloatField(verbose_name='Monto ejecutado al final del año',blank=True,null=True)
 
     class Meta:
-        verbose_name_plural = 'Proyectos'
-        verbose_name = 'Proyecto'
+        verbose_name_plural = 'Convenios'
+        verbose_name = 'Convenio'
 
 SEMESTRE_CHOICES = (('I','I'),('II','II'))
 

@@ -35,13 +35,15 @@ class SubActividadesPOA(models.Model):
     semestre_1 = models.BooleanField()
     semestre_2 = models.BooleanField()
     monto_presupuestado = models.FloatField()
-    monto_semestre_1 = models.FloatField(verbose_name='Monto ejecutado al I semestre',blank=True,null=True)
-    monto_final_anio = models.FloatField(verbose_name='Monto ejecutado al final del año',blank=True,null=True)
+    monto_semestre_1 = models.FloatField(verbose_name='Monto ejecutado I semestre',blank=True,null=True)
+    monto_final_anio = models.FloatField(verbose_name='Monto ejecutado II semestre',blank=True,null=True)
     insumos = models.CharField(max_length=250,blank=True,null=True)
     actores = models.CharField(max_length=250,blank=True,null=True)
     responsable = models.CharField(max_length=250,blank=True,null=True)
     meses = MultiSelectField(choices=MESES_CHOICES,verbose_name='Meses planificado')
     meses_ejecucion = MultiSelectField(choices=MESES_CHOICES,blank=True,null=True)
+    avance_semestre_1 = models.TextField(blank=True,null=True,verbose_name='Avence I semestre')
+    avance_semestre_2 = models.TextField(blank=True,null=True,verbose_name='Avence II semestre')
 
     class Meta:
         verbose_name_plural = 'Sub Actividades'

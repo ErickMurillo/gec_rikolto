@@ -24,7 +24,8 @@
                 <div class="tab-content">
                     {% for key,values in dict_anios.items %}
                     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{key}}">
-                        <div class="table-responsive" id="tabla1">
+                        <a href="" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
+                        <div class="table-responsive" id="tabla{{forloop.counter}}">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>

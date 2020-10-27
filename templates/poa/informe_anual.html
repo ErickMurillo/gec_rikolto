@@ -55,12 +55,12 @@
                                         <th colspan="2"></th>
                                         <th colspan="2" class="text-center">Semestre</th>
                                         <th colspan="2" class="text-center">Monto</th>
-                                        <th colspan="4"></th>
+                                        <th colspan="2"></th>
                                         <th colspan="2" class="text-center">Meses</th>
                                     </tr>
                                     <tr>
                                         <th></th>
-                                        <th scope="col">Acciones</th>
+                                        <th scope="col" class="text-center">Acciones</th>
                                         <th scope="col">I</th>
                                         <th scope="col">II </th>
                                         <th scope="col">Presupestado</th>
@@ -68,9 +68,10 @@
                                         <th scope="col">Ejecutado final de año</th>
                                         {# <th scope="col">% ejecución I Semestre</th> #}
                                         <th scope="col">% Ejecución anual</th>
-                                        <th scope="col">Insumos</th>
+                                        <!-- <th scope="col">Insumos</th>
                                         <th scope="col">Actores</th>
-                                        <th scope="col">Responsables</th>
+                                        <th scope="col">Responsables</th> -->
+                                        <th scope="col" class="text-center">Avance</th>
                                         <th scope="col">Planificado</th>
                                         <th scope="col">Ejecución</th>
                                     </tr>
@@ -91,8 +92,8 @@
                                         <td>{{x.2|default:"0.00"|intcomma}}</td>
                                         {# <td></td> #}
                                         <td>{{x.2|porcentaje:x.1|default:"0.00"|floatformat:2|intcomma}}</td>
-                                        <td></td>
-                                        <td></td>
+                                        <!-- <td></td>
+                                        <td></td> -->
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -108,9 +109,10 @@
                                             <td>{{sub_act.monto_final_anio|default:"0.00"|intcomma}}</td>
                                             {# <td>{{sub_act.monto_semestre_1|porcentaje:sub_act.monto_presupuestado|default:"0"|floatformat:2|intcomma}}</td> #}
                                             <td>{{sub_act.monto_final_anio|porcentaje:sub_act.monto_presupuestado|default:"0"|floatformat:2|intcomma}}</td></td>
-                                            <td>{{sub_act.insumos|default:"---"}}</td>
+                                            <!-- <td>{{sub_act.insumos|default:"---"}}</td>
                                             <td>{{sub_act.actores|default:"---"}}</td>
-                                            <td>{{sub_act.responsable|default:"---"}}</td>
+                                            <td>{{sub_act.responsable|default:"---"}}</td> -->
+                                            <td width="30%">{{sub_act.avance_semestre_2|default:"---"}}</td>
                                             <td>{{sub_act.meses}}</td>
                                             <td>{{sub_act.meses_ejecucion}}</td>
                                         </tr>

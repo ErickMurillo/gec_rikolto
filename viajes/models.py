@@ -28,6 +28,8 @@ class InlineViaje(models.Model):
     gastos_combustibles = models.FloatField()
     gastos_alojamiento = models.FloatField()
     gastos_diarios = models.FloatField()
+    otros_gastos = models.FloatField()
+    archivo = models.FileField(upload_to='viajes/',null=True,blank=True)
 
     class Meta:
         verbose_name_plural = 'Viajes'

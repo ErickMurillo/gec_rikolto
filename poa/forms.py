@@ -8,7 +8,7 @@ from django.contrib.admin.widgets import AutocompleteSelect
 def anios():
     anio_poa = Poa.objects.filter(proyecto = id).values_list('anio',flat=True).distinct()
     return anio_poa
-    
+
 class FiltroAnio(forms.Form):
     def __init__(self, *args, **kwargs):
         super(FiltroAnio, self).__init__(*args, **kwargs)
@@ -18,10 +18,10 @@ class SubActividadesPOAAdminForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(SubActividadesPOAAdminForm, self).__init__(*args, **kwargs)
         self.fields['identificador'] = forms.CharField(widget=forms.TextInput(attrs={'size':'5'}))
-        self.fields['monto_presupuestado'] = forms.IntegerField(widget=forms.TextInput(attrs={'size':'7'}))
-        self.fields['monto_semestre_1'] = forms.IntegerField(required=False,widget=forms.TextInput(attrs={'size':'7'}))
-        self.fields['monto_final_anio'] = forms.IntegerField(required=False,widget=forms.TextInput(attrs={'size':'7'}))
-	
+        self.fields['monto_presupuestado'] = forms.FloatField(widget=forms.TextInput(attrs={'size':'7'}))
+        self.fields['monto_semestre_1'] = forms.FloatField(required=False,widget=forms.TextInput(attrs={'size':'7'}))
+        self.fields['monto_final_anio'] = forms.FloatField(required=False,widget=forms.TextInput(attrs={'size':'7'}))
+
 class ActividadesPOAForm(forms.ModelForm):
 	class Meta:
 		widgets = {
