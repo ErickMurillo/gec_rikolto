@@ -22,7 +22,11 @@
                 <div class="tab-content">
                     {% for anio,values in dict_anios.items %}
                     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{anio}}">
-                        <div class="table-responsive" id="">
+                      <div class="text-right m-t-20">
+                            <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
+                      </div>
+                      <br>
+                      <div class="table-responsive" id="tabla{{forloop.counter}}">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -38,8 +42,8 @@
                                 {% for v in values %}
                                       <tr>
                                           <td>{{v.proyecto}}</td>
-                                          <td>{% if v.semestre_1 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
-                                          <td>{% if v.semestre_2 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                          <td>{% if v.semestre_1 == True %}X{% endif %}</td>
+                                          <td>{% if v.semestre_2 == True %}X{% endif %}</td>
                                           <td>{{v.org_implementadora}}</td>
                                           <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %},{% endif %}{% endfor %}</td>
                                           <td>{{v.monto_presupuestado|floatformat:2|intcomma}}</td>

@@ -22,7 +22,10 @@
                 <div class="tab-content">
                     {% for anio,values in dict_anios.items %}
                     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{anio}}">
-                        <div class="table-responsive" id="">
+                      <div class="text-right m-t-20">
+                            <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
+                      </div>
+                        <div class="table-responsive" id="tabla{{forloop.counter}}">
                           <br>
                             <table class="table table-bordered">
                                 <thead>

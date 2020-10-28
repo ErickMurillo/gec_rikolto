@@ -48,9 +48,9 @@
                     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{anio}}">
                         {% for key,value in poa.items %}
 
-                        <!-- <div class="text-right m-t-20">
+                        <div class="text-right m-t-20">
                               <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
-                        </div> -->
+                        </div>
                         <div class="table-responsive" id="tabla{{forloop.counter}}">
                           <h4>Efecto {{key.identificador}}: {{key.descripcion}}</h4>
                             <table class="table table-bordered">

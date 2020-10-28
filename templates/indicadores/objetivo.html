@@ -6,157 +6,149 @@
     <div class="panel-body index-body">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h3>Nombre del proyecto: {{proyecto}}</h3>
-				{% for obj in object %}
-					<br>
-					{% ifchanged %}
-						<h4>Objetivo: {{obj.objetivo}}</h4>
-					  {% endifchanged  %}
-				  	{% if obj.objind1_set.all %}
-						<br>
-				  		{% comment %} <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> {% endcomment %}
-		  				<div class="table-responsive" id="tabla1">
-		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
-		                    	<thead>
-			                      <tr>
-			                        <th scope="col">Año de registro</th>
-			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de productores</th>
-			                        <th scope="col">Ingreso de SAF USD/ha</th>
-			                        <th scope="col">Aumento de Ingreso SAF (%)</th>
-			                        <th scope="col">Título y Fuente</th>
-									<th scope="col">Url</th>
-			                        <th scope="col">Archivo</th>
-			                      </tr>
-		                    	</thead>
-		                    	<tbody>
-		                    		{% for x in obj.objind1_set.all %}
-						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_productores|default:'---'}}</td>
-						  					<td>{{x.ingreso_saf|default:'---'}}</td>
-						  					<td>{{x.aumento_ingreso_saf|default:'---'}}</td>
-						  					<td>{{x.fuente|default:'---'}}</td>
-											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
-						  				</tr>
-						  			{% endfor %}
-		                    	</tbody>
-		                   </table>
-		                </div>
-		  			{% endif %}
-		  			{% if obj.objind2_set.all %}
-					  	<br>
-		  				{% comment %} <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a> {% endcomment %}
-		  				<div class="table-responsive" id="tabla2">
-		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
-		                    	<thead>
-			                      <tr>
-			                        <th scope="col">Año de registro</th>
-			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Número de productores</th>
-			                        <th scope="col">Productividad cacao kg/ha</th>
-			                        <th scope="col">Aumento de productividad (%)</th>
-			                        <th scope="col">Título y Fuente</th>
-									<th scope="col">Url</th>
-			                        <th scope="col">Archivo</th>
-			                      </tr>
-		                    	</thead>
-		                    	<tbody>
-		                    		{% for x in obj.objind2_set.all %}
-						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.numero_productores|default:'---'}}</td>
-						  					<td>{{x.productividad_cacao|default:'---'}}</td>
-						  					<td>{{x.aumento_productividad_cacao|default:'---'}}</td>
-						  					<td>{{x.fuente|default:'---'}}</td>
-											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
-						  				</tr>
-						  			{% endfor %}
-		                    	</tbody>
-		                   </table>
-		                </div>
-		  			{% endif %}
+      				<h3>Nombre del proyecto: {{proyecto}}</h3>
+              <div class="text-right m-t-20">
+                    <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla'); return false;">Exportar tabla</a>
+              </div>
+              <div class="table-responsive" id="tabla">
+      				{% for obj in object %}
 
-		  			{% if obj.objind3_set.all %}
-					  	<br>
-		  				{% comment %} <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> {% endcomment %}
-		  				<div class="table-responsive" id="tabla3">
-		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
-		                    	<thead>
-			                      <tr>
-			                        <th scope="col">Año de registro</th>
-			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Nombre de Pólitica Regional</th>
-			                        <th scope="col">Descripción</th>
-			                        <th scope="col">Estado de esfuerzo</th>
-			                        <th scope="col">Título y Fuente</th>
-									<th scope="col">Url</th>
-			                        <th scope="col">Archivo</th>
-			                      </tr>
-		                    	</thead>
-		                    	<tbody>
-		                    		{% for x in obj.objind3_set.all %}
-						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.nombre_politica_regional|default:'---'}}</td>
-						  					<td>{{x.descripcion|default:'---'}}</td>
-						  					<td>{{x.estado_esfuerzo|default:'---'}}</td>
-						  					<td>{{x.fuente|default:'---'}}</td>
-											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
-						  				</tr>
-						  			{% endfor %}
-		                    	</tbody>
-		                   </table>
-		                </div>
-		  			{% endif %}
+                  {% ifchanged %}
+        					   <h4>Objetivo: {{obj.objetivo}}</h4>
+        					{% endifchanged  %}
+        						<hr>
+                  {% if obj.objind1_set.all %}
+                   <table class="table table-bordered">
+                    	<caption>{{obj.indicador}}</caption>
+                    	<thead>
+                        <tr>
+                          <th scope="col">Año de registro</th>
+                          <th scope="col">Semestre</th>
+                          <th scope="col">Número de productores</th>
+                          <th scope="col">Ingreso de SAF USD/ha</th>
+                          <th scope="col">Aumento de Ingreso SAF (%)</th>
+                          <th scope="col">Título y Fuente</th>
+      				            <th scope="col">Url</th>
+                          <th scope="col">Archivo</th>
+                        </tr>
+                    	</thead>
+                    	<tbody>
+                    		{% for x in obj.objind1_set.all %}
+            	  				<tr>
+            	  					<td>{{x.anio}}</td>
+            	  					<td>{{x.get_semestre_display}}</td>
+            	  					<td>{{x.numero_productores|default:'---'}}</td>
+            	  					<td>{{x.ingreso_saf|default:'---'}}</td>
+            	  					<td>{{x.aumento_ingreso_saf|default:'---'}}</td>
+            	  					<td>{{x.fuente|default:'---'}}</td>
+            						<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+            	  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+            	  				</tr>
+            	  			{% endfor %}
+                    	</tbody>
+                   </table>
+                  {% endif %}
 
-		  			{% if obj.objind4_set.all %}
-					  	<br>
-		  				<!-- <a href="" onclick="exportarXLS('tabla4'); return false;">Exportar</a> -->
-		  				<div class="table-responsive" id="tabla4">
-		                    <table class="table table-bordered">
-		                    	<caption>{{obj.indicador}}</caption>
-		                    	<thead>
-			                      <tr>
-			                        <th scope="col">Año de registro</th>
-			                        <th scope="col">Semestre</th>
-			                        <th scope="col">Nombre de Plataforma</th>
-			                        <th scope="col">Descripción</th>
-			                        <th scope="col">Estado de Plataforma</th>
-			                        <th scope="col">Título y Fuente</th>
-									<th scope="col">Url</th>
-			                        <th scope="col">Archivo</th>
-			                      </tr>
-		                    	</thead>
-		                    	<tbody>
-		                    		{% for x in obj.objind4_set.all %}
-						  				<tr>
-						  					<td>{{x.anio}}</td>
-						  					<td>{{x.get_semestre_display}}</td>
-						  					<td>{{x.nombre_plataforma|default:'---'}}</td>
-						  					<td>{{x.descripcion|default:'---'}}</td>
-						  					<td>{{x.estado_plataforma|default:'---'}}</td>
-						  					<td>{{x.fuente|default:'---'}}</td>
-											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
-						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
-						  				</tr>
-						  			{% endfor %}
-		                    	</tbody>
-		                   </table>
-		                </div>
-		  			{% endif %}
-				  {% endfor %}
-             </div>
-		</div>
-	</div>
-</div>
+                  {% if obj.objind2_set.all %}
+                   <table class="table table-bordered">
+                    	<caption>{{obj.indicador}}</caption>
+                    	<thead>
+                        <tr>
+                          <th scope="col">Año de registro</th>
+                          <th scope="col">Semestre</th>
+                          <th scope="col">Número de productores</th>
+                          <th scope="col">Productividad cacao kg/ha</th>
+                          <th scope="col">Aumento de productividad (%)</th>
+                          <th scope="col">Título y Fuente</th>
+      				            <th scope="col">Url</th>
+                          <th scope="col">Archivo</th>
+                        </tr>
+                    	</thead>
+                    	<tbody>
+                    		{% for x in obj.objind2_set.all %}
+              	  				<tr>
+              	  					<td>{{x.anio}}</td>
+              	  					<td>{{x.get_semestre_display}}</td>
+              	  					<td>{{x.numero_productores|default:'---'}}</td>
+              	  					<td>{{x.productividad_cacao|default:'---'}}</td>
+              	  					<td>{{x.aumento_productividad_cacao|default:'---'}}</td>
+              	  					<td>{{x.fuente|default:'---'}}</td>
+              						<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+              	  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+              	  				</tr>
+              	  			{% endfor %}
+                    	</tbody>
+                   </table>
+      		  			{% endif %}
+
+      		  			{% if obj.objind3_set.all %}
+                   <table class="table table-bordered">
+                    	<caption>{{obj.indicador}}</caption>
+                    	<thead>
+                        <tr>
+                          <th scope="col">Año de registro</th>
+                          <th scope="col">Semestre</th>
+                          <th scope="col">Nombre de Pólitica Regional</th>
+                          <th scope="col">Descripción</th>
+                          <th scope="col">Estado de esfuerzo</th>
+                          <th scope="col">Título y Fuente</th>
+      				<th scope="col">Url</th>
+                          <th scope="col">Archivo</th>
+                        </tr>
+                    	</thead>
+                    	<tbody>
+                    		{% for x in obj.objind3_set.all %}
+      	  				<tr>
+      	  					<td>{{x.anio}}</td>
+      	  					<td>{{x.get_semestre_display}}</td>
+      	  					<td>{{x.nombre_politica_regional|default:'---'}}</td>
+      	  					<td>{{x.descripcion|default:'---'}}</td>
+      	  					<td>{{x.estado_esfuerzo|default:'---'}}</td>
+      	  					<td>{{x.fuente|default:'---'}}</td>
+      						<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+      	  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+      	  				</tr>
+      	  			{% endfor %}
+                    	</tbody>
+                   </table>
+      		  			{% endif %}
+
+      		  			{% if obj.objind4_set.all %}
+                    <table class="table table-bordered">
+                    	<caption>{{obj.indicador}}</caption>
+                    	<thead>
+                        <tr>
+                          <th scope="col">Año de registro</th>
+                          <th scope="col">Semestre</th>
+                          <th scope="col">Nombre de Plataforma</th>
+                          <th scope="col">Descripción</th>
+                          <th scope="col">Estado de Plataforma</th>
+                          <th scope="col">Título y Fuente</th>
+      				            <th scope="col">Url</th>
+                          <th scope="col">Archivo</th>
+                        </tr>
+                    	</thead>
+                    	<tbody>
+                    		{% for x in obj.objind4_set.all %}
+              	  				<tr>
+              	  					<td>{{x.anio}}</td>
+              	  					<td>{{x.get_semestre_display}}</td>
+              	  					<td>{{x.nombre_plataforma|default:'---'}}</td>
+              	  					<td>{{x.descripcion|default:'---'}}</td>
+              	  					<td>{{x.estado_plataforma|default:'---'}}</td>
+              	  					<td>{{x.fuente|default:'---'}}</td>
+              						<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+              	  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+              	  				</tr>
+              	  			{% endfor %}
+                    	</tbody>
+                   </table>
+      		  			{% endif %}
+
+      				  {% endfor %}
+                </div>
+              </div>
+	          </div>
+          </div>
+        </div>
 {% endblock %}

@@ -24,8 +24,10 @@
                     </div>
                 </div>-->
                 <h3>Nombre del proyecto: {{proyecto}}</h3>
-                {% comment %} <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> {% endcomment %}
-                <div class="table-responsive" id="tabla1">
+                <div class="text-right m-t-20">
+                      <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla'); return false;">Exportar tabla</a>
+                </div>
+                <div class="table-responsive" id="tabla">
                   <table class="table table-bordered">
                   <caption><h4>Objetivos</h4></caption>
                     <thead>
@@ -55,15 +57,10 @@
 
                       {% endfor %}
 
-                      
+
                     </tbody>
                   </table>
-                </div>
-
-                <br>
-                <hr>
-                {% comment %} <a href="" onclick="exportarXLS('tabla2'); return false;">Exportar</a> {% endcomment %}
-                <div class="table-responsive" id="tabla2">
+                  <hr>
                   <table class="table table-bordered">
                   <caption><h4>Efectos y Productos</h4></caption>
                     <thead>
@@ -114,12 +111,7 @@
 
                     </tbody>
                   </table>
-                </div>
-
-                <br>
-                <hr>
-                {% comment %} <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> {% endcomment %}
-                <div class="table-responsive" id="tabla3">
+                  <hr>
                   <table class="table table-bordered">
                   <caption><h4>Actividades</h4></caption>
                     <thead>
@@ -149,10 +141,9 @@
                     </tbody>
                   </table>
                 </div>
+                </div>
 
             </div>
         </div>
     </div>
-</div>
-</div>
 {% endblock %}

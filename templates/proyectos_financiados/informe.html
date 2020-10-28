@@ -23,7 +23,10 @@
                 <div class="tab-content">
                     {% for anio,values in dict_anios.items %}
                     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{anio}}">
-                        <div class="table-responsive" id="">
+                      <div class="text-right m-t-20">
+                            <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
+                      </div>
+                        <div class="table-responsive" id="tabla{{forloop.counter}}">
                           <br>
                             <table class="table table-bordered">
                               <caption>Implementación de Convenios de Colaboración</caption>
@@ -45,8 +48,8 @@
                                 {% for v in values.0 %}
                                       <tr>
                                           <td>{{v.proyecto}}</td>
-                                          <td>{% if v.semestre_1 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
-                                          <td>{% if v.semestre_2 == True %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                          <td>{% if v.semestre_1 == True %}X{% endif %}</td>
+                                          <td>{% if v.semestre_2 == True %}X{% endif %}</td>
                                           <td>{{v.org_implementadora}}</td>
                                           <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
                                           <td>{{v.monto_presupuestado|floatformat:2|intcomma}}</td>
@@ -58,39 +61,40 @@
                                     {% endfor %}
                                 </tbody>
                             </table>
+                            <hr>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <caption>Generación de productos generados por Convenios de Colaboración</caption>
+                                  <thead>
+                                      <tr>
+                                          <th scope="col">Convenios de Colaboración</th>
+                                          <th scope="col">Titulo de producto generado</th>
+                                          <th scope="col">Semestre I</th>
+                                          <th scope="col">Semestre II</th>
+                                          <th scope="col">Paises de influencia</th>
+                                          <th scope="col">Url</th>
+                                          <th scope="col">Archivo</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                  {% for v in values.1 %}
+                                        <tr>
+                                            {% ifchanged %}
+                                            <td rowspan="{{values.1.count}}">{{v.inline_proyecto.proyecto}}</td>
+                                            {% endifchanged  %}
+                                            <td>{{v.titulo}}</td>
+                                            <td>{% if v.semestre == 'I' %}X{% endif %}</td>
+                                            <td>{% if v.semestre == 'II' %}X{% endif %}</td>
+                                            <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                            <td>{% if v.url %}<a href="{{v.url}}" target="_blank">{{v.url}}</a>{% else %}---{% endif %}</td>
+                                            <td>{% if v.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                        </tr>
+                                      {% endfor %}
+                                  </tbody>
+                              </table>
+                            </div>
                         </div>
-                        <hr>
-                        <div class="table-responsive">
-                          <table class="table table-bordered">
-                            <caption>Generación de productos generados por Convenios de Colaboración</caption>
-                              <thead>
-                                  <tr>
-                                      <th scope="col">Convenios de Colaboración</th>
-                                      <th scope="col">Titulo de producto generado</th>
-                                      <th scope="col">Semestre I</th>
-                                      <th scope="col">Semestre II</th>
-                                      <th scope="col">Paises de influencia</th>
-                                      <th scope="col">Url</th>
-                                      <th scope="col">Archivo</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                              {% for v in values.1 %}
-                                    <tr>
-                                        {% ifchanged %}
-                                        <td rowspan="{{values.1.count}}">{{v.inline_proyecto.proyecto}}</td>
-                                        {% endifchanged  %}
-                                        <td>{{v.titulo}}</td>
-                                        <td>{% if v.semestre == 'I' %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
-                                        <td>{% if v.semestre == 'II' %}<i class="fa fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
-                                        <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
-                                        <td>{% if v.url %}<a href="{{v.url}}" target="_blank">{{v.url}}</a>{% else %}---{% endif %}</td>
-                                        <td>{% if v.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
-                                    </tr>
-                                  {% endfor %}
-                              </tbody>
-                          </table>
-                        </div>
+
                     </div>
                     {% endfor %}
                 </div>
