@@ -42,8 +42,8 @@ class SubActividadesPOA(models.Model):
     responsable = models.CharField(max_length=250,blank=True,null=True)
     meses = MultiSelectField(choices=MESES_CHOICES,verbose_name='Meses planificado')
     meses_ejecucion = MultiSelectField(choices=MESES_CHOICES,blank=True,null=True)
-    avance_semestre_1 = models.TextField(blank=True,null=True,verbose_name='Avence I semestre')
-    avance_semestre_2 = models.TextField(blank=True,null=True,verbose_name='Avence II semestre')
+    avance_semestre_1 = models.TextField(blank=True,null=True,verbose_name='Avance I semestre')
+    avance_semestre_2 = models.TextField(blank=True,null=True,verbose_name='Avance II semestre')
 
     class Meta:
         verbose_name_plural = 'Sub Actividades'
