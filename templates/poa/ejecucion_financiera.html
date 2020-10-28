@@ -4,6 +4,16 @@
 {% load extras %}
 
 {% block content %}
+<style media="screen">
+  .gris {
+    background-color: #b1b1b1;
+    color: white;
+  }
+  .naranja {
+    background-color: #ffcb70;
+    color: white;
+  }
+</style>
 <div class="panel panel-primary">
     <div class="panel-body index-body">
         <div class="row">
@@ -24,7 +34,10 @@
                 <div class="tab-content">
                     {% for key,values in dict_anios.items %}
                     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{key}}">
-                        <a href="" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
+                      <!-- <div class="text-right m-t-20">
+                            <a href="" class="btn btn-primary waves-effect waves-light" onclick="exportarXLS('tabla{{forloop.counter}}'); return false;">Exportar tabla</a>
+                      </div>
+                      <br> -->
                         <div class="table-responsive" id="tabla{{forloop.counter}}">
                             <table class="table table-bordered">
                                 <thead>
@@ -39,9 +52,9 @@
                                 </thead>
                                 <tbody>
                                 {% for k,v in values.items %}
-                                    <tr class="{% if k == 'Funcionamiento General' or k == 'Funcionamiento Programático' %}info
-                                                {% elif k == 'Costos Administrativos' %}bg-success
-                                                {% elif k == 'Salario Programático' %}bg-warning
+                                    <tr class="{% if k == 'Funcionamiento General' or k == 'Funcionamiento Programático' %}gris
+                                                {% elif k == 'Costos Administrativos' %}success
+                                                {% elif k == 'Salario Programático' %}naranja
                                                 {% elif k == 'ACTIVIDADES DEL PROGRAMA' %}bg-primary
                                                 {% elif 'Efecto' in k %}info
                                                 {% elif 'Producto' in k %}success

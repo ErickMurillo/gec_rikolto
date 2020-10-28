@@ -36,7 +36,7 @@ class ObjInd4_Inline(admin.TabularInline):
 
 class IndObjetivosAdmin(admin.ModelAdmin):
 	inlines = [ObjInd1_Inline,ObjInd2_Inline,ObjInd3_Inline,ObjInd4_Inline,]
-	
+
 	class Media:
 		js = ('js/admin.js',)
 
@@ -151,13 +151,22 @@ class IndProducto2_6_2_Inline(admin.TabularInline):
 	model = IndProducto2_6_2
 	extra = 1
 
+class IndProducto2_7_1_Inline(admin.TabularInline):
+	model = IndProducto2_7_1
+	extra = 1
+
+class IndProducto2_7_2_Inline(admin.TabularInline):
+	model = IndProducto2_7_2
+	extra = 1
+
 class IndProductosAdmin(admin.ModelAdmin):
 	inlines = [IndProducto1_1_1_Inline,IndProducto1_1_2_Inline,IndProducto1_1_3_Inline,
 				IndProducto1_2_1_Inline,IndProducto1_2_2_Inline,IndProducto1_2_3_Inline,IndProducto1_2_4_Inline,IndProducto1_2_5_Inline,
 				IndProducto1_3_1_Inline,IndProducto1_3_2_Inline,IndProducto1_3_3_Inline,
 				IndProducto1_4_1_Inline,IndProducto1_4_2_Inline,IndProducto1_4_3_Inline,IndProducto1_4_4_Inline,
 				IndProducto2_5_1_Inline,IndProducto2_5_2_Inline,
-				IndProducto2_6_1_Inline,IndProducto2_6_2_Inline]
+				IndProducto2_6_1_Inline,IndProducto2_6_2_Inline,
+				IndProducto2_7_1_Inline,IndProducto2_7_2_Inline]
 	class Media:
 		js = ('js/producto.js',)
 

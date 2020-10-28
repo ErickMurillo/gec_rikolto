@@ -22,7 +22,7 @@ class IndObjetivos(models.Model):
 SEMESTRE_CHOICES = ((1,'I'),(2,'II'))
 
 class ObjInd1(models.Model):
-	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	numero_productores = models.IntegerField('Número de productores',null=True,blank=True)
@@ -37,7 +37,7 @@ class ObjInd1(models.Model):
 		verbose_name = "Indicador 1"
 
 class ObjInd2(models.Model):
-	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	numero_productores = models.IntegerField('Número de productores',null=True,blank=True)
@@ -55,7 +55,7 @@ ESTADO_ESFUERZO_CHOICES = (('No iniciado','No iniciado'),('Iniciado','Iniciado')
 							('Avanzado','Avanzado'),('Cumplido','Cumplido'))
 
 class ObjInd3(models.Model):
-	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	nombre_politica_regional = models.CharField(max_length=250, verbose_name='Nombre de Pólitica Regional',null=True,blank=True)
@@ -70,7 +70,7 @@ class ObjInd3(models.Model):
 		verbose_name = "Indicador 3"
 
 class ObjInd4(models.Model):
-	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	nombre_plataforma = models.CharField(max_length=250, verbose_name='Nombre de Plataforma',null=True,blank=True)
@@ -103,7 +103,7 @@ class IndEfectos(models.Model):
 
 
 class IndEfecto1_1(models.Model):
-	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	numero_productores = models.IntegerField('Número de productores adoptando BPA',null=True,blank=True)
@@ -118,7 +118,7 @@ class IndEfecto1_1(models.Model):
 		verbose_name = "Indicador 1.1"
 
 class IndEfecto1_2(models.Model):
-	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	numero_empresas = models.IntegerField('Número de empresas implementando MNC',null=True,blank=True)
@@ -131,7 +131,7 @@ class IndEfecto1_2(models.Model):
 		verbose_name = "Indicador 1.2"
 
 class IndEfecto2_1(models.Model):
-	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE) 
+	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
 	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
 	nombre_politica = models.CharField(max_length=300,verbose_name='Nombre de Pólitica/Estrategia actualizada',null=True,blank=True)
@@ -187,7 +187,7 @@ class IndProducto1_1_2(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 1.1.2"
 		verbose_name = "Indicador 1.1.2"
-	
+
 class IndProducto1_1_3(models.Model):
 	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -202,7 +202,7 @@ class IndProducto1_1_3(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 1.1.3"
 		verbose_name = "Indicador 1.1.3"
-	
+
 class IndProducto1_2_1(models.Model):
 	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -215,7 +215,7 @@ class IndProducto1_2_1(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 1.2.1"
 		verbose_name = "Indicador 1.2.1"
-	
+
 class IndProducto1_2_2(models.Model):
 	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -267,7 +267,7 @@ class IndProducto1_2_5(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 1.2.5"
 		verbose_name = "Indicador 1.2.5"
-	
+
 class IndProducto1_3_1(models.Model):
 	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -307,7 +307,7 @@ class IndProducto1_3_3(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 1.3.3"
 		verbose_name = "Indicador 1.3.3"
-	
+
 class IndProducto1_4_1(models.Model):
 	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -411,3 +411,29 @@ class IndProducto2_6_2(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 2.6.2"
 		verbose_name = "Indicador 2.6.2"
+
+class IndProducto2_7_1(models.Model):
+	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	numero_politica = models.IntegerField(verbose_name='Número',null=True,blank=True)
+	fuente = models.CharField(max_length=300,null=True,blank=True,verbose_name='Título y fuente')
+	url = models.URLField(null=True,blank=True)
+	archivo = models.FileField(upload_to='ind-prod-2-6-2/',null=True,blank=True)
+
+	class Meta:
+		verbose_name_plural = "Indicador 2.7.1"
+		verbose_name = "Indicador 2.7.1"
+
+class IndProducto2_7_2(models.Model):
+	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	numero_politica = models.IntegerField(verbose_name='Número',null=True,blank=True)
+	fuente = models.CharField(max_length=300,null=True,blank=True,verbose_name='Título y fuente')
+	url = models.URLField(null=True,blank=True)
+	archivo = models.FileField(upload_to='ind-prod-2-6-2/',null=True,blank=True)
+
+	class Meta:
+		verbose_name_plural = "Indicador 2.7.2"
+		verbose_name = "Indicador 2.7.2"

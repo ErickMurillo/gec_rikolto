@@ -29,7 +29,8 @@
                                 <thead>
                                     <tr>
                                       <th colspan="6"></th>
-                                      <th colspan="4" class="text-center">Gastos</th>
+                                      <th colspan="5" class="text-center">Gastos</th>
+                                      <th colspan="1"></th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Proyectos financiados</th>
@@ -42,6 +43,8 @@
                                         <th scope="col">Combustible</th>
                                         <th scope="col">Alojamiento</th>
                                         <th scope="col">Diarios</th>
+                                        <th scope="col">Otros</th>
+                                        <th scope="col">Archivo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -57,6 +60,8 @@
                                           <td>{{v.gastos_combustibles|floatformat:2|intcomma}}</td>
                                           <td>{{v.gastos_alojamiento|floatformat:2|intcomma}}</td>
                                           <td>{{v.gastos_diarios|floatformat:2|intcomma}}</td>
+                                          <td>{{v.otros_gastos|floatformat:2|intcomma}}</td>
+                                          <td>{% if v.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
                                       </tr>
                                     {% endfor %}
                                 </tbody>

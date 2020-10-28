@@ -8,12 +8,12 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3>Nombre del proyecto: {{proyecto}}</h3>
 				  {% for obj in object %}
-				  	
+
 					  {% ifchanged %}
 					  	<br>
 						<h4>Producto: {{obj.producto}}</h4>
 					  {% endifchanged  %}
-						  
+
 					  {% if obj.indproducto1_1_1_set.all %}
 					  <br>
 				  		<!-- <a href="" onclick="exportarXLS('tabla1'); return false;">Exportar</a> -->
@@ -113,7 +113,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_2_1_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -177,7 +177,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_2_3_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -209,7 +209,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_2_4_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -241,7 +241,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_2_5_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -371,7 +371,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_4_1_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -435,7 +435,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_4_3_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -467,7 +467,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto1_4_4_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -531,7 +531,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto2_5_2_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -563,7 +563,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto2_6_1_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -595,7 +595,7 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
-                    
+
 					{% if obj.indproducto2_6_2_set.all %}
 					<br>
 		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
@@ -627,6 +627,70 @@
 		                   </table>
 		                </div>
 		  			{% endif %}
+
+            {% if obj.indproducto2_7_1_set.all %}
+  					<br>
+  		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
+  		  				<div class="table-responsive" id="tabla3">
+  		                    <table class="table table-bordered">
+  		                    	<caption>Indicador: {{obj.indicador}}</caption>
+  		                    	<thead>
+  			                      <tr>
+  								  	<th scope="col">Número</th>
+  			                        <th scope="col">Año</th>
+  			                        <th scope="col">Semestre</th>
+  									<th scope="col">Título y Fuente</th>
+  									<th scope="col">Url</th>
+  			                        <th scope="col">Archivo</th>
+  			                      </tr>
+  		                    	</thead>
+  		                    	<tbody>
+  		                    		{% for x in obj.indproducto2_7_1_set.all %}
+  						  				<tr>
+  										  	<td>{{x.numero_politica|default:'---'}}</td>
+  						  					<td>{{x.anio}}</td>
+  						  					<td>{{x.get_semestre_display}}</td>
+  											<td>{{x.fuente|default:'---'}}</td>
+  											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+  						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+  						  				</tr>
+  						  			{% endfor %}
+  		                    	</tbody>
+  		                   </table>
+  		                </div>
+  		  			{% endif %}
+
+              {% if obj.indproducto2_7_2_set.all %}
+    					<br>
+    		  				<!-- <a href="" onclick="exportarXLS('tabla3'); return false;">Exportar</a> -->
+    		  				<div class="table-responsive" id="tabla3">
+    		                    <table class="table table-bordered">
+    		                    	<caption>Indicador: {{obj.indicador}}</caption>
+    		                    	<thead>
+    			                      <tr>
+    								  	<th scope="col">Número</th>
+    			                        <th scope="col">Año</th>
+    			                        <th scope="col">Semestre</th>
+    									<th scope="col">Título y Fuente</th>
+    									<th scope="col">Url</th>
+    			                        <th scope="col">Archivo</th>
+    			                      </tr>
+    		                    	</thead>
+    		                    	<tbody>
+    		                    		{% for x in obj.indproducto2_7_2_set.all %}
+    						  				<tr>
+    										  	<td>{{x.numero_politica|default:'---'}}</td>
+    						  					<td>{{x.anio}}</td>
+    						  					<td>{{x.get_semestre_display}}</td>
+    											<td>{{x.fuente|default:'---'}}</td>
+    											<td>{% if x.url %}<a href="{{x.url}}" target="_blank">{{x.url}}</a>{% else %}---{% endif %}</td>
+    						  					<td>{% if x.archivo %}<a href="/media/{{x.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+    						  				</tr>
+    						  			{% endfor %}
+    		                    	</tbody>
+    		                   </table>
+    		                </div>
+    		  			{% endif %}
 
 				  {% endfor %}
              </div>
