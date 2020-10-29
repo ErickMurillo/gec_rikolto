@@ -1,6 +1,7 @@
 from django.db import models
 from modulo_gerencia.models import *
 from smart_selects.db_fields import ChainedManyToManyField, ChainedForeignKey
+from django.contrib.auth.models import User
 # Create your models here.
 
 class IndObjetivos(models.Model):
@@ -11,6 +12,7 @@ class IndObjetivos(models.Model):
 	indicador = ChainedForeignKey(IndicadoresObjetivos,
 								chained_field="objetivo",
         						chained_model_field="objetivo",)
+	usuario = models.ForeignKey(User,on_delete=models.CASCADE)
 
 	class Meta:
 		verbose_name_plural = "Indicadores de Objetivos"
@@ -21,6 +23,20 @@ class IndObjetivos(models.Model):
 
 SEMESTRE_CHOICES = ((1,'I'),(2,'II'))
 
+class IndicadoresObjetivosInline(models.Model):
+	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE)
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	avance = models.TextField()
+	fuente = models.CharField(max_length=300,null=True,blank=True,verbose_name='Título y fuente')
+	url = models.URLField(null=True,blank=True)
+	archivo = models.FileField(upload_to='obj-indicadores/',null=True,blank=True)
+
+	class Meta:
+		verbose_name_plural = "Indicadores"
+		verbose_name = "Indicador"
+
+######################### Programacion vieja ###########################
 class ObjInd1(models.Model):
 	obj = models.ForeignKey(IndObjetivos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -84,6 +100,8 @@ class ObjInd4(models.Model):
 		verbose_name_plural = "Indicador 4"
 		verbose_name = "Indicador 4"
 
+###############################################################
+
 #efectos -----------------------------------------------------------------
 class IndEfectos(models.Model):
 	proyecto = models.ForeignKey(Proyecto,on_delete=models.CASCADE)
@@ -93,6 +111,7 @@ class IndEfectos(models.Model):
 	indicador = ChainedForeignKey(IndicadoresEfectos,
 								chained_field="efecto",
         						chained_model_field="efecto",)
+	usuario = models.ForeignKey(User,on_delete=models.CASCADE)
 
 	class Meta:
 		verbose_name_plural = "Indicadores de Efectos"
@@ -101,7 +120,20 @@ class IndEfectos(models.Model):
 	def __str__(self):
 		return '%s' % (self.indicador)
 
+class IndicadoresEfectosInline(models.Model):
+	efecto = models.ForeignKey(IndEfectos,on_delete=models.CASCADE)
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	avance = models.TextField()
+	fuente = models.CharField(max_length=300,null=True,blank=True,verbose_name='Título y fuente')
+	url = models.URLField(null=True,blank=True)
+	archivo = models.FileField(upload_to='obj-indicadores/',null=True,blank=True)
 
+	class Meta:
+		verbose_name_plural = "Indicadores"
+		verbose_name = "Indicador"
+
+###############################################################
 class IndEfecto1_1(models.Model):
 	obj = models.ForeignKey(IndEfectos,on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -144,7 +176,7 @@ class IndEfecto2_1(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 2.1"
 		verbose_name = "Indicador 2.1"
-
+###############################################################
 #Productos
 class IndProductos(models.Model):
 	proyecto = models.ForeignKey(Proyecto,on_delete=models.CASCADE)
@@ -154,6 +186,7 @@ class IndProductos(models.Model):
 	indicador = ChainedForeignKey(IndicadoresProductos,
 								chained_field="producto",
         						chained_model_field="producto",)
+	usuario = models.ForeignKey(User,on_delete=models.CASCADE)
 
 	class Meta:
 		verbose_name_plural = "Indicadores de Productos"
@@ -162,6 +195,20 @@ class IndProductos(models.Model):
 	def __str__(self):
 		return '%s' % (self.indicador)
 
+class IndicadoresProductosInline(models.Model):
+	producto = models.ForeignKey(IndProductos,on_delete=models.CASCADE)
+	anio = models.IntegerField('Año')
+	semestre = models.IntegerField(choices=SEMESTRE_CHOICES)
+	avance = models.TextField()
+	fuente = models.CharField(max_length=300,null=True,blank=True,verbose_name='Título y fuente')
+	url = models.URLField(null=True,blank=True)
+	archivo = models.FileField(upload_to='obj-indicadores/',null=True,blank=True)
+
+	class Meta:
+		verbose_name_plural = "Indicadores"
+		verbose_name = "Indicador"
+
+####################################################################################
 class IndProducto1_1_1(models.Model):
 	producto = models.ForeignKey(IndProductos, on_delete=models.CASCADE)
 	anio = models.IntegerField('Año')
@@ -437,3 +484,4 @@ class IndProducto2_7_2(models.Model):
 	class Meta:
 		verbose_name_plural = "Indicador 2.7.2"
 		verbose_name = "Indicador 2.7.2"
+####################################################################################

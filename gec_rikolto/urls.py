@@ -36,6 +36,7 @@ urlpatterns = [
     path('_nested_admin/', include('nested_admin.urls')),
     path('xls/', save_as_xls, name='xls'),
     path('', index),
+    path('marco-logico/<int:id>', marco_logico, name='marco-logico'),
     path('indicadores-objetivo/<int:id>/', indicadores_objetivo, name='indicadores-objetivo'),
     path('indicadores-efectos/<int:id>/', indicadores_efectos, name='indicadores-efectos'),
     path('indicadores-productos/<int:id>/', indicadores_productos, name='indicadores-productos'),

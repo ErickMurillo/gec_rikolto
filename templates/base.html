@@ -48,25 +48,26 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="inicio {% if request.path == '/' %}active{% endif %}">
-                        <a href="/" class="waves-effect  profile">Marco lógico</a>
+                    {% if not request.path == '/' %}
+                    <li class="inicio {% if request.path == '/marco-logico/' %}active{% endif %}">
+                        <a href="{% url 'marco-logico' proyecto.id %}" class="waves-effect  profile">Marco lógico</a>
                     </li>
                     <li class="dropdown {% if '/indicadores-objetivo/' in request.path or '/indicadores-efectos/' in request.path or '/indicadores-productos/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Monitoreo de indicadores<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li {% if '/indicadores-objetivo/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-objetivo' id %}"> Objetivo</a></li>
-                            <li {% if '/indicadores-efectos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-efectos' id %}"> Efectos</a></li>
-                            <li {% if '/indicadores-productos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-productos' id %}"> Productos</a></li>
+                            <li {% if '/indicadores-objetivo/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-objetivo' proyecto.id %}"> Objetivo</a></li>
+                            <li {% if '/indicadores-efectos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-efectos' proyecto.id %}"> Efectos</a></li>
+                            <li {% if '/indicadores-productos/' in request.path %}class="active"{% endif %}><a href="{% url 'indicadores-productos' proyecto.id %}"> Productos</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown {% if '/poa/plan/' in request.path or '/poa/informe-semestral/' in request.path or '/poa/informe-anual/' in request.path or '/poa/ejecucion-financiera/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Plan Operativo Anual<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' id %}"> Plan de actividades</a></li>
-                            <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' id %}"> Informe de actividades semestre I</a></li>
-                            <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' id %}"> Informe de actividades semestre II</a></li>
-                            <li {% if '/poa/ejecucion-financiera/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-ejecucion-financiera' id %}"> Ejecución financiera</a></li>
+                            <li {% if '/poa/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-plan' proyecto.id %}"> Plan de actividades</a></li>
+                            <li {% if '/poa/informe-semestral/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe' proyecto.id %}"> Informe de actividades semestre I</a></li>
+                            <li {% if '/poa/informe-anual/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-informe-anual' proyecto.id %}"> Informe de actividades semestre II</a></li>
+                            <li {% if '/poa/ejecucion-financiera/' in request.path %}class="active"{% endif %}><a href="{% url 'poa-ejecucion-financiera' proyecto.id %}"> Ejecución financiera</a></li>
 
                         </ul>
                     </li>
@@ -75,26 +76,28 @@
                     <li class="dropdown {% if '/proyectos-financiados/plan/' in request.path or '/proyectos-financiados/informe/' in request.path %}active{% endif %}">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">Convenios de Colaboración<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li {% if '/proyectos-financiados/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'plan-proyectos' id %}"> Plan</a></li>
-                            <li {% if '/proyectos-financiados/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'informe-proyectos' id %}"> Informe</a></li>
+                            <li {% if '/proyectos-financiados/plan/' in request.path %}class="active"{% endif %}><a href="{% url 'plan-proyectos' proyecto.id %}"> Plan</a></li>
+                            <li {% if '/proyectos-financiados/informe/' in request.path %}class="active"{% endif %}><a href="{% url 'informe-proyectos' proyecto.id %}"> Informe</a></li>
                         </ul>
                     </li>
 
                     <li class="inicio {% if '/viajes/' in request.path %}active{% endif %}">
-                        <a href="{% url 'viajes' id %}" class="waves-effect  profile">Movilización</a>
+                        <a href="{% url 'viajes' proyecto.id %}" class="waves-effect  profile">Movilización</a>
                     </li>
 
                     <li class="inicio {% if '/contrapartida/' in request.path %}active{% endif %}">
-                        <a href="{% url 'contrapartida' id %}" class="waves-effect  profile">Contrapartida</a>
+                        <a href="{% url 'contrapartida' proyecto.id %}" class="waves-effect  profile">Contrapartida</a>
                     </li>
 
                     <li class="inicio {% if '/documentos/' in request.path %}active{% endif %}">
-                        <a href="{% url 'documentos' id %}" class="waves-effect  profile">Documentos</a>
+                        <a href="{% url 'documentos' proyecto.id %}" class="waves-effect  profile">Documentos</a>
                     </li>
+                    {% endif %}
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-user" aria-hidden="true"> </i> {{user.username}}<b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li><a href="/"> Proyectos</a></li>
                             <li><a href="/admin/"> Administración</a></li>
                             <li><a href="{% url 'logout_base' %}?next=/login/"> Cerrar sesion</a></li>
                             <li><a href="http://plasystem.net/" target="_blank"> Plasystem</a></li>

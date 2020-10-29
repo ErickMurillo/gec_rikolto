@@ -37,7 +37,11 @@
                                     <tr>
                                         <th scope="col">DESCRIPCIÓN</th>
                                         {% for x in values  %}
-                                        <th>{{x.0}}</th>
+                                          {% if forloop.first %}
+                                            <th>{% for obj in x.0 %}{{obj}}{% if not forloop.last %}, {% endif %}{% endfor %}</th>
+                                          {% else %}
+                                            <th>{{x.0}}</th>
+                                          {% endif %}
                                         {% endfor %}
                                     </tr>
 
@@ -68,39 +72,33 @@
                                     {% endfor %}
                                   </tr>
                                   <tr>
-                                    <td>Efecto 1</td>
+                                    <td>Actividades</td>
                                     {% for x in values  %}
                                     <td>{{x.5|floatformat:2|intcomma}}</td>
                                     {% endfor %}
                                   </tr>
                                   <tr>
-                                    <td>Efecto 2</td>
+                                    <td>Total Gastos</td>
                                     {% for x in values  %}
                                     <td>{{x.6|floatformat:2|intcomma}}</td>
                                     {% endfor %}
                                   </tr>
                                   <tr>
-                                    <td>Total Gastos</td>
+                                    <td>Overhead</td>
                                     {% for x in values  %}
                                     <td>{{x.7|floatformat:2|intcomma}}</td>
                                     {% endfor %}
                                   </tr>
                                   <tr>
-                                    <td>Overhead</td>
+                                    <td>Total General</td>
                                     {% for x in values  %}
                                     <td>{{x.8|floatformat:2|intcomma}}</td>
                                     {% endfor %}
                                   </tr>
                                   <tr>
-                                    <td>Total General</td>
-                                    {% for x in values  %}
-                                    <td>{{x.9|floatformat:2|intcomma}}</td>
-                                    {% endfor %}
-                                  </tr>
-                                  <tr>
                                     <td>Porcentaje de contribución</td>
                                     {% for x in values  %}
-                                      <td>{% if not x.0 == 'Total' %}{{x.9|porcentaje:total_total|floatformat:2|intcomma}}{% endif %}</td>
+                                      <td>{% if not x.0 == 'Total' %}{{x.8|porcentaje:total_total|floatformat:2|intcomma}}{% endif %}</td>
                                     {% endfor %}
                                   </tr>
                                 </tbody>

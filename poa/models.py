@@ -2,11 +2,13 @@ from django.db import models
 from modulo_gerencia.models import *
 from listas.models import *
 from multiselectfield import MultiSelectField
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Poa(models.Model):
     proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
     anio = models.IntegerField(verbose_name="Año")
+    usuario = models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
         return '%s' % (str(self.anio))
@@ -52,6 +54,7 @@ class SubActividadesPOA(models.Model):
 class Funcionamiento(models.Model):
     proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
     anio = models.IntegerField(verbose_name="Año")
+    usuario = models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
         return '%s' % (str(self.anio))
