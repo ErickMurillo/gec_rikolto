@@ -49,7 +49,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     {% if not request.path == '/' %}
-                    <li class="inicio {% if request.path == '/marco-logico/' %}active{% endif %}">
+                    <li class="inicio {% if '/marco-logico/' in request.path %}active{% endif %}">
                         <a href="{% url 'marco-logico' proyecto.id %}" class="waves-effect  profile">Marco lógico</a>
                     </li>
                     <li class="dropdown {% if '/indicadores-objetivo/' in request.path or '/indicadores-efectos/' in request.path or '/indicadores-productos/' in request.path %}active{% endif %}">

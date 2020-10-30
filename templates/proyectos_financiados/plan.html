@@ -7,7 +7,7 @@
     <div class="panel-body index-body">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-12">
-                <h3>Nombre del proyecto: {{proyecto}}</h3>
+                <h3>Nombre del proyecto: {{proyecto.nombre}}</h3>
             </div>
             <br>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -42,8 +42,8 @@
                                 {% for v in values %}
                                       <tr>
                                           <td>{{v.proyecto}}</td>
-                                          <td>{% if v.semestre_1 == True %}X{% endif %}</td>
-                                          <td>{% if v.semestre_2 == True %}X{% endif %}</td>
+                                          <td>{% if v.semestre_1 == True %}<b>x</b>{% endif %}</td>
+                                          <td>{% if v.semestre_2 == True %}<b>x</b>{% endif %}</td>
                                           <td>{{v.org_implementadora}}</td>
                                           <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %},{% endif %}{% endfor %}</td>
                                           <td>{{v.monto_presupuestado|floatformat:2|intcomma}}</td>
