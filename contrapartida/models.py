@@ -21,7 +21,7 @@ class InlineContrapartida(models.Model):
     organizacion = models.ForeignKey(OrgImplementador, on_delete=models.CASCADE)
     costos_admin = models.FloatField(verbose_name='Aporte a Costos Administrativos')
     salario_programatico = models.FloatField(verbose_name='Aporte a Salario Programático')
-    aporte_actividades = models.FloatField(verbose_name='Aprote a actividades')
+    aporte_actividades = models.FloatField(verbose_name='Aporte a actividades')
     overhead = models.FloatField(verbose_name='Aporte a Overhead')
 
     class Meta:
