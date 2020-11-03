@@ -1,0 +1,4184 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$JjSds8gGRTZU$JRLS4P3sbQ0hyia2pAkSezJP023IIQXPBEAL6KPcTfY=",
+    "last_login": "2020-10-17T02:39:28.750Z",
+    "is_superuser": true,
+    "username": "erick",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-10-07T21:34:54.749Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$DED3UySXQTtE$wRV6mZufOkFYhCT1dJASql+aMPhpbzgyj0uD7yB4Ae8=",
+    "last_login": "2020-10-30T19:52:00.327Z",
+    "is_superuser": true,
+    "username": "fguharay",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-10-08T15:40:41Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$V96R6fVtA1EQ$y2VBcbHKNVxC8lQZliTXhKCVNtH/boqoj9o4urBVEGI=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "carlos",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-10-08T15:40:55Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4idgdgz2abci0u08i9eo4tvjzg4rf4hm",
+  "fields": {
+    "session_data": "YjhjNjE4YTlkODcwNGM1ODVjY2NiOTFhMGE4NDY1MTA3M2Y1MTRjZDqABJWXAAAAAAAAAH2UKIwNX2F1dGhfdXNlcl9pZJSMATGUjA9fYXV0aF91c2VyX2hhc2iUjCgyNmE2NGVmYTFiOTdlNjVhZjBjNDU2YTYzMjkwYWQyZWI0OTlkZjY5lIwSX2F1dGhfdXNlcl9iYWNrZW5klIwpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmSUdS4=",
+    "expire_date": "2020-10-31T00:44:30.037Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g8lzg681pytrpd7rg9lo0yelwko776yw",
+  "fields": {
+    "session_data": "MWY4N2NmY2YxZTJkNzgwNmU4MjgzNDc2OGIyYzYzZWM5M2ZjM2RkYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjI2YTY0ZWZhMWI5N2U2NWFmMGM0NTZhNjMyOTBhZDJlYjQ5OWRmNjkiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+    "expire_date": "2020-10-21T21:35:58.198Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "la0o4ns5p65bsrxou7l9vwg47e6jyhby",
+  "fields": {
+    "session_data": "YjhjNjE4YTlkODcwNGM1ODVjY2NiOTFhMGE4NDY1MTA3M2Y1MTRjZDqABJWXAAAAAAAAAH2UKIwNX2F1dGhfdXNlcl9pZJSMATGUjA9fYXV0aF91c2VyX2hhc2iUjCgyNmE2NGVmYTFiOTdlNjVhZjBjNDU2YTYzMjkwYWQyZWI0OTlkZjY5lIwSX2F1dGhfdXNlcl9iYWNrZW5klIwpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmSUdS4=",
+    "expire_date": "2020-10-31T02:39:28.752Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wa8lamh7pzopc7fnmbx6gv9an8a21xhh",
+  "fields": {
+    "session_data": "MTkzYWJiYTM3ODkzYjBjNTRjMmE2ZTFhZWFlMjhjOTA2MzhjMmM5MDqABJWXAAAAAAAAAH2UKIwPX2F1dGhfdXNlcl9oYXNolIwoOTJiYjVkMWE1MTY4NjVhYmZhNDI1NGE1MTkwMzYzZTY3ZmUxMjY3MpSMDV9hdXRoX3VzZXJfaWSUjAEylIwSX2F1dGhfdXNlcl9iYWNrZW5klIwpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmSUdS4=",
+    "expire_date": "2020-11-13T19:52:00.331Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yu71fksw3gaoyhsdpc031zmad884zrfu",
+  "fields": {
+    "session_data": "MTQ4MTQ2MzEzOTVkY2I2NzY2MGYwMjNkMGY5OTZjZmQ0MzFhZjQ3YTqABJWXAAAAAAAAAH2UKIwPX2F1dGhfdXNlcl9oYXNolIwoMjZhNjRlZmExYjk3ZTY1YWYwYzQ1NmE2MzI5MGFkMmViNDk5ZGY2OZSMDV9hdXRoX3VzZXJfaWSUjAExlIwSX2F1dGhfdXNlcl9iYWNrZW5klIwpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmSUdS4=",
+    "expire_date": "2020-10-30T15:57:02.502Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z64e4jmabr1iudkvtu3wqaog93w168ba",
+  "fields": {
+    "session_data": "YjhjNjE4YTlkODcwNGM1ODVjY2NiOTFhMGE4NDY1MTA3M2Y1MTRjZDqABJWXAAAAAAAAAH2UKIwNX2F1dGhfdXNlcl9pZJSMATGUjA9fYXV0aF91c2VyX2hhc2iUjCgyNmE2NGVmYTFiOTdlNjVhZjBjNDU2YTYzMjkwYWQyZWI0OTlkZjY5lIwSX2F1dGhfdXNlcl9iYWNrZW5klIwpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmSUdS4=",
+    "expire_date": "2020-10-30T23:06:15.547Z"
+  }
+},
+{
+  "model": "modulo_gerencia.proyecto",
+  "pk": 1,
+  "fields": {
+    "nombre": "Gesti\u00f3n de Conocimiento de la Cadena de Valor del Cacao en Centroam\u00e9rica",
+    "nombre_corto": "1",
+    "org_implementador": 2,
+    "anio_inicio": "2018-07-01",
+    "anio_fin": "2022-06-30",
+    "usuario": 1,
+    "financiadores": [
+      2
+    ],
+    "aliados": [
+      2
+    ],
+    "paises": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "org_socias": [
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "modulo_gerencia.objetivo",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "identificador": "1",
+    "descripcion": "Aumentar la competitividad y sostenibilidad del sector cacaotero regional a trav\u00e9s de la incidencia en pol\u00edticas nacionales y regionales y gesti\u00f3n de conocimiento.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 1,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "1",
+    "descripcion": "1500 productores de cacao incrementan ingresos el al menos 20%, por la implementaci\u00f3n de SAF."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 2,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "2",
+    "descripcion": "1500 productores de cacao incrementan la productividad en al menos 20%."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 3,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "3",
+    "descripcion": "Una Pol\u00edtica Regional que favorece la competitividad de la cadena de valor del cacao Centroamericano."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresobjetivos",
+  "pk": 4,
+  "fields": {
+    "objetivo": 1,
+    "identificador": "4",
+    "descripcion": "Una Plataforma \u201cComit\u00e9 de Integraci\u00f3n Centroamericana de Cacao, SICACAO, establecida, funcionando y auto sostenible con la participaci\u00f3n de al menos 4 pa\u00edses."
+  }
+},
+{
+  "model": "modulo_gerencia.efecto",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "objetivo": 1,
+    "identificador": "1",
+    "descripcion": "Actores de la Cadena de Valor del Cacao en CA, con base en nuevos conocimientos adquiridos y generaci\u00f3n de evidencias, ajustan sus modelos productivos y de negocios para ser m\u00e1s competitivo y sostenibles.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.efecto",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "objetivo": 1,
+    "identificador": "2",
+    "descripcion": "Actores p\u00fablicos y privados implementan Pol\u00edtica/Estrategia Regional del Cacao Centroamericano y adecuan las pol\u00edticas nacionales para la competitividad y resiliencia del subsector.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresefectos",
+  "pk": 1,
+  "fields": {
+    "efecto": 1,
+    "identificador": "1.1",
+    "descripcion": "1500 productores (30% j\u00f3venes y mujeres) adoptan buenas pr\u00e1cticas ambientales (manejo de agua, suelo, biodiversidad y diversificaci\u00f3n)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresefectos",
+  "pk": 2,
+  "fields": {
+    "efecto": 1,
+    "identificador": "1.2",
+    "descripcion": "Veinte (20) empresas y asociaciones de productores de cacao implementan modelos de negocios competitivos (costo, rendimiento, calidad, certificaci\u00f3n, rendici\u00f3n de cuentas.)"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresefectos",
+  "pk": 3,
+  "fields": {
+    "efecto": 2,
+    "identificador": "2.1",
+    "descripcion": "Al menos tres (3) Pol\u00edticas/estrategias nacionales han sido actualizadas sobre la base de la Pol\u00edtica/Estrategia Regional de cacao centroamericano."
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.1",
+    "descripcion": "Nuevos conocimientos basados en evidencia para producir y comercializar cacao de calidad, rentable y proveniente de modelos de SAF de cacao.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.2",
+    "descripcion": "Aplicaci\u00f3n de nuevos conocimientos para fomentar iniciativas de producci\u00f3n   y comercializaci\u00f3n inclusiva de cacao de calidad, resiliente a cambio clim\u00e1tico.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 3,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.3",
+    "descripcion": "Uso de herramientas de comunicaci\u00f3n para el desarrollo y Tics mejoran la gesti\u00f3n de la informaci\u00f3n y de aprendizaje, entre actores regionales e internacionales para el posicionamiento de la regi\u00f3n.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 4,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 1,
+    "identificador": "1.4",
+    "descripcion": "Directrices regionales para la inversi\u00f3n y el fomento de sistemas agroforestales para cacao m\u00e1s sostenible.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 5,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 2,
+    "identificador": "2.5",
+    "descripcion": "El comit\u00e9 de integraci\u00f3n del cacao de Centroam\u00e9rica y Rep\u00fablica Dominicana SICACAO, consolidado y reconocido por los actores del SICA y nivel internacional para el   posicionamiento y la articulaci\u00f3n de iniciativas para el desarrollo competitivo y resiliente del sector cacaotero.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 6,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 2,
+    "identificador": "2.6",
+    "descripcion": "Pol\u00edtica y/o la Estrategia Regional del Cacao bajo una visi\u00f3n compartida que incorpora elementos de adaptaci\u00f3n al cambio clim\u00e1tico.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.producto",
+  "pk": 7,
+  "fields": {
+    "proyecto": 1,
+    "efecto": 2,
+    "identificador": "2.7",
+    "descripcion": "Identificada e impementada acciones para la prevenci\u00f3n y mitigaci\u00f3n del  COVID19 en la cadena de valor del  CACAO en los paises CA.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 1,
+  "fields": {
+    "producto": 1,
+    "identificador": "1.1.1",
+    "descripcion": "Cuatro (4) estudios que demuestren que los SAF y modelos de negocios de la cadena cacao son rentables y competitivos"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 2,
+  "fields": {
+    "producto": 1,
+    "identificador": "1.1.2",
+    "descripcion": "Un plan de desarrollo de capacidades con inclusi\u00f3n de j\u00f3venes y mujeres, elaborado e implementado."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 3,
+  "fields": {
+    "producto": 1,
+    "identificador": "1.1.3",
+    "descripcion": "Al menos tres (3) comunidades de pr\u00e1ctica establecidas con temas priorizados, en al menos 60 fincas pilotos y 10 negocios inclusivos (SAF, Pol\u00edticas e incidencias, mecanismos de comercializaci\u00f3n\u2026)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 4,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.1",
+    "descripcion": "Al menos diez (10) Iniciativas de inversi\u00f3n con modelos de negocio inclusivo, identificadas e implementadas."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 5,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.2",
+    "descripcion": "Seis (6) modelos de negocio de SAF efectivos para la r\u00e9plica, identificados y validados."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 6,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.3",
+    "descripcion": "Dos (2) modelos de inversi\u00f3n factible en cacao para la banca y/o inversionistas para la validaci\u00f3n y adopci\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 7,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.4",
+    "descripcion": "Una oferta de servicios t\u00e9cnicos en la cadena de valor de cacao Identificada, homologada y difundida."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 8,
+  "fields": {
+    "producto": 2,
+    "identificador": "1.2.5",
+    "descripcion": "Un estudio de an\u00e1lisis cr\u00edtico del efecto de los modelos de inversi\u00f3n, negocios inclusivos y SAF en ingreso y empleo en la regi\u00f3n en el 2020"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 9,
+  "fields": {
+    "producto": 3,
+    "identificador": "1.3.1",
+    "descripcion": "Al menos 3000 participantes entre productores y actores de la cadena conocen y hacen uso de los documentos, videos entre otros materiales de comunicaci\u00f3n (25 eventos)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 10,
+  "fields": {
+    "producto": 3,
+    "identificador": "1.3.2",
+    "descripcion": "Al menos tres (3) experiencias y casos de \u00e9xito sistematizados (Modelos de inversi\u00f3n factibles, estrategia de cacao clim\u00e1ticamente inteligente a nivel regional, modelos de SAF, etc.)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 11,
+  "fields": {
+    "producto": 3,
+    "identificador": "1.3.3",
+    "descripcion": "Actores claves de la cadena que usan Tics y plataformas digitales para dinamizar el intercambio de conocimientos y el posicionamiento del sector, se han fortalecido."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 12,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.1",
+    "descripcion": "Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 13,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.2",
+    "descripcion": "Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 14,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.3",
+    "descripcion": "Cinco (5) directrices regionales para el fomento de modelos de Negocios Inclusivos en cacao (NI)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 15,
+  "fields": {
+    "producto": 4,
+    "identificador": "1.4.4",
+    "descripcion": "Un estudio sobre el nivel de conocimiento, uso de directrices de inversi\u00f3n para el fomento de SAF y modelos de negocios inclusivos en cacao."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 16,
+  "fields": {
+    "producto": 5,
+    "identificador": "2.5.1",
+    "descripcion": "Un Comit\u00e9 de Integraci\u00f3n del Cacao de Centroam\u00e9rica y Rep\u00fablica Dominicana \u2013 SICACAO fortalecido con estrategia de sostenibilidad en los aspectos organizativo e institucional a nivel regional."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 17,
+  "fields": {
+    "producto": 5,
+    "identificador": "2.5.2",
+    "descripcion": "Cuatro (4) plataformas nacionales  funcionando como referentes de la plataforma SICACAO."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 18,
+  "fields": {
+    "producto": 6,
+    "identificador": "2.6.1",
+    "descripcion": "Un documento de pol\u00edtica en implementaci\u00f3n en el marco del Consejo Agropecuario Centroamericano (CAC)."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 19,
+  "fields": {
+    "producto": 6,
+    "identificador": "2.6.2",
+    "descripcion": "Instrumentos y mecanismos para la implementaci\u00f3n y seguimiento de la pol\u00edtica/estrategia por los miembros de la plataforma SICACAO y el SECAC."
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 20,
+  "fields": {
+    "producto": 7,
+    "identificador": "2.7.1",
+    "descripcion": "10 materiales informativos y de formaci\u00f3n sobre mitigaci\u00f3n de riesgos de COVID elaboradas y distribuidas en la zona de influencia de proyecto"
+  }
+},
+{
+  "model": "modulo_gerencia.indicadoresproductos",
+  "pk": 21,
+  "fields": {
+    "producto": 7,
+    "identificador": "2.7.2",
+    "descripcion": "2 estudios realizados sobre impacto de COVID 19 sobre la cadena de cacao a nivel regional y resultados utulizados en proceso de formulaci\u00f3n planes de resiliencias"
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.1",
+    "descripcion": "L\u00ednea base en los 4 pa\u00edses y ajuste del sistema de monitoreo y seguimiento.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.2",
+    "descripcion": "Establecer las tres comunidades de practica (SAF, Pol\u00edtica e incidencias, mecanismo de comercializaci\u00f3n.)",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 3,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.3",
+    "descripcion": "Realizar estudios de an\u00e1lisis cr\u00edtico que demuestran los efectos de los modelos de inversi\u00f3n, negocios inclusivos y los modelos SAF de cacao sostenible son m\u00e1s competitivos, generan empleo e ingreso",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 4,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "identificador": "1.1.4",
+    "descripcion": "Elaborar e implementar el plan de desarrollo de capacidades de negocio, calidad y mercado con inclusi\u00f3n de j\u00f3venes y mujeres.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 5,
+  "fields": {
+    "proyecto": 1,
+    "producto": 2,
+    "identificador": "1.2.1",
+    "descripcion": "Identificar, validar iniciativas de inversi\u00f3n, modelos de negocios inclusivos.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 6,
+  "fields": {
+    "proyecto": 1,
+    "producto": 2,
+    "identificador": "1.2.2",
+    "descripcion": "Identificar, validar iniciativas de inversi\u00f3n, modelos SAF.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 7,
+  "fields": {
+    "proyecto": 1,
+    "producto": 2,
+    "identificador": "1.2.3",
+    "descripcion": "Dise\u00f1ar las herramientas y metodolog\u00edas para la difusi\u00f3n de la oferta de servicios de apoyo t\u00e9cnico y empresarial en la cadena de valor de cacao.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 8,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "1.3.1",
+    "descripcion": "Documentar y difundir la informaci\u00f3n did\u00e1ctica al servicio de los actores de cadena de valor por medio de materiales de comunicaci\u00f3n sistematizando experiencias, modelos de inversi\u00f3n factibles, estrategia de cacao clim\u00e1ticamente inteligente a nivel regional, modelos de SAF.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 9,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "1.3.3",
+    "descripcion": "Utilizaci\u00f3n de las TICs y otras herramientas digitales para dinamizar el intercambio de conocimientos y el posicionamiento del sector.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 10,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "1.3.4",
+    "descripcion": "Dinamizar el intercambio de conocimientos y el posicionamiento del sector, a trav\u00e9s del uso de TICs y plataformas digitales",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 11,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.1",
+    "descripcion": "Analizar la exposici\u00f3n a la variabilidad clim\u00e1tica de las zonas cacaoteras y riesgo de las cadenas de la regi\u00f3n Mesoam\u00e9rica en alianza con el CIAT.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 12,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.2",
+    "descripcion": "Elaborar de un documento sobre impacto de cambio clim\u00e1tico en zonas cacaoteras y riesgos de las cadenas y potenciales medidas de adaptaci\u00f3n para la regi\u00f3n.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 13,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.3",
+    "descripcion": "Realizar eventos regionales virtuales para reflexionar sobre las lecciones de exposici\u00f3n de las zonas cacaoteras y los riesgos de las cadenas a CC y medidas de adaptaci\u00f3n.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 14,
+  "fields": {
+    "proyecto": 1,
+    "producto": 5,
+    "identificador": "2.5.1",
+    "descripcion": "Formalizar y fortalecer el Comit\u00e9 de Integraci\u00f3n del Cacao de Centroam\u00e9rica SICACAO en lo organizativo e institucional a nivel regional.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 15,
+  "fields": {
+    "proyecto": 1,
+    "producto": 6,
+    "identificador": "2.6.1",
+    "descripcion": "Realizar el an\u00e1lisis de las pol\u00edticas y estrategias nacionales para la elaboraci\u00f3n pol\u00edtica regional de cacao sostenible gestionada e implementada a partir de las pol\u00edticas/estrategias de cacao de los pa\u00edses de la regi\u00f3n",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 16,
+  "fields": {
+    "proyecto": 1,
+    "producto": 3,
+    "identificador": "1.3.2",
+    "descripcion": "Actualizar la estrategia de comunicaci\u00f3n para dinamizar el quehacer del proyecto en la regi\u00f3n de acuerdo con los objetivos.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 17,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.4",
+    "descripcion": "An\u00e1lisis de estrategias nacionales y elaboraci\u00f3n de Directrices regionales para fomento de  Cacao resiliente y sostenible",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 18,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.5",
+    "descripcion": "Analizar los modelos de negocios inclusivos de actores claves de la cadena de valor para fomento de cacao en SAF adaptado a CC y VC.",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 19,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.6",
+    "descripcion": "Elaborar un documento de directrices regionales sobre modelos de negocios inclusivos para el fomento de SAF Cacao resiliente y sostenible",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 20,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "identificador": "1.4.7",
+    "descripcion": "Realizar estudios sobre el nivel de conocimiento y el uso de 10 directrices regionales por parte de 80 actores tomadores de decisi\u00f3n",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 24,
+  "fields": {
+    "proyecto": 1,
+    "producto": 5,
+    "identificador": "2.5.2",
+    "descripcion": "Fortalecer las plataformas nacionales como referentes claves de la plataforma SICACAO",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 25,
+  "fields": {
+    "proyecto": 1,
+    "producto": 6,
+    "identificador": "2.6.2",
+    "descripcion": "Elaborar e implementar un plan de acci\u00f3n para la Pol\u00edtica y/o Estrategia de cacao sostenible",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 26,
+  "fields": {
+    "proyecto": 1,
+    "producto": 7,
+    "identificador": "2.7.1",
+    "descripcion": "Elaboraci\u00f3n de materiales prevenci\u00f3n covid19 para los paises",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 27,
+  "fields": {
+    "proyecto": 1,
+    "producto": 7,
+    "identificador": "2.7.2",
+    "descripcion": "Incorporar a los poas de los  SAF pilotos, asocios de cultivos a los  cultivos anuales  como  asocios  a los SAF pilotos",
+    "usuario": 1
+  }
+},
+{
+  "model": "modulo_gerencia.actividades",
+  "pk": 28,
+  "fields": {
+    "proyecto": 1,
+    "producto": 7,
+    "identificador": "2.7.3",
+    "descripcion": "Analizar  los efectos  del COVID 19 en la cadena de valor del cacao - sistemas alimentarios,  en la region CA.",
+    "usuario": 1
+  }
+},
+{
+  "model": "listas.orgimplementador",
+  "pk": 1,
+  "fields": {
+    "nombre": "WCF",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.orgimplementador",
+  "pk": 2,
+  "fields": {
+    "nombre": "Rikolto",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.orgimplementador",
+  "pk": 3,
+  "fields": {
+    "nombre": "CLUSA El Salvador",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.finaciadores",
+  "pk": 2,
+  "fields": {
+    "nombre": "COSUDE",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.aliados",
+  "pk": 2,
+  "fields": {
+    "nombre": "WCF",
+    "logo": ""
+  }
+},
+{
+  "model": "listas.pais",
+  "pk": 1,
+  "fields": {
+    "nombre": "Nicaragua"
+  }
+},
+{
+  "model": "listas.pais",
+  "pk": 2,
+  "fields": {
+    "nombre": "Guatemala"
+  }
+},
+{
+  "model": "listas.pais",
+  "pk": 3,
+  "fields": {
+    "nombre": "El Salvador"
+  }
+},
+{
+  "model": "listas.pais",
+  "pk": 4,
+  "fields": {
+    "nombre": "Honduras"
+  }
+},
+{
+  "model": "listas.orgsocias",
+  "pk": 1,
+  "fields": {
+    "nombre": "Org socia 1",
+    "logo": "",
+    "pais": 1
+  }
+},
+{
+  "model": "listas.orgsocias",
+  "pk": 2,
+  "fields": {
+    "nombre": "EXPASA",
+    "logo": "",
+    "pais": 1
+  }
+},
+{
+  "model": "listas.orgsocias",
+  "pk": 3,
+  "fields": {
+    "nombre": "CLUSA El Salvador",
+    "logo": "",
+    "pais": 3
+  }
+},
+{
+  "model": "listas.orgsocias",
+  "pk": 4,
+  "fields": {
+    "nombre": "Cacao Vera Paz",
+    "logo": "",
+    "pais": 2
+  }
+},
+{
+  "model": "listas.orgsocias",
+  "pk": 5,
+  "fields": {
+    "nombre": "Chocolats Halba",
+    "logo": "",
+    "pais": 4
+  }
+},
+{
+  "model": "listas.actorespoa",
+  "pk": 1,
+  "fields": {
+    "nombre": "Consultor\u00eda"
+  }
+},
+{
+  "model": "listas.actorespoa",
+  "pk": 2,
+  "fields": {
+    "nombre": "Organizaciones socias"
+  }
+},
+{
+  "model": "listas.actorespoa",
+  "pk": 3,
+  "fields": {
+    "nombre": "Plataformas nacionales"
+  }
+},
+{
+  "model": "listas.proyectofinanciado",
+  "pk": 1,
+  "fields": {
+    "nombre": "Pilotos de sistemas agroforestales de cacao rentables y resilientes"
+  }
+},
+{
+  "model": "listas.personasviajan",
+  "pk": 1,
+  "fields": {
+    "nombre": "Ninoska Hurtado"
+  }
+},
+{
+  "model": "listas.personasviajan",
+  "pk": 2,
+  "fields": {
+    "nombre": "Mar\u00eda de los Angeles Rivera"
+  }
+},
+{
+  "model": "listas.personasviajan",
+  "pk": 3,
+  "fields": {
+    "nombre": "Lourdes Zamora"
+  }
+},
+{
+  "model": "listas.costoadministrativo",
+  "pk": 1,
+  "fields": {
+    "nombre": "Overhead"
+  }
+},
+{
+  "model": "listas.costoadministrativo",
+  "pk": 2,
+  "fields": {
+    "nombre": "Administrador Contable"
+  }
+},
+{
+  "model": "listas.costoadministrativo",
+  "pk": 3,
+  "fields": {
+    "nombre": "Movilizaci\u00f3n"
+  }
+},
+{
+  "model": "listas.salarioprogramatico",
+  "pk": 1,
+  "fields": {
+    "nombre": "Coordinador"
+  }
+},
+{
+  "model": "listas.salarioprogramatico",
+  "pk": 2,
+  "fields": {
+    "nombre": "Comunicador"
+  }
+},
+{
+  "model": "listas.fuentedocumentos",
+  "pk": 1,
+  "fields": {
+    "nombre": "Consultor\u00eda"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indobjetivos",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "objetivo": 1,
+    "indicador": 1,
+    "usuario": 1
+  }
+},
+{
+  "model": "monitoreo_indicadores.indobjetivos",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "objetivo": 1,
+    "indicador": 4,
+    "usuario": 1
+  }
+},
+{
+  "model": "monitoreo_indicadores.objind1",
+  "pk": 1,
+  "fields": {
+    "obj": 1,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_productores": 40,
+    "ingreso_saf": 1400.0,
+    "aumento_ingreso_saf": null,
+    "fuente": "Datos de Estado de fincas y familias",
+    "url": "http://cci.alianza-cac.net/linea-base/consultar/",
+    "archivo": "obj-indicador-1/Informe_Estado_de_fincas_Cacaoteras_2019_Producto_1_FG_25.10.30_Final.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.objind4",
+  "pk": 1,
+  "fields": {
+    "obj": 2,
+    "anio": 2019,
+    "semestre": 1,
+    "nombre_plataforma": "SICACAO",
+    "descripcion": "Plataforma regional de concertaci\u00f3n y colaboraci\u00f3n para cadenas de cacao",
+    "estado_plataforma": "Avanzado",
+    "fuente": "SICACAO",
+    "url": "http://sicacao.info/",
+    "archivo": ""
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproductos",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "indicador": 12,
+    "usuario": 1
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproductos",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "producto": 4,
+    "indicador": 13,
+    "usuario": 1
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproductos",
+  "pk": 3,
+  "fields": {
+    "proyecto": 1,
+    "producto": 1,
+    "indicador": 1,
+    "usuario": 1
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_1_1",
+  "pk": 1,
+  "fields": {
+    "producto": 3,
+    "anio": 2020,
+    "semestre": 1,
+    "numero": 1,
+    "fuente": "Climate Smart Cocoa Investment opportunities WCF",
+    "url": "https://bit.ly/2SG5qSI",
+    "archivo": "ind-prod-1-1-1/Climate_Smart_Cocoa_Investment_opportunities_Central_America_Caribbean_V1.edited.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_1",
+  "pk": 1,
+  "fields": {
+    "producto": 1,
+    "anio": 2019,
+    "semestre": 1,
+    "numero_documentos": 1,
+    "fuente": "Caco sostenible adaptado al clima CIAT WCF Rikolto",
+    "url": "https://bit.ly/36PaWKT",
+    "archivo": "ind-prod-1-4-1/Cacao_adapatado_al_clima_2019.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_1",
+  "pk": 2,
+  "fields": {
+    "producto": 1,
+    "anio": 2019,
+    "semestre": 1,
+    "numero_documentos": 1,
+    "fuente": "Impacto de Cambio Clim\u00e1tico CIAT WCF Rikolto",
+    "url": "https://bit.ly/3lsXqRm",
+    "archivo": "ind-prod-1-4-1/Atlas_CAM_Final.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 1,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 1,
+    "fuente": "Directrices Regionales para fomento de Cacao resiliente y sostenible Rikolto WCF",
+    "url": "https://bit.ly/2GPHHwq",
+    "archivo": "ind-prod-1-4-2/Directrices_regionales_para_SAF_Cacao_resiliente_y_sostenible_Lutgarda_Ba_E3F53sr.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 2,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 2,
+    "fuente": "Propuesta de acci\u00f3n para Cacao resiliente y sostenible Rikolto WCF",
+    "url": "https://bit.ly/30Nw54n",
+    "archivo": "ind-prod-1-4-2/Propuesta_de_acciones_para_fomento_de_CCI_Lutgarda_Barahona_06.12.2019.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 3,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 3,
+    "fuente": "Directrices t\u00e9cnicas para Cacao Clim\u00e1ticamente Inteligente El Salvador Rikoto WCF",
+    "url": "https://bit.ly/36KTbwh",
+    "archivo": "ind-prod-1-4-2/Directrices_T\u00e9cnicas_para_dise\u00f1ar_SAF-Cacao_Clim\u00e1ticamente_Inteligentes-E_idV3jqU.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 4,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 4,
+    "fuente": "Directrices t\u00e9cnicas para Cacao Clim\u00e1ticamente Inteligente Guatemala Rikolto WCF",
+    "url": "https://bit.ly/2GRuEup",
+    "archivo": "ind-prod-1-4-2/Directrices_T\u00e9cnicas_para_dise\u00f1ar_SAF-Cacao_Clim\u00e1ticamente_Inteligentes-Guatemala.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 5,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 5,
+    "fuente": "Directrices t\u00e9cnicas para Cacao Clim\u00e1ticamente Inteligente Honduras Rikolto WCF",
+    "url": "https://bit.ly/3d84dwQ",
+    "archivo": "ind-prod-1-4-2/Directrices_T\u00e9cnicas_para_dise\u00f1ar_SAF-Cacao_Clim\u00e1ticamente_Inteligentes-Honduras.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 6,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 6,
+    "fuente": "Directrices t\u00e9cnicas para Cacao Clim\u00e1ticamente Inteligente Nicaragua Rikolto WCF",
+    "url": "https://bit.ly/3lmxMxm",
+    "archivo": "ind-prod-1-4-2/Directrices_T\u00e9cnicas_para_dise\u00f1ar_SAF-Cacao_Clim\u00e1ticamente_Inteligentes-Nicaragua.pdf"
+  }
+},
+{
+  "model": "monitoreo_indicadores.indproducto1_4_2",
+  "pk": 7,
+  "fields": {
+    "producto": 2,
+    "anio": 2019,
+    "semestre": 2,
+    "numero_documentos": 7,
+    "fuente": "Directrices t\u00e9cnicas para Cacao Clim\u00e1ticamente Inteligente R. Dominicana Rikolto WCF",
+    "url": "https://bit.ly/3jLY0sT",
+    "archivo": "ind-prod-1-4-2/Directrices_T\u00e9cnicas_para_dise\u00f1ar_SAF-Cacao_Clim\u00e1ticamente_Inteligentes-R_qE7WQSJ.pdf"
+  }
+},
+{
+  "model": "poa.poa",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "anio": 2020,
+    "usuario": 1
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 1,
+  "fields": {
+    "poa": 1,
+    "actividad": 1
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 2,
+  "fields": {
+    "poa": 1,
+    "actividad": 2
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 3,
+  "fields": {
+    "poa": 1,
+    "actividad": 5
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 4,
+  "fields": {
+    "poa": 1,
+    "actividad": 6
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 5,
+  "fields": {
+    "poa": 1,
+    "actividad": 8
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 6,
+  "fields": {
+    "poa": 1,
+    "actividad": 16
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 7,
+  "fields": {
+    "poa": 1,
+    "actividad": 9
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 8,
+  "fields": {
+    "poa": 1,
+    "actividad": 10
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 9,
+  "fields": {
+    "poa": 1,
+    "actividad": 11
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 10,
+  "fields": {
+    "poa": 1,
+    "actividad": 13
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 11,
+  "fields": {
+    "poa": 1,
+    "actividad": 20
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 12,
+  "fields": {
+    "poa": 1,
+    "actividad": 14
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 13,
+  "fields": {
+    "poa": 1,
+    "actividad": 24
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 14,
+  "fields": {
+    "poa": 1,
+    "actividad": 15
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 15,
+  "fields": {
+    "poa": 1,
+    "actividad": 25
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 16,
+  "fields": {
+    "poa": 1,
+    "actividad": 26
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 17,
+  "fields": {
+    "poa": 1,
+    "actividad": 27
+  }
+},
+{
+  "model": "poa.actividadespoa",
+  "pk": 18,
+  "fields": {
+    "poa": 1,
+    "actividad": 28
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 1,
+  "fields": {
+    "actividad_poa": 1,
+    "identificador": "1.1.1.1",
+    "descripcion": "Actualizaci\u00f3n del Sistema de Seguimiento y Monitoreo de Rikolto",
+    "semestre_1": true,
+    "semestre_2": false,
+    "monto_presupuestado": 5000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda, TDR",
+    "actores": "Empresa Consultora, Dise\u00f1ador del Sistema",
+    "responsable": "Consultora con seguimiento y aprobaci\u00f3n de Rikolto",
+    "meses": "Febrero,Marzo,Abril,Mayo",
+    "meses_ejecucion": "Julio,Agosto,Septiembre,Octubre",
+    "avance_semestre_1": "Se elaboraron Tdrs, con base a las necesidades del proyecto y se cuenta con la propuesta de SIMAS. Para el ajuste del sistema actual a las necesidades identificadas por el proyecto.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 2,
+  "fields": {
+    "actividad_poa": 2,
+    "identificador": "1.1.2.1",
+    "descripcion": "Dise\u00f1o de productos para el acompa\u00f1amiento de la gesti\u00f3n de las Comunidades de pr\u00e1ctica SAF y Negocios Inclusivos.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Digital desde los miembros de las comunidades de pr\u00e1ctica se esta realizando",
+    "actores": "Acotres de la cadena de valor del cacao, representaciones de los paises en las  comunidades de pr\u00e1cticas.",
+    "responsable": "Comuniciaci\u00f3n, coordinadora.\r\n(Jorge y Lourdes)",
+    "meses": "Febrero,Marzo,Abril,Mayo,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se ha puesto en marcha la implementaci\u00f3n de las comunidades de pr\u00e1ctica, ha sido un mecanismo importante, de difundir experiencias, intercambio entre los paises y compartir resultados. Se han definido una serie de temas para profundizar conocimientos y se contratara expertos para el desarrollo de capacidades desde los procesos de conocimiento, aprendizajes, puesta en pr\u00e1ctica de las experiencias.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 3,
+  "fields": {
+    "actividad_poa": 2,
+    "identificador": "1.1.2.2",
+    "descripcion": "Ejecuci\u00f3n de plan de desarrollo de capacidades con la inclusi\u00f3n de j\u00f3venes y mujeres, por la Comunidad de Pr\u00e1ctica. (Nacionales y locales).",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 10000.0,
+    "monto_semestre_1": 62.0,
+    "monto_final_anio": null,
+    "insumos": "Log\u00edstica para eventos\r\nMemorias.\r\nIntercambios.\r\nExpertos tem\u00e1ticos. Tdrs.",
+    "actores": "Actores en las comunidades de practicas",
+    "responsable": "Coordinaci\u00f3n \r\n(Lourdes y Jorge, Santos)",
+    "meses": "Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "La comunidad de practica tambi\u00e9n se consultan contenidos y se acuerdan. Ambas comunidades est\u00e1n desarrollando acciones de acuerdo con la situaci\u00f3n actual y tendencias con relaci\u00f3n a posibles escenarios futuros con el mercado, estrategias, an\u00e1lisis y reflexi\u00f3n. Cuentan con plan de trabajo y priorizaci\u00f3n de temas a desarrollar durante los meses de julio a diciembre 2020.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 4,
+  "fields": {
+    "actividad_poa": 2,
+    "identificador": "1..1.2.3",
+    "descripcion": "Implementar el plan de trabajo por comunidad de pr\u00e1ctica.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 14260.0,
+    "monto_semestre_1": 7132.0,
+    "monto_final_anio": null,
+    "insumos": "Webinar, virtual",
+    "actores": "Actores en las comunidades de pr\u00e1cticas",
+    "responsable": "Coordinaci\u00f3n\r\nLideres de las comunidades",
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 5,
+  "fields": {
+    "actividad_poa": 3,
+    "identificador": "1.2.1.1",
+    "descripcion": "Establecimiento de los Modelos de Negocios a partir de la documentaci\u00f3n y sistematizaci\u00f3n de las experiencias actuales. Sistematizar las experiencias actuales.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 15400.0,
+    "monto_semestre_1": 3675.0,
+    "monto_final_anio": null,
+    "insumos": "Sesiones de trabajo vituales\r\nTdrs /consultor\u00eda\r\n\r\nSUB ACTIVIDADES",
+    "actores": "Chocolats Halba(Chocolats Halba, Cacao Verapaz).",
+    "responsable": "Rikolto.\r\nJorge, Lourdes, \r\nNapoleon.\r\nCoordinaci\u00f3n.",
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se estableci\u00f3 un modelo de negocio, de finca ancla en Nicaragua, en alianza con EXPASA, como piloto se ha implementado dise\u00f1os de modelo de SAF en las fincas alrededor de la finca ancla, se cuenta con la propuesta del modelo de negocio y el proceso para su desarrollo. Se ha continuado la AT, sin embargo, el tema de desarrollo empresarial no se ha logrado, estos temas son de requerimiento presencial para tener efectos esperados.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 6,
+  "fields": {
+    "actividad_poa": 3,
+    "identificador": "1.2.1.2",
+    "descripcion": "Definici\u00f3n y homologaci\u00f3n de los instrumentos t\u00e9cnicos.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Sesiones de trabajo y facilitaci\u00f3n.",
+    "actores": "Comunidades de practica",
+    "responsable": "Rikolto, Consultor",
+    "meses": "Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se realiz\u00f3 la sistematizaci\u00f3n de los modelos de negocio de Chocolats Halba y dos organizaciones de productores, y en Cacao Verapaz y dos organizaciones de productores. Con el cierre de frontes y la cuarentena, se realiz\u00f3 un plan \u201cB\u201d para el cumplimiento del producto de la consultor\u00eda, a\u00fan con ese plan, fue dif\u00edcil por la consultora finalizar con la calidad requerida del producto esperado. Dando por no aceptada la calidad de los resultados de la sistematizaci\u00f3n del modelo de negocio inclusivo de ambas empresas. Siendo una prioridad para poder definir el plan del piloto de modelos de negocio, se ha considerado que RRHH de Rikolto asuman la obtenci\u00f3n de informaci\u00f3n faltante y una persona edite los documentos de sistematizaci\u00f3n.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 7,
+  "fields": {
+    "actividad_poa": 4,
+    "identificador": "1.2.2.1",
+    "descripcion": "Establecimientos de los pilotos SAF en 4 pa\u00edses, en conjunto con aliados.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 50089.0,
+    "monto_semestre_1": 34357.0,
+    "monto_final_anio": null,
+    "insumos": "Planes de implementaci\u00f3n parcelas pilots SAF Cacao",
+    "actores": "Aliados ECOM, Alianza Cacao, CLUSA, CACAP VERAPAZ y Chocolats Halba/PROCACAHO",
+    "responsable": null,
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se logro firmar convenio y aprobar las poas 2020 para la continuidad de los 47 SAF pilotos. Los pa\u00edses que tuvieron mayor afectaci\u00f3n de la AT presencial fueron El Salvador y Honduras, sin embargo, v\u00eda celulares, y con salvo conductos se mantuvo cierto acompa\u00f1amiento a las fincas. En Guatemala y Nicaragua, se mantuvo la presencia de la AT en campo y se ha brindado apoyo a los productores no con la misma intensidad, pero si con mayor presencia que los otros dos pa\u00edses.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 10,
+  "fields": {
+    "actividad_poa": 4,
+    "identificador": "1.2.2.2",
+    "descripcion": "Aplicaci\u00f3n de buenas pr\u00e1cticas agr\u00edcolas, mitigaci\u00f3n y medidas. (pr\u00e1cticas en campo) y levantamiento de la informaci\u00f3n para la base de datos.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 5391.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Propuestas de los planes de finca pilotos.",
+    "actores": "Aliados ECOM, Alianza Cacao, CLUSA, CACAO VERAPAZ y Chocolats Halba/PROCACAHO",
+    "responsable": "Rikolto\r\nWCF.",
+    "meses": "Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Es importante mencionar que se ha mantenido el llenado de informaci\u00f3n en el sistema de base de datos de los SAF, caso El Salvador hay tres formatos sin ser levantados en campo. Recientemente se ha realizado la presentaci\u00f3n de informaci\u00f3n generada por la base de datos a la comunidad de pr\u00e1ctica, analizando los datos y utilidad de los mismo para la toma de decisiones. A trav\u00e9s de whatsapp se mantiene comunicaci\u00f3n entre los t\u00e9cnicos y el apoyo que brinda un Consultor al sistema de datos.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 11,
+  "fields": {
+    "actividad_poa": 4,
+    "identificador": "1.2.2.3",
+    "descripcion": "Identificar ofertas de servicios para la cadena de valor de cacao en los 4 pa\u00edses. prestaci\u00f3n de servicios; evaluaci\u00f3n y ajustes en temas claves (tecnolog\u00eda, BPA, BPM, negocio, mercado) a nivel regional).",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "A traves de encuestas y desde la comunidad de practica. Se trabajar\u00e1 virtual",
+    "actores": "Actores en los 4 paises",
+    "responsable": "Rikolto\r\nCoordinaci\u00f3n",
+    "meses": "Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Este fue trasladado al segundo semestre para arrancar con encuestas y realizar los procesos en el 2021. Se ha considerado que con la pandemia COVID 19. Estas ofertas de servicios van a tener un cambio y ser\u00e1 una oportunidad para la evaluaci\u00f3n y ajuste considerando la variante de la bioseguridad.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 12,
+  "fields": {
+    "actividad_poa": 5,
+    "identificador": "1.3.1.1",
+    "descripcion": "Dise\u00f1ar instrumentos/herramientas de comunicaci\u00f3n para la transferencia de conocimientos dise\u00f1o y elaboraci\u00f3n del APP para m\u00f3viles ambiente Android y IOS.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 10000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda Programaci\u00f3n",
+    "actores": "WCF, aliados en los pa\u00edses.",
+    "responsable": "Rikolto.\r\nCoordinaci\u00f3n\r\nComunicaci\u00f3n",
+    "meses": "Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 13,
+  "fields": {
+    "actividad_poa": 5,
+    "identificador": "1.3.1.2",
+    "descripcion": "Realizar publicaciones digitales relevantes para la facilitaci\u00f3n de la gesti\u00f3n y transferencia del conocimiento.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda,  Documentos Virtuales",
+    "actores": "WCF, Rikolto y socios de los pilotos y SICACAO",
+    "responsable": "Comunicaci\u00f3n\r\nCoordinaci\u00f3n\r\nApoyo equipo Rikolto.",
+    "meses": "Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 14,
+  "fields": {
+    "actividad_poa": 5,
+    "identificador": "1.3.1.2",
+    "descripcion": "Apoyar a la comunicaci\u00f3n estrat\u00e9gica conforme a Plan Anual de plataformas nacionales (Webinar, foros, zoom, funcionamiento eventos)",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 1126.0,
+    "monto_semestre_1": 25.0,
+    "monto_final_anio": null,
+    "insumos": null,
+    "actores": null,
+    "responsable": null,
+    "meses": "Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 15,
+  "fields": {
+    "actividad_poa": 6,
+    "identificador": "1.3.2.1",
+    "descripcion": "Difusi\u00f3n de informaci\u00f3n de medios de comunicaci\u00f3n en Centroam\u00e9rica",
+    "semestre_1": true,
+    "semestre_2": false,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": null,
+    "monto_final_anio": null,
+    "insumos": null,
+    "actores": "SICACAO",
+    "responsable": "Comunicaci\u00f3n",
+    "meses": "Febrero,Marzo,Abril,Mayo",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 16,
+  "fields": {
+    "actividad_poa": 7,
+    "identificador": "1.3.3.1",
+    "descripcion": "Promover el desarrollo de conocimiento y uso de las TICs, plataformas digitales, para dinamizar el intercambio de conocimiento y posicionamiento del sector, (webinar, campa\u00f1as, redes sociales)",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": null,
+    "monto_final_anio": null,
+    "insumos": "Pago a herramientas digitales, para difusi\u00f3n de conocimiento.",
+    "actores": "Aliados",
+    "responsable": "Comunicaci\u00f3n",
+    "meses": "Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Las actividades ligadas al producto 3. Se han realizado de manera virtual, se actualizo la web de sicacao. Se elaboro un video sobre SICACAO, como resultado de la alianza con WCF. Y se publicaron dos art\u00edculos sobre productores cacaoteros de Honduras. Importante hay que mencionar que todo evento y publicaci\u00f3n se realiza en el marco de SICACAO. Su posicionamiento y reconocimiento a sido por LA. Per\u00fa interesado en construir una plataforma de actores similar a SICACAO a mostrado inter\u00e9s de conocer la experiencia y se ha realizado una presentaci\u00f3n y hemos sido invitados a presentar el tema en el sal\u00f3n del chocolate virtual que se realizara esta presentaci\u00f3n para finales de agosto.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 17,
+  "fields": {
+    "actividad_poa": 7,
+    "identificador": "1.3.3.2",
+    "descripcion": "Posicionar el sector cacaotero a nivel centroamericano y la gesti\u00f3n y transferencia de conocimiento (community manager - redes sociales, sitio web y directorio)",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 10000.0,
+    "monto_semestre_1": 2000.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda, pagos motores de b\u00fasqueda",
+    "actores": "SICACAO, Mesa Nacional de Cacao, Comit\u00e9 de Cadena del Cacao, Comit\u00e9 del Cacao, Mesas de agrocadenas, Participantes directos implementadores de modelos SAF, OP.",
+    "responsable": "Rikolto Comunicaci\u00f3n",
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se realizo una revisi\u00f3n a las acciones de comunicaci\u00f3n para el 2020 y  de acuerdo a la situaci\u00f3n actual de la pandemia. Se ha realizado una priorizaci\u00f3n de acciones y una revisi\u00f3n de la estrategia de comunicaciones para el desarrollo apropiado de la gesti\u00f3n del conocimiento. Se ha considerado que el resto del a\u00f1o todas las acciones se realizaran de forma virtual. Las TICs toman mayor relevancia, sin embargo, debemos de darle un correcto manejo para alcanzar los efectos deseados de la gesti\u00f3n del conocimiento.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 18,
+  "fields": {
+    "actividad_poa": 8,
+    "identificador": "1.3.4.1",
+    "descripcion": "Divulgar en medios tradicionales a nivel regional (Contrataci\u00f3n de agencia de noticia).",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 4000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": null,
+    "actores": null,
+    "responsable": null,
+    "meses": "Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 19,
+  "fields": {
+    "actividad_poa": 8,
+    "identificador": "1.3.4.2",
+    "descripcion": "Implementar de la Estrategia de Comunicaci\u00f3n y Posicionamiento de SICACAO",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 1680.0,
+    "monto_semestre_1": 88.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda, Materiales",
+    "actores": "Mesa Nacional de Cacao, Mesas de Agrocadena, Comit\u00e9 de Cadena del Cacao, Comisi\u00f3n Nacional del Cacao, ECOM, Chocolats Halba, MAGA, CENTA, MAG",
+    "responsable": "Comunicaciones.\r\nCoordinaci\u00f3n",
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 20,
+  "fields": {
+    "actividad_poa": 9,
+    "identificador": "1.4.1.1",
+    "descripcion": "Sesiones de trabajo (1 d\u00eda) en los 4 pa\u00edses para la entrega y discusi\u00f3n de las directrices y herramientas para escalonamiento de Cacao sostenible y resiliente a cambio clim\u00e1tico, con el uso del sistema de informaci\u00f3n, capacitaci\u00f3n",
+    "semestre_1": true,
+    "semestre_2": false,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": null,
+    "monto_final_anio": null,
+    "insumos": "Virtual a trav\u00e9s de webinar",
+    "actores": "Participaci\u00f3n de los actores claves de sector cacao en los 4 pa\u00edses",
+    "responsable": "WCF, RIKOLTO\r\nApoya Jorge, Lourdes",
+    "meses": "Febrero,Marzo,Abril",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se realizaron sesiones de presentaci\u00f3n en 5 pa\u00edses sobre las directrices y herramientas de cacao basado en los mapas de exposici\u00f3n y la herramienta de rentabilidad SAF. Para un total de 110 participantes el 20% fueron mujeres. 20 actores han decidido de hacer uso de las herramientas y de apoyar en el uso manejo de estas a trav\u00e9s de asesor\u00edas en trabajo de grupo en l\u00ednea. Para impartir estas presentaciones se realizaron en webex y en alianza con CIAT.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 21,
+  "fields": {
+    "actividad_poa": 9,
+    "identificador": "1.4.1.2",
+    "descripcion": "Facilitar el proceso de aprendizaje colectivo con los integrantes de la Comunidad de pr\u00e1ctica SAF Cacao sobre transformaci\u00f3n de las parcelas SAF cacao tradicional a parcelas SAF Cacao resiliente (espacios comunidad de practica SAF)",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 4000.0,
+    "monto_semestre_1": 4000.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda",
+    "actores": "Actores ejecutores de los piltos SAF y comunidad de practica",
+    "responsable": "Coordinaci\u00f3n Rikolto, Consultor",
+    "meses": "Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se pospuso para el segundo semestre los webinar de dos temas para la difusi\u00f3n masiva de las directrices regionales y herramientas para cacao clim\u00e1ticamente inteligente.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 22,
+  "fields": {
+    "actividad_poa": 10,
+    "identificador": "1.4.3.1",
+    "descripcion": "Webinar regional para difundir para difundir masivamente las directrices regionales y herramientas para escalonamiento de Cacao sostenible y resiliente a cambio clim\u00e1tico",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 700.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Webinar",
+    "actores": "Organizaciones involucradas en sector cacao en la regi\u00f3n",
+    "responsable": "Coordinaci\u00f3n, Comunicaci\u00f3n, Consultor",
+    "meses": "Agosto,Septiembre,Octubre,Noviembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "El TDR fue elaborado y la contrataci\u00f3n de Consultor se realiz\u00f3. Las acciones fueron programados para el II semestre",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 23,
+  "fields": {
+    "actividad_poa": 10,
+    "identificador": "1.4.3.2",
+    "descripcion": "Organizar contenido, conducir y elaborar memorias de dos series de Webinar regional (10 eventos en total) para difundir masivamente los conocimiento y las herramientas para escalonar Cacao resiliente. Contrataci\u00f3n de un consultor(a) regional",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 4000.0,
+    "monto_semestre_1": 3160.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda \r\nReuniones virtuales",
+    "actores": "Miembros de comunidad de practica SAF",
+    "responsable": "Rikolto Coordinaci\u00f3n, Comunicaci\u00f3n, Consultor",
+    "meses": "Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "El TDR fue elaborado y la contrataci\u00f3n de Consultor se realiz\u00f3. Las acciones fueron programados para el II semestre",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 24,
+  "fields": {
+    "actividad_poa": 10,
+    "identificador": "1.4.3.3",
+    "descripcion": "En consulta con los integrantes de la Comunidad de pr\u00e1ctica SAF cacao resiliente, dise\u00f1ar las l\u00f3gicas y algoritmos y documentos de soporte de las cinco aplicaciones Android-IOS para mejorar la toma de decisi\u00f3n a nivel de campo.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 4000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda \r\nReuniones virtuales",
+    "actores": "Miembros de comunidad de practica SAF",
+    "responsable": "Rikolto Coordinaci\u00f3n, Comunicaci\u00f3n, Consultor",
+    "meses": "Agosto,Septiembre,Octubre,Noviembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "El TDR fue elaborado y la contrataci\u00f3n de Consultor se realiz\u00f3. Las acciones fueron programados para el II semestre",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 25,
+  "fields": {
+    "actividad_poa": 11,
+    "identificador": "1.4.7.1",
+    "descripcion": "Desarrollo de metodolog\u00eda y aplicaci\u00f3n de instrumentos con los actores de cadena de valor de cacao en la regi\u00f3n",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Contrataci\u00f3n de un consultor(a) regional",
+    "actores": "Consulta con actores claves de sector cacao en los 4 pa\u00edses",
+    "responsable": "WCF, Rikolto",
+    "meses": "Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "El TDR fue elaborado y la contrataci\u00f3n de Consultor se realiz\u00f3. Las acciones fueron programados para el II semestre",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 26,
+  "fields": {
+    "actividad_poa": 11,
+    "identificador": "1.4.7.2",
+    "descripcion": "Realizar un estudio virtual/presencial para construir una l\u00ednea base sobre transmisi\u00f3n y uso de conocimiento por parte de los 80 actores claves de cadena de cacao involucrados en el proceso de fomento de cacao resiliente en la regi\u00f3n.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 6000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Contrataci\u00f3n de un consultor(a) regional",
+    "actores": "Consulta con actores claves de sector cacao en los 4 pa\u00edses",
+    "responsable": "WCF, Rikolto",
+    "meses": "Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "El TDR fue elaborado y la contrataci\u00f3n de Consultor se realiz\u00f3. Las acciones fueron programados para el II semestre",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 27,
+  "fields": {
+    "actividad_poa": 12,
+    "identificador": "2.5.1.1",
+    "descripcion": "Reuniones virtuales y presenciales de SICACAO",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Sesi\u00f3n de trabajo presencial Facilitador Virtuales sesiones de trabajo",
+    "actores": "SECAC, Miembros de las plataformas nacionales, Asesores aliados (IICA, CATIE, CIAT WCF)",
+    "responsable": "Coordinaci\u00f3n,\r\nComunicaci\u00f3n\r\nFausto Rodriguez",
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se han realizado reuniones desde la comunidad de gobernanza para revisar el plan de trabajo de SICACAO, y se ha realizado una sesi\u00f3n para conocer como es la situaci\u00f3n de cada pa\u00eds ante la pandemia y los efectos en el cacao. Esto apoyo a definir una serie de temas necesarios para tomar acciones y estrategias, para la bioseguridad en la cadena de valor del cacao y la tendencia del mercado internacional ante el impacto del COVID 19 \u2013 cacao \u2013 seguridad alimentaria.\r\nSICACAO se ha posicionado su imagen corporativa en todos los espacios regionales que se han realizado actividades, como la del grupo Ad hoc, la cual elaboro una infograf\u00eda y un documento a partir de la alianza establecida a trav\u00e9s de la WCF y FCCI, para realizar una encuesta y presentar los resultados a los actores de la regi\u00f3n sobre los hallazgos de dicha encuesta, sus recomendaciones fueron muy oportunas sobre la situaci\u00f3n del momento. Sin embargo, es importante de trabajar el tema de liderazgo entre los miembros que representan SICACAO tomen un mayor liderazgo en las acciones a realizarse a nivel de la regi\u00f3n.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 28,
+  "fields": {
+    "actividad_poa": 13,
+    "identificador": "2.5.2.1",
+    "descripcion": "Apoyar el desarrollo estrat\u00e9gico de las plataformas nacionales  en lo organizativo, asociativo",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": null,
+    "actores": "Representante de las plataformas nacionales y asesores regionales",
+    "responsable": "Rikolto (equipo)\r\nJorge/Lourdes. Apoyo puntual Fausto.",
+    "meses": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Al inicio de a\u00f1os se trabaj\u00f3 en los planes de fortalecimiento de las plataformas nacionales. Caso de Honduras y Nicaragua, cuentan con un POA y apoyo directo de los fondos de Rikolto para el alcance de algunas acciones o bien en alianza con otros fondos, estos son manejado en Nicaragua por APEN y en Honduras por FENAPROCACAHO.  En Guatemala se ha promovido la presencia de una plataforma nacional, en alianza con el IICA y MAGA, se han analizado, sin embargo, Se est\u00e1 definiendo surgiendo es una federaci\u00f3n de productores de Guatemala. Se espera que esto se logre concretizar. Se ha promovido la importancia de la asociatividad en un reciente conversatorio con ellos y la importancia hoy frente a la situaci\u00f3n actual de la pandemia.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 29,
+  "fields": {
+    "actividad_poa": 13,
+    "identificador": "2.5.2.2",
+    "descripcion": "Realizaci\u00f3n de eventos tales como foros seminarios en coordinaci\u00f3n con otros aliados desde las plataformas nacionales, estrat\u00e9gicas para la GEC",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Virtuales  con la comunidad de Gobernanza",
+    "actores": "Plataformas nacionales y aliados estrat\u00e9gicos",
+    "responsable": "Rikolto",
+    "meses": "Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "En Nicaragua a nivel del grupo de revisi\u00f3n se ha dado consideraciones sobre la conformaci\u00f3n de las comisiones territoriales y su funcionamiento. Revisi\u00f3n a los documentos de la consultor\u00eda, tambi\u00e9n se ha realizado revisi\u00f3n a la administraci\u00f3n de la web y su estructuraci\u00f3n.\r\nEl Salvador desde el whatsapp se ha apoyado y asesorado en temas t\u00e9cnicos, con el asesor de Rikolto para El Salvador y Guatemala. Han participado activamente en los webinar reuniones para la priorizaci\u00f3n de temas sobre SAF. Honduras, se est\u00e1 retomando las reuniones con las comisiones territoriales. La asesora de cacao de Rikolto es la persona que da seguimiento a las acciones del plan de fortalecimiento.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 30,
+  "fields": {
+    "actividad_poa": 14,
+    "identificador": "2.6.1.1",
+    "descripcion": "Realizar el an\u00e1lisis de las pol\u00edticas y estrategias nacionales para la elaboraci\u00f3n pol\u00edtica regional de cacao sostenible gestionada e implementada a partir de las pol\u00edticas/estrategias de cacao de los pa\u00edses de la regi\u00f3n.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Tdrs /consultor\u00eda Sesiones de trabajo virtual",
+    "actores": "SECAC/CAC, SIECA, SICACAO\r\nWCF y actores relevantes de cacao a nivel regional",
+    "responsable": "Rikolto",
+    "meses": "Febrero,Marzo,Abril,Mayo,Junio,Julio",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "SECAC ha facilitado el proceso para la construcci\u00f3n de la estrategia regional de caf\u00e9. La cual se analizara con la finalidad si es relevante seguir el mismo proceso o enriquecerlo con los proceso propios del sub sector cacao.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 31,
+  "fields": {
+    "actividad_poa": 15,
+    "identificador": "2.6.2.1",
+    "descripcion": "Elaborar e implementar la estrategia de cacao sostenible para la implementaci\u00f3n de la pol\u00edtica regional.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 25416.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Consultor\u00eda/facilitador estudios, manuales, reglamento, taller, foro ) a identificar en pro del cacao a nivel regi\u00f3n.",
+    "actores": "Actores de la comunidad de gobernanza, Aliados, instancias regionales.",
+    "responsable": "Rikolto",
+    "meses": "Octubre,Noviembre,Diciembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se ha logrado la aprobaci\u00f3n para la construcci\u00f3n de la Estrategia Regional de Cacao oficialmente. Se est\u00e1 en construcci\u00f3n de una ruta para la elaboraci\u00f3n de la Estrategia.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 32,
+  "fields": {
+    "actividad_poa": 16,
+    "identificador": "2.7.1.1",
+    "descripcion": "Afiches material trabajado por ONUDI/ COSUDE, traducido al misquito, quechi.",
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 5200.0,
+    "monto_semestre_1": 4463.0,
+    "monto_final_anio": null,
+    "insumos": "Afiches y baner",
+    "actores": "Productores de cacaoteros de Honduras, El Salvador, Guatemala y Nicaragua",
+    "responsable": "Rikolto",
+    "meses": "Junio,Julio",
+    "meses_ejecucion": "",
+    "avance_semestre_1": "Se reprodujeron material (afiches, banner, sobre la prevenci\u00f3n del COVID 19. Estos afiches fueron dise\u00f1ados por ONUDI/PROCACAO Nicaragua. Se imprimieron en cada pa\u00eds y se ajust\u00f3 los logos de las plataformas nacionales y actores involucrados en la mejora del lenguaje, traducci\u00f3n en Quechi. En Honduras se realizar\u00eda la traducci\u00f3n en misquito. Esto no se logr\u00f3 dado que ya el proyecto Prawanca ten\u00eda sus propios afiches.",
+    "avance_semestre_2": ""
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 33,
+  "fields": {
+    "actividad_poa": 17,
+    "identificador": "2.7.2.1",
+    "descripcion": "Implementar asocios de cultivos frijol y maiz. Y huertos familiares para generar alimento e ingreso para las familias. Nicaragua y Guatemala.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 4000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Insumos y semillas",
+    "actores": "Cacao Verapaz \r\nExpasa.\r\n27 fincas SAF",
+    "responsable": null,
+    "meses": "Agosto,Septiembre,Octubre,Noviembre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 34,
+  "fields": {
+    "actividad_poa": 18,
+    "identificador": "2.7.3.1",
+    "descripcion": "Estudio de costos para la prevenci\u00f3n y mitigaci\u00f3n COVID19 en la cadena de valor del cacao en CA, (8 paises)",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 12000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Tdrs.  Consultor\u00eda, llamadas virtuales, encuesta",
+    "actores": "SICACAO, comunidad de gobernanza",
+    "responsable": "Rikolto",
+    "meses": "Agosto,Septiembre,Octubre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.subactividadespoa",
+  "pk": 35,
+  "fields": {
+    "actividad_poa": 18,
+    "identificador": "2.7.3.2",
+    "descripcion": "Realizar  el estudio monitoreo  al primer analisis de FCCI sobre el impacto del covid  - Cacao - Sistema alimentario en CA.",
+    "semestre_1": false,
+    "semestre_2": true,
+    "monto_presupuestado": 10000.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null,
+    "insumos": "Tdrs.  Consultor\u00eda.",
+    "actores": "FCCI, SICACAO, SECAC",
+    "responsable": "Rikolto",
+    "meses": "Septiembre,Octubre",
+    "meses_ejecucion": "",
+    "avance_semestre_1": null,
+    "avance_semestre_2": null
+  }
+},
+{
+  "model": "poa.funcionamiento",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "anio": 2020,
+    "usuario": 1
+  }
+},
+{
+  "model": "poa.inlinecostoadmin",
+  "pk": 1,
+  "fields": {
+    "funcionamiento": 1,
+    "costo_admin": 1,
+    "monto_presupuestado": 17904.5,
+    "monto_semestre_1": 10227.0,
+    "monto_final_anio": null
+  }
+},
+{
+  "model": "poa.inlinecostoadmin",
+  "pk": 2,
+  "fields": {
+    "funcionamiento": 1,
+    "costo_admin": 2,
+    "monto_presupuestado": 18055.0,
+    "monto_semestre_1": 8933.0,
+    "monto_final_anio": null
+  }
+},
+{
+  "model": "poa.inlinecostoadmin",
+  "pk": 3,
+  "fields": {
+    "funcionamiento": 1,
+    "costo_admin": 3,
+    "monto_presupuestado": 3418.5,
+    "monto_semestre_1": 3419.0,
+    "monto_final_anio": null
+  }
+},
+{
+  "model": "poa.inlinesalarioprogramatico",
+  "pk": 1,
+  "fields": {
+    "funcionamiento": 1,
+    "salario_programatico": 1,
+    "monto_presupuestado": 52539.52,
+    "monto_semestre_1": 26401.0,
+    "monto_final_anio": null
+  }
+},
+{
+  "model": "poa.inlinesalarioprogramatico",
+  "pk": 2,
+  "fields": {
+    "funcionamiento": 1,
+    "salario_programatico": 2,
+    "monto_presupuestado": 0.0,
+    "monto_semestre_1": 0.0,
+    "monto_final_anio": null
+  }
+},
+{
+  "model": "proyectos_financiados.proyectosfinanciados",
+  "pk": 2,
+  "fields": {
+    "proyecto": 1,
+    "anio": 2020,
+    "usuario": 1
+  }
+},
+{
+  "model": "proyectos_financiados.inlineproyecto",
+  "pk": 1,
+  "fields": {
+    "proyectos_financiados": 2,
+    "proyecto": 1,
+    "org_implementadora": 3,
+    "semestre_1": true,
+    "semestre_2": true,
+    "monto_presupuestado": 18138.5,
+    "monto_semestre_1": 15976.07,
+    "monto_final_anio": null,
+    "paises_influencia": [
+      3
+    ]
+  }
+},
+{
+  "model": "proyectos_financiados.productoproyecto",
+  "pk": 3,
+  "fields": {
+    "inline_proyecto": 1,
+    "titulo": "Informe t\u00e9cnico I Semestre 2020 CLUSA Rikolto Convenio de Coloboraci\u00f3n",
+    "anio": 2020,
+    "semestre": "I",
+    "url": null,
+    "archivo": "producto-proy-financiados/Informe_T\u00e9cnico_Sem_I_2020_CLUSA_Rikolto.pdf",
+    "paises_influencia": [
+      3
+    ]
+  }
+},
+{
+  "model": "proyectos_financiados.productoproyecto",
+  "pk": 4,
+  "fields": {
+    "inline_proyecto": 1,
+    "titulo": "Informe financiero I Semestre 2020 CLUSA Rikolto Convenio de Colaboraci\u00f3n",
+    "anio": 2020,
+    "semestre": "I",
+    "url": null,
+    "archivo": "producto-proy-financiados/Informe_financiero_Sem_I_2020_CLUSA_Rikolto.pdf",
+    "paises_influencia": [
+      3
+    ]
+  }
+},
+{
+  "model": "viajes.viajes",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "anio": 2020,
+    "usuario": 1
+  }
+},
+{
+  "model": "viajes.inlineviaje",
+  "pk": 1,
+  "fields": {
+    "viaje": 1,
+    "titulo": "Seguimiento Covenio de Colaboraci\u00f3n CLUSA",
+    "semestre": "I",
+    "fecha_inicio": "2020-02-18",
+    "fecha_fin": "2020-02-21",
+    "gastos_boletos": 1300.0,
+    "gastos_combustibles": 95.0,
+    "gastos_alojamiento": 531.0,
+    "gastos_diarios": 224.0,
+    "otros_gastos": 0.0,
+    "archivo": "",
+    "personas_viajan": [
+      1,
+      2
+    ],
+    "paises_viajan": [
+      3
+    ]
+  }
+},
+{
+  "model": "viajes.inlineviaje",
+  "pk": 2,
+  "fields": {
+    "viaje": 1,
+    "titulo": "Seguimiento Convenio de Colaboraci\u00f3n Cacao Vera Paz",
+    "semestre": "I",
+    "fecha_inicio": "2020-03-11",
+    "fecha_fin": "2020-03-11",
+    "gastos_boletos": 1183.88,
+    "gastos_combustibles": 0.0,
+    "gastos_alojamiento": 0.0,
+    "gastos_diarios": 0.0,
+    "otros_gastos": 0.0,
+    "archivo": "",
+    "personas_viajan": [
+      1,
+      3
+    ],
+    "paises_viajan": [
+      2
+    ]
+  }
+},
+{
+  "model": "contrapartida.contrapartida",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "anio": 2020,
+    "usuario": 1
+  }
+},
+{
+  "model": "contrapartida.inlinecontrapartida",
+  "pk": 1,
+  "fields": {
+    "contrapartida": 1,
+    "organizacion": 2,
+    "costos_admin": 76330.0,
+    "salario_programatico": 86100.0,
+    "aporte_actividades": 0.0,
+    "overhead": 0.0
+  }
+},
+{
+  "model": "contrapartida.inlinecontrapartida",
+  "pk": 2,
+  "fields": {
+    "contrapartida": 1,
+    "organizacion": 1,
+    "costos_admin": 0.0,
+    "salario_programatico": 0.0,
+    "aporte_actividades": 0.0,
+    "overhead": 0.0
+  }
+},
+{
+  "model": "contrapartida.inlinecontrapartida",
+  "pk": 3,
+  "fields": {
+    "contrapartida": 1,
+    "organizacion": 3,
+    "costos_admin": 0.0,
+    "salario_programatico": 0.0,
+    "aporte_actividades": 0.0,
+    "overhead": 0.0
+  }
+},
+{
+  "model": "documentos.documentos",
+  "pk": 1,
+  "fields": {
+    "proyecto": 1,
+    "anio": 2020,
+    "usuario": 1
+  }
+},
+{
+  "model": "documentos.inlinedocumentos",
+  "pk": 1,
+  "fields": {
+    "documento": 1,
+    "titulo": "Memoria de Webinar Directrices regionales para fomento de SAF Cacao resiliente y sostenible",
+    "semestre": "I",
+    "fuente": 1,
+    "url": null,
+    "archivo": "documentos/Memoria_de_serie_de_Webinar_Directrices_regionales_y_Planes_de_accion_Naciona_HiQ0Oie.pdf"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2020-10-07T21:36:07.497Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Aliado 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2020-10-07T21:36:14.766Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Financiador 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2020-10-07T21:36:22.472Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "Org implementador 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2020-10-07T21:36:35.861Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Nicaragua",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2020-10-07T21:36:38.976Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Org socia 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2020-10-08T15:40:41.412Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "fguharay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2020-10-08T15:40:46.174Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "fguharay",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_staff\", \"is_superuser\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2020-10-08T15:40:55.394Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "carlos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2020-10-08T15:41:01.327Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "carlos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_staff\", \"is_superuser\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2020-10-08T19:19:16.924Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "1.4.1 - Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"IndProducto1_4_1 object (1)\", \"name\": \"Indicador 1.4.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2020-10-08T19:23:40.488Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "1.4.1 - Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"fuente\"], \"object\": \"IndProducto1_4_1 object (1)\", \"name\": \"Indicador 1.4.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2020-10-08T20:26:30.307Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "1.4.1 - Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"archivo\"], \"object\": \"IndProducto1_4_1 object (1)\", \"name\": \"Indicador 1.4.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2020-10-08T20:28:32.972Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "1.4.1 - Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"archivo\"], \"object\": \"IndProducto1_4_1 object (1)\", \"name\": \"Indicador 1.4.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2020-10-08T20:29:21.273Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "1.4.1 - Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"archivo\"], \"object\": \"IndProducto1_4_1 object (1)\", \"name\": \"Indicador 1.4.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2020-10-08T20:55:54.816Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "1.4.1 - Un documento sobre el impacto de Cambio Clim\u00e1tico en zonas cacaoteras, con planes de acci\u00f3n nacionales y regional con medidas de mitigaci\u00f3n y adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndProducto1_4_1 object (2)\", \"name\": \"Indicador 1.4.1\"}}, {\"changed\": {\"fields\": [\"archivo\"], \"object\": \"IndProducto1_4_1 object (1)\", \"name\": \"Indicador 1.4.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2020-10-08T21:00:43.459Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"IndProducto1_4_2 object (1)\", \"name\": \"Indicador 1.4.2\"}}, {\"added\": {\"object\": \"IndProducto1_4_2 object (2)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2020-10-08T21:13:35.321Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndProducto1_4_2 object (3)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2020-10-08T21:14:52.203Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndProducto1_4_2 object (4)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2020-10-08T21:16:04.787Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndProducto1_4_2 object (5)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2020-10-08T21:18:41.722Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndProducto1_4_2 object (6)\", \"name\": \"Indicador 1.4.2\"}}, {\"added\": {\"object\": \"IndProducto1_4_2 object (7)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"fuente\"], \"object\": \"IndProducto1_4_2 object (3)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"fuente\"], \"object\": \"IndProducto1_4_2 object (4)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"fuente\"], \"object\": \"IndProducto1_4_2 object (5)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2020-10-08T21:38:35.322Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndProducto1_4_2 object (8)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2020-10-08T21:46:37.532Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"object\": \"IndProducto1_4_2 object (8)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2020-10-08T21:48:39.697Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "3",
+    "object_repr": "1.1.1 - Cuatro (4) estudios que demuestren que los SAF y modelos de negocios de la cadena cacao son rentables y competitivos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"IndProducto1_1_1 object (1)\", \"name\": \"Indicador 1.1.1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2020-10-08T21:50:38.614Z",
+    "user": 2,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "Rikolto",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2020-10-08T21:51:45.983Z",
+    "user": 2,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Guatemala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2020-10-08T21:51:53.146Z",
+    "user": 2,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "El Salvador",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2020-10-08T21:52:00.014Z",
+    "user": 2,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "Honduras",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2020-10-08T21:52:13.544Z",
+    "user": 2,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Gesti\u00f3n de Conocimiento de la Cadena de Valor del Cacao en Centroam\u00e9rica",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"nombre\", \"org_implementador\", \"anio_inicio\", \"anio_fin\", \"paises\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2020-10-08T21:52:35.449Z",
+    "user": 2,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "COSUDE",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2020-10-08T21:52:51.576Z",
+    "user": 2,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Financiador 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2020-10-08T21:53:11.937Z",
+    "user": 2,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "WCF",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2020-10-08T21:53:19.340Z",
+    "user": 2,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Aliado 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2020-10-08T21:53:42.431Z",
+    "user": 2,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Gesti\u00f3n de Conocimiento de la Cadena de Valor del Cacao en Centroam\u00e9rica",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"financiadores\", \"aliados\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2020-10-08T22:05:04.863Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "1.4.2 - Cinco (5) directrices regionales de inversi\u00f3n para el fomento de cacao en Sistemas Agroforestales (SAF)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"numero_documentos\"], \"object\": \"IndProducto1_4_2 object (2)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"numero_documentos\"], \"object\": \"IndProducto1_4_2 object (3)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"numero_documentos\"], \"object\": \"IndProducto1_4_2 object (4)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"numero_documentos\"], \"object\": \"IndProducto1_4_2 object (5)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"numero_documentos\"], \"object\": \"IndProducto1_4_2 object (6)\", \"name\": \"Indicador 1.4.2\"}}, {\"changed\": {\"fields\": [\"numero_documentos\"], \"object\": \"IndProducto1_4_2 object (7)\", \"name\": \"Indicador 1.4.2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2020-10-09T02:17:41.057Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "4.1.3 - Realizar eventos regionales virtuales para reflexionar sobre las lecciones de exposici\u00f3n de las zonas cacaoteras y los riesgos de las cadenas a CC y medidas de adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2020-10-09T19:49:23.450Z",
+    "user": 2,
+    "content_type": 22,
+    "object_id": "3",
+    "object_repr": "1.1.1 - Cuatro (4) estudios que demuestren que los SAF y modelos de negocios de la cadena cacao son rentables y competitivos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"numero\"], \"name\": \"Indicador 1.1.1\", \"object\": \"IndProducto1_1_1 object (1)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2020-10-12T16:01:25.566Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "4.1.10 - Realizar evento regional para reflexionar sobre resultados estudio sobre el nivel de conocimiento y el uso de 10 directrices regionales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2020-10-14T20:58:45.871Z",
+    "user": 2,
+    "content_type": 50,
+    "object_id": "1",
+    "object_repr": "Consultor\u00eda",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2020-10-14T20:59:00.555Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"IndicadoresPOA object (1)\", \"name\": \"Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2020-10-14T20:59:08.468Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2020-10-14T21:00:29.786Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"object\": \"IndicadoresPOA object (1)\", \"name\": \"Actividad\", \"fields\": [\"monto_semestre_1\", \"monto_final_anio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2020-10-14T21:01:04.379Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"object\": \"IndicadoresPOA object (1)\", \"name\": \"Actividad\", \"fields\": [\"monto_final_anio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2020-10-14T21:03:59.698Z",
+    "user": 2,
+    "content_type": 50,
+    "object_id": "2",
+    "object_repr": "Organizaciones socias",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2020-10-14T21:04:24.089Z",
+    "user": 2,
+    "content_type": 50,
+    "object_id": "3",
+    "object_repr": "Plataformas nacionales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2020-10-14T21:05:10.802Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"object\": \"IndicadoresPOA object (1)\", \"name\": \"Actividad\", \"fields\": [\"actores\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2020-10-14T21:47:59.904Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndicadoresPOA object (2)\", \"name\": \"Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2020-10-14T21:50:47.632Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndicadoresPOA object (3)\", \"name\": \"Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2020-10-14T21:54:24.317Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"IndicadoresPOA object (4)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"IndicadoresPOA object (5)\", \"name\": \"Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2020-10-14T21:56:57.706Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"object\": \"IndicadoresPOA object (3)\", \"name\": \"Actividad\", \"fields\": [\"monto_final_anio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2020-10-14T21:59:03.992Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"object\": \"IndicadoresPOA object (2)\", \"name\": \"Actividad\", \"fields\": [\"semestre_2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2020-10-14T23:14:24.450Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "4.1.4 - An\u00e1lisis de estrategias nacionales y elaboraci\u00f3n de Directrices regionales para fomento de  Cacao resiliente y sostenible",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2020-10-14T23:16:01.731Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "4.1.6 - Elaborar un documento de directrices regionales sobre modelos de negocios inclusivos para el fomento de SAF Cacao resiliente y sostenible",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2020-10-14T23:16:52.395Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "4.1.7 - Realizar estudios sobre el nivel de conocimiento y el uso de 10 directrices regionales por parte de 80 actores tomadores de decisi\u00f3n",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2020-10-14T23:17:11.316Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "4.1.10 - Realizar evento regional para reflexionar sobre resultados estudio sobre el nivel de conocimiento y el uso de 10 directrices regionales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2020-10-14T23:17:11.319Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "4.1.9 - Realizar de eventos regionales virtuales para reflexionar sobre directrices regionales de modelos de negocios inclusivos para el fomento de cacao en SAF adaptado a CC y VC.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2020-10-14T23:17:11.320Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "4.1.8 - Realizar estudios sobre el nivel de conocimiento y el uso de 10 directrices regionales por parte de 80 actores tomadores de decisi\u00f3n",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2020-10-14T23:30:52.026Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "1.2.1 - Identificar, validar iniciativas de inversi\u00f3n, modelos de negocios inclusivos.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2020-10-14T23:31:02.681Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "1.2.2 - Identificar, validar iniciativas de inversi\u00f3n, modelos SAF.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2020-10-14T23:31:13.858Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "1.2.3 - Dise\u00f1ar las herramientas y metodolog\u00edas para la difusi\u00f3n de la oferta de servicios de apoyo t\u00e9cnico y empresarial en la cadena de valor de cacao.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2020-10-14T23:32:55.723Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "1.3.1 - Documentar y difundir la informaci\u00f3n did\u00e1ctica al servicio de los actores de cadena de valor por medio de materiales de comunicaci\u00f3n sistematizando experiencias, modelos de inversi\u00f3n factibles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2020-10-14T23:33:23.458Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "1.3.3 - Utilizaci\u00f3n de las TICs y otras herramientas digitales para dinamizar el intercambio de conocimientos y el posicionamiento del sector.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2020-10-14T23:33:35.403Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "1.3.4 - Dinamizar el intercambio de conocimientos y el posicionamiento del sector, a trav\u00e9s del uso de TICs y plataformas digitales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2020-10-14T23:33:57.884Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "1.4.1 - Analizar la exposici\u00f3n a la variabilidad clim\u00e1tica de las zonas cacaoteras y riesgo de las cadenas de la regi\u00f3n Mesoam\u00e9rica en alianza con el CIAT.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2020-10-14T23:34:06.958Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "1.4.2 - Elaborar de un documento sobre impacto de cambio clim\u00e1tico en zonas cacaoteras y riesgos de las cadenas y potenciales medidas de adaptaci\u00f3n para la regi\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2020-10-14T23:34:17.007Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "1.4.3 - Realizar eventos regionales virtuales para reflexionar sobre las lecciones de exposici\u00f3n de las zonas cacaoteras y los riesgos de las cadenas a CC y medidas de adaptaci\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2020-10-14T23:34:29.589Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "1.4.4 - An\u00e1lisis de estrategias nacionales y elaboraci\u00f3n de Directrices regionales para fomento de  Cacao resiliente y sostenible",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2020-10-14T23:34:38.840Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "1.4.5 - Analizar los modelos de negocios inclusivos de actores claves de la cadena de valor para fomento de cacao en SAF adaptado a CC y VC.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2020-10-14T23:34:48.233Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "1.4.6 - Elaborar un documento de directrices regionales sobre modelos de negocios inclusivos para el fomento de SAF Cacao resiliente y sostenible",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2020-10-14T23:34:55.775Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "1.4.7 - Realizar estudios sobre el nivel de conocimiento y el uso de 10 directrices regionales por parte de 80 actores tomadores de decisi\u00f3n",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2020-10-14T23:35:40.044Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "2.5.1 - Formalizar y fortalecer el Comit\u00e9 de Integraci\u00f3n del Cacao de Centroam\u00e9rica SICACAO en lo organizativo e institucional a nivel regional.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2020-10-14T23:35:55.873Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "24",
+    "object_repr": "2.5.2 - Definir y aprobar la propuesta de funcionamiento de la SICACAO y plan de acci\u00f3n consensuado entre actores de la plataforma y tomadores de decisi\u00f3n.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2020-10-14T23:36:06.446Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "2.6.1 - Realizar el an\u00e1lisis de las pol\u00edticas y estrategias nacionales para la elaboraci\u00f3n pol\u00edtica regional de cacao sostenible gestionada e implementada a partir de las pol\u00edticas/estrategias de caca",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2020-10-14T23:36:15.241Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "25",
+    "object_repr": "2.6.2 - Elaborar e implementar un plan de acci\u00f3n para la Pol\u00edtica y/o Estrategia de cacao sostenible",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2020-10-14T23:37:30.954Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "1.3.2 - Actualizar la estrategia de comunicaci\u00f3n para dinamizar el quehacer del proyecto en la regi\u00f3n de acuerdo con los objetivos.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"identificador\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2020-10-15T00:36:25.548Z",
+    "user": 2,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "2.7 - Identificada e impementada acciones para la prevenci\u00f3n y mitigaci\u00f3n del  COVID19 en la cadena de valor del  CACAO en los paises CA.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"2.7.1 - 10 materiales informativos y de formaci\\u00f3n sobre mitigaci\\u00f3n de riesgos de COVID elaboradas y distribuidas en la zona de influencia de proyecto\", \"name\": \"indicadores productos\"}}, {\"added\": {\"object\": \"2.7.2 - 2 estudios realizados sobre impacto de COVID 19 sobre la cadena de cacao a nivel regional y resultados utulizados en proceso de formulaci\\u00f3n planes de resiliencias\", \"name\": \"indicadores productos\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2020-10-15T00:38:05.136Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "26",
+    "object_repr": "2.7.1 - Elaboraci\u00f3n de materiales prevenci\u00f3n covid19 para los paises/Afiches material trabajado por ONUDI/ COSUDE, traducido al misquito, quechi.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2020-10-15T00:39:40.331Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "27",
+    "object_repr": "2.7.2 - Incorporar a POAs de los  SAF pilotos, asocios de cultivos a los cultivos anuales (frijol y maiz y huertos familiares)para generar alimento e ingreso para las familias de Nicaragua y Guatemala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2020-10-15T00:40:15.705Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "28",
+    "object_repr": "2.7.3 - Analizar  los efectos  del COVID 19 en la cadena de valor del cacao - sistemas alimentarios,  en la region CA.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2020-10-15T14:05:37.605Z",
+    "user": 2,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "1 - 1500 productores de cacao incrementan ingresos el al menos 20%, por la implementaci\u00f3n de SAF.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"ObjInd1 object (1)\", \"name\": \"Indicador 1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2020-10-15T14:08:38.323Z",
+    "user": 2,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "4 - Una Plataforma \u201cComit\u00e9 de Integraci\u00f3n Centroamericana de Cacao, SICACAO, establecida, funcionando y auto sostenible con la participaci\u00f3n de al menos 4 pa\u00edses.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"ObjInd4 object (1)\", \"name\": \"Indicador 4\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2020-10-15T16:51:13.156Z",
+    "user": 2,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "2 - 1500 productores de cacao incrementan la productividad en al menos 20%.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"ObjInd2 object (1)\", \"name\": \"Indicador 2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2020-10-15T16:52:28.660Z",
+    "user": 2,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "2 - 1500 productores de cacao incrementan la productividad en al menos 20%.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2020-10-16T18:55:17.797Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "Poa object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2020-10-16T19:00:47.390Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "2",
+    "object_repr": "Poa object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"IndicadoresPOA object (6)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2020-10-16T19:04:29.154Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "2",
+    "object_repr": "Poa object (2)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2020-10-16T19:08:17.102Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "3",
+    "object_repr": "Poa object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"IndicadoresPOA object (7)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2020-10-16T19:14:46.432Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "3",
+    "object_repr": "Poa object (3)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2020-10-16T19:20:17.275Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "3",
+    "object_repr": "Poa object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2020-10-16T19:20:17.277Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "2",
+    "object_repr": "Poa object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2020-10-19T16:08:05.980Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"ActividadesPOA object (1)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (1)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2020-10-19T16:12:28.613Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (2)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (2)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2020-10-19T16:14:22.053Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"SubActividadesPOA object (3)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2020-10-19T16:15:51.720Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"SubActividadesPOA object (4)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2020-10-19T16:19:06.383Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (3)\", \"name\": \"Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2020-10-19T16:22:55.907Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"object\": \"ActividadesPOA object (3)\", \"name\": \"Actividad\", \"fields\": [\"actividad\"]}}, {\"added\": {\"object\": \"SubActividadesPOA object (5)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2020-10-19T16:45:16.447Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (4)\", \"name\": \"Actividad\"}}, {\"changed\": {\"object\": \"SubActividadesPOA object (1)\", \"name\": \"Sub Actividad\", \"fields\": [\"identificador\", \"monto_semestre_1\"]}}, {\"changed\": {\"object\": \"SubActividadesPOA object (2)\", \"name\": \"Sub Actividad\", \"fields\": [\"monto_semestre_1\"]}}, {\"changed\": {\"object\": \"SubActividadesPOA object (3)\", \"name\": \"Sub Actividad\", \"fields\": [\"monto_semestre_1\"]}}, {\"changed\": {\"object\": \"SubActividadesPOA object (4)\", \"name\": \"Sub Actividad\", \"fields\": [\"monto_presupuestado\", \"monto_semestre_1\"]}}, {\"added\": {\"object\": \"SubActividadesPOA object (6)\", \"name\": \"Sub Actividad\"}}, {\"changed\": {\"object\": \"SubActividadesPOA object (5)\", \"name\": \"Sub Actividad\", \"fields\": [\"identificador\", \"monto_presupuestado\", \"monto_semestre_1\"]}}, {\"added\": {\"object\": \"SubActividadesPOA object (7)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (8)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (9)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (10)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (11)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2020-10-19T16:48:57.600Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2020-10-19T21:15:35.483Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2020-10-19T21:54:03.566Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (10)\", \"fields\": [\"identificador\"]}}, {\"changed\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (11)\", \"fields\": [\"identificador\"]}}, {\"deleted\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (8)\"}}, {\"deleted\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (9)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2020-10-23T19:23:16.170Z",
+    "user": 2,
+    "content_type": 58,
+    "object_id": "1",
+    "object_repr": "Overhead",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2020-10-23T19:23:39.489Z",
+    "user": 2,
+    "content_type": 58,
+    "object_id": "2",
+    "object_repr": "Administrador Contable",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2020-10-23T19:23:48.375Z",
+    "user": 2,
+    "content_type": 58,
+    "object_id": "3",
+    "object_repr": "Movilizaci\u00f3n",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2020-10-23T19:25:50.828Z",
+    "user": 2,
+    "content_type": 55,
+    "object_id": "1",
+    "object_repr": "Coordinador",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2020-10-23T19:26:13.078Z",
+    "user": 2,
+    "content_type": 55,
+    "object_id": "2",
+    "object_repr": "Comunicador",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2020-10-23T19:26:51.079Z",
+    "user": 2,
+    "content_type": 60,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Costo administrativo\", \"object\": \"InlineCostoAdmin object (1)\"}}, {\"added\": {\"name\": \"Costo administrativo\", \"object\": \"InlineCostoAdmin object (2)\"}}, {\"added\": {\"name\": \"Costo administrativo\", \"object\": \"InlineCostoAdmin object (3)\"}}, {\"added\": {\"name\": \"Salario Programatico\", \"object\": \"InlineSalarioProgramatico object (1)\"}}, {\"added\": {\"name\": \"Salario Programatico\", \"object\": \"InlineSalarioProgramatico object (2)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2020-10-23T19:28:27.901Z",
+    "user": 2,
+    "content_type": 60,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"monto_semestre_1\"], \"name\": \"Salario Programatico\", \"object\": \"InlineSalarioProgramatico object (2)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2020-10-23T19:59:04.051Z",
+    "user": 2,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "WCF",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"nombre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2020-10-23T20:01:15.675Z",
+    "user": 2,
+    "content_type": 67,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Contrapartida\", \"object\": \"InlineContrapartida object (1)\"}}, {\"added\": {\"name\": \"Contrapartida\", \"object\": \"InlineContrapartida object (2)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2020-10-23T20:44:40.706Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2020-10-23T20:44:57.331Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2020-10-23T21:09:35.911Z",
+    "user": 2,
+    "content_type": 56,
+    "object_id": "1",
+    "object_repr": "Pilotos de sistemas agroforestales de cacao rentables y resilientes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2020-10-23T21:10:06.336Z",
+    "user": 2,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "CLUSA El Salvador",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2020-10-23T21:17:44.282Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "2",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Proyecto\", \"object\": \"InlineProyecto object (1)\"}}, {\"added\": {\"name\": \"Producto\", \"object\": \"ProductoProyecto object (1)\"}}, {\"added\": {\"name\": \"Producto\", \"object\": \"ProductoProyecto object (2)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2020-10-23T21:20:08.657Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "2",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"Producto\", \"object\": \"ProductoProyecto object (None)\"}}, {\"deleted\": {\"name\": \"Producto\", \"object\": \"ProductoProyecto object (None)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2020-10-23T21:21:29.807Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "2",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"Producto\", \"object\": \"ProductoProyecto object (3)\"}}, {\"added\": {\"name\": \"Producto\", \"object\": \"ProductoProyecto object (4)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2020-10-23T21:22:38.486Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "2",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"monto_semestre_1\"], \"name\": \"Proyecto\", \"object\": \"InlineProyecto object (1)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2020-10-23T21:26:42.091Z",
+    "user": 2,
+    "content_type": 57,
+    "object_id": "1",
+    "object_repr": "Ninoska Hurtado",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2020-10-23T21:27:18.207Z",
+    "user": 2,
+    "content_type": 57,
+    "object_id": "2",
+    "object_repr": "Mar\u00eda de los Angeles Rivera",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2020-10-23T21:28:44.415Z",
+    "user": 2,
+    "content_type": 65,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"InlineViaje object (1)\", \"name\": \"Viaje\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2020-10-23T21:30:31.010Z",
+    "user": 2,
+    "content_type": 57,
+    "object_id": "3",
+    "object_repr": "Lourdes Zamora",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2020-10-23T21:31:04.180Z",
+    "user": 2,
+    "content_type": 65,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"InlineViaje object (2)\", \"name\": \"Viaje\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2020-10-23T21:52:15.959Z",
+    "user": 2,
+    "content_type": 63,
+    "object_id": "2",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"semestre_2\"], \"name\": \"Proyecto\", \"object\": \"InlineProyecto object (1)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2020-10-26T16:34:43.317Z",
+    "user": 2,
+    "content_type": 69,
+    "object_id": "1",
+    "object_repr": "Consultor\u00eda",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2020-10-26T16:39:11.385Z",
+    "user": 2,
+    "content_type": 70,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"InlineDocumentos object (1)\", \"name\": \"Documento\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2020-10-26T20:55:22.063Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (5)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (12)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2020-10-26T21:12:35.444Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (6)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"ActividadesPOA object (7)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"ActividadesPOA object (8)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (13)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (14)\", \"name\": \"Sub Actividad\"}}, {\"changed\": {\"object\": \"SubActividadesPOA object (12)\", \"name\": \"Sub Actividad\", \"fields\": [\"monto_semestre_1\"]}}, {\"added\": {\"object\": \"SubActividadesPOA object (15)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (16)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (17)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (18)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2020-10-26T21:30:15.573Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (9)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"ActividadesPOA object (10)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"ActividadesPOA object (11)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (19)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (20)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (21)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (22)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (23)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (24)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (25)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (26)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2020-10-26T21:36:47.794Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "24",
+    "object_repr": "2.5.2 - Fortalecer las plataformas nacionales como referentes claves de la plataforma SICACAO",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2020-10-26T21:42:19.558Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (12)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"ActividadesPOA object (13)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (27)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (28)\", \"name\": \"Sub Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (29)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2020-10-26T21:50:02.056Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "26",
+    "object_repr": "2.7.1 - Elaboraci\u00f3n de materiales prevenci\u00f3n covid19 para los paises",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2020-10-26T21:53:28.367Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "2.6.1 - Realizar el an\u00e1lisis de las pol\u00edticas y estrategias nacionales para la elaboraci\u00f3n pol\u00edtica regional de cacao sostenible gestionada e implementada a partir de las pol\u00edticas/estrategias de caca",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2020-10-26T21:53:50.496Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (14)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (30)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2020-10-26T21:55:42.114Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"object\": \"ActividadesPOA object (15)\", \"name\": \"Actividad\"}}, {\"added\": {\"object\": \"SubActividadesPOA object (31)\", \"name\": \"Sub Actividad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2020-10-26T22:07:02.689Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"Actividad\", \"object\": \"ActividadesPOA object (16)\"}}, {\"added\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (32)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2020-10-26T22:11:18.680Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "27",
+    "object_repr": "2.7.2 - Incorporar a los poas de los  SAF pilotos, asocios de cultivos a los  cultivos anuales  como  asocios  a los SAF pilotos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"descripcion\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2020-10-26T22:13:04.993Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"Actividad\", \"object\": \"ActividadesPOA object (17)\"}}, {\"added\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (33)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2020-10-26T22:36:49.116Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"Actividad\", \"object\": \"ActividadesPOA object (18)\"}}, {\"added\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (34)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2020-10-26T22:38:44.761Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (35)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2020-10-27T15:11:10.723Z",
+    "user": 2,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "EXPASA",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2020-10-27T15:11:26.420Z",
+    "user": 2,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "CLUSA El Salvador",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2020-10-27T15:11:43.762Z",
+    "user": 2,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "Cacao Vera Paz",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2020-10-27T15:12:05.940Z",
+    "user": 2,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "Chocolats Halba",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2020-10-27T15:12:33.415Z",
+    "user": 2,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Gesti\u00f3n de Conocimiento de la Cadena de Valor del Cacao en Centroam\u00e9rica",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"org_socias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2020-10-27T15:22:33.413Z",
+    "user": 2,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "1 - 1500 productores de cacao incrementan ingresos el al menos 20%, por la implementaci\u00f3n de SAF.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"Indicador 1\", \"fields\": [\"archivo\"], \"object\": \"ObjInd1 object (1)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2020-10-28T19:24:01.155Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"meses_ejecucion\", \"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (1)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (2)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (3)\"}}, {\"changed\": {\"fields\": [\"insumos\", \"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (5)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (6)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (7)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (10)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (11)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (16)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (17)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (20)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (21)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (22)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (23)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (24)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (27)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (28)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (29)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (30)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (31)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (32)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2020-10-28T19:25:54.036Z",
+    "user": 2,
+    "content_type": 51,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (25)\"}}, {\"changed\": {\"fields\": [\"avance_semestre_1\"], \"name\": \"Sub Actividad\", \"object\": \"SubActividadesPOA object (26)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2020-10-28T19:34:19.243Z",
+    "user": 2,
+    "content_type": 67,
+    "object_id": "1",
+    "object_repr": "2020",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"Contrapartida\", \"object\": \"InlineContrapartida object (3)\"}}]"
+  }
+}
+]
