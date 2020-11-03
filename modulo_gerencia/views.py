@@ -7,9 +7,9 @@ import collections
 @login_required
 def index(request,template='index.html'):
 	proyectos = Proyecto.objects.order_by('nombre')
-
 	return render(request, template, locals())
 
+@login_required
 def marco_logico(request,id,template='marco_logico/marco_logico.html'):
 	proyecto =  Proyecto.objects.get(id = id)
 	objetivos = Objetivo.objects.filter(proyecto = proyecto)
