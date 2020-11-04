@@ -3565,7 +3565,14 @@ File: nuevo css
 
 .footer2 {background-color: #2a323c;color: white;padding: 20px;width: 100%;position: absolute;bottom: 0px;}
 .footer2 a{color: white;}
-.footer3 {background-color: #3D3935;color: white;padding: 20px;}
+.footer3 {
+    background-color: #3D3935;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 .footer3 a{color: #b5bd00;}
 .wrapper-page2 {
     margin: 2.5% auto;
@@ -3964,4 +3971,30 @@ Lista de organizaciones
   background: #3d3935;
   color: white;
   cursor: pointer;
+}
+.mt-50{
+    margin-top: 50px !important;
+}
+
+.mb-20{
+    margin-bottom: 20px !important;
+}
+.mb-30{
+    margin-bottom: 30px !important;
+}
+.mb-40{
+    margin-bottom: 40px !important;
+}
+.mb-50{
+    margin-bottom: 50px !important;
+}
+
+.mb-100{
+    margin-bottom: 100px !important;
+}
+
+.list-group-item{
+    border-color: transparent;
+    border-bottom: 2px solid #ddd;
+
 }

@@ -2,18 +2,52 @@
 {% load static %}
 
 {% block content %}
-<div class="panel panel-primary">
+<style>
+ /*.prueba{ height: 2000px;}*/
+</style>
+
+<div class="panel panel-primary mb-100">
     <div class="panel-body index-body">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h1 class="text-center">Sistema de Monitoreo y Seguimiento de proyectos</h1>
+              <h1 class="text-center mb-50 mt-50">Sistema de Monitoreo y Seguimiento de proyectos</h1>
             </div>
             <div class="col-md-12">
-              <ul>
-                {% for obj in proyectos %}
-                <li><a href="{% url 'marco-logico' obj.id %}">{{obj.nombre}}</a></li>
-                {% endfor %}
-              </ul>
+                <ul class="list-group list mb-50">
+                    {% for obj in proyectos %}
+                    <li>
+                        <a class="list-group-item" href="{% url 'marco-logico' obj.id %}">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>{{obj.nombre}} ({{obj.nombre_corto}})</h5>
+                                    <p>
+                                        <strong>Oganización implementador: </strong> {{obj.org_implementador}}
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Año inicio: </strong>{{obj.anio_inicio}}
+                                        </li>
+                                        <li>
+                                            <strong>Año fin: </strong>{{obj.anio_fin}}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Países metas</h5>
+                                    <p>
+                                    {% for x in  obj.paises.all %}
+                                        {{x.nombre}} {% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                    </p>
+                                    
+                                </div>	
+                            </div>
+                            
+                        </a>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
             </div>
 
         </div>
