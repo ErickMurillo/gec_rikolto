@@ -25,6 +25,11 @@ def informe_proyectos(request,id=None,template='proyectos_financiados/informe.ht
     for anio in anios:
         proyectos = InlineProyecto.objects.filter(proyectos_financiados__proyecto = proyecto,proyectos_financiados__anio = anio)
         productos = ProductoProyecto.objects.filter(inline_proyecto__proyectos_financiados__proyecto = proyecto,inline_proyecto__proyectos_financiados__anio = anio)
-        dict_anios[anio] = proyectos,productos
 
+        dict = collections.OrderedDict()
+        for x in proyectos:
+            prod = productos.filter(inline_proyecto = x)
+            dict[x] = prod.count(),prod
+        print(dict)
+        dict_anios[anio] = proyectos,dict
     return render(request, template, locals())

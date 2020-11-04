@@ -77,18 +77,28 @@
                                       </tr>
                                   </thead>
                                   <tbody>
-                                  {% for v in values.1 %}
+                                  {% for k,v in values.1.items %}
                                         <tr>
-                                            {% ifchanged %}
-                                            <td rowspan="{{values.1.count}}">{{v.inline_proyecto.proyecto}}</td>
-                                            {% endifchanged  %}
-                                            <td>{{v.titulo}}</td>
-                                            <td>{% if v.semestre == 'I' %}<b>x</b>{% endif %}</td>
-                                            <td>{% if v.semestre == 'II' %}<b>x</b>{% endif %}</td>
-                                            <td>{% for x in v.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
-                                            <td>{% if v.url %}<a href="{{v.url}}" target="_blank">{{v.url}}</a>{% else %}---{% endif %}</td>
-                                            <td>{% if v.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                            <td rowspan="{{v.0}}">{{k.proyecto}}</td>
+                                            {% for fila in v.1|slice:'1' %}
+                                            <td>{{fila.titulo}}</td>
+                                            <td>{% if fila.semestre == 'I' %}<b>x</b>{% endif %}</td>
+                                            <td>{% if fila.semestre == 'II' %}<b>x</b>{% endif %}</td>
+                                            <td>{% for x in fila.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                            <td>{% if fila.url %}<a href="{{fila.url}}" target="_blank">{{fila.url}}</a>{% else %}---{% endif %}</td>
+                                            <td>{% if fila.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                            {% endfor %}
                                         </tr>
+                                        {% for fila in v.1|slice:'1:' %}
+                                        <tr>
+                                          <td>{{fila.titulo}}</td>
+                                          <td>{% if fila.semestre == 'I' %}<b>x</b>{% endif %}</td>
+                                          <td>{% if fila.semestre == 'II' %}<b>x</b>{% endif %}</td>
+                                          <td>{% for x in fila.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                                          <td>{% if fila.url %}<a href="{{fila.url}}" target="_blank">{{fila.url}}</a>{% else %}---{% endif %}</td>
+                                          <td>{% if fila.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                        </tr>
+                                        {% endfor %}
                                       {% endfor %}
                                   </tbody>
                               </table>
