@@ -23,6 +23,9 @@
                                     <p>
                                         <strong>Oganización implementador: </strong> {{obj.org_implementador}}
                                     </p>
+                                    <p>
+                                        <strong>Donante(s): </strong> {% for x in  obj.financiadores.all %}{{x.nombre}} {% if not forloop.last %}, {% endif %}{% endfor %}
+                                    </p>
                                     <ul class="list-inline">
                                         <li>
                                             <strong>Año inicio: </strong>{{obj.anio_inicio}}
@@ -39,14 +42,14 @@
                                         {{x.nombre}} {% if not forloop.last %}, {% endif %}
                                     {% endfor %}
                                     </p>
-                                    
-                                </div>	
+
+                                </div>
                             </div>
-                            
+
                         </a>
                     </li>
                     {% endfor %}
-                    
+
                 </ul>
             </div>
 
