@@ -3570,7 +3570,7 @@ File: nuevo css
     color: white;
     padding: 20px;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 .footer3 a{color: #b5bd00;}
@@ -3804,7 +3804,7 @@ File: Responsive
     text-align: center;
     padding: 10px 15px 88px 20px;
   }
-  
+
 
 
 }
