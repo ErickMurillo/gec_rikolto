@@ -4,6 +4,9 @@
 {% block content %}
 <style>
  /*.prueba{ height: 2000px;}*/
+.border{
+  border: 1px solid #555;
+}
 </style>
 
 <div class="panel panel-primary mb-100">
@@ -17,7 +20,7 @@
                     {% for obj in proyectos %}
                     <li>
                         <a class="list-group-item" href="{% url 'marco-logico' obj.id %}">
-                            <div class="row">
+                            <div class="row border">
                                 <div class="col-md-8">
                                     <h5>{{obj.nombre}} ({{obj.nombre_corto}})</h5>
                                     <p>
