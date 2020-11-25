@@ -37,7 +37,7 @@
                                         <th scope="col">Semestre II</th>
                                         <th scope="col">Organización implementadora</th>
                                         <th scope="col">Paises de influencia</th>
-                                        <th scope="col">Monto presupestado</th>
+                                        <th scope="col">Presupuesto Rikolto más socios</th>
                                         <th scope="col">Monto Ejecutado I semestre</th>
                                         <th scope="col">% Ejecución semestral</th>
                                         <th scope="col">Monto Ejecutado al final del año</th>
@@ -86,7 +86,7 @@
                                             <td>{% if fila.semestre == 'II' %}<b>x</b>{% endif %}</td>
                                             <td>{% for x in fila.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
                                             <td>{% if fila.url %}<a href="{{fila.url}}" target="_blank">{{fila.url}}</a>{% else %}---{% endif %}</td>
-                                            <td>{% if fila.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                            <td>{% if fila.archivo %}<a href="/media/{{fila.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
                                             {% endfor %}
                                         </tr>
                                         {% for fila in v.1|slice:'1:' %}
@@ -96,7 +96,7 @@
                                           <td>{% if fila.semestre == 'II' %}<b>x</b>{% endif %}</td>
                                           <td>{% for x in fila.paises_influencia.all %}{{x}}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
                                           <td>{% if fila.url %}<a href="{{fila.url}}" target="_blank">{{fila.url}}</a>{% else %}---{% endif %}</td>
-                                          <td>{% if fila.archivo %}<a href="/media/{{v.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
+                                          <td>{% if fila.archivo %}<a href="/media/{{fila.archivo}}" target="_blank">Descargar</a>{% else %}---{% endif %}</td>
                                         </tr>
                                         {% endfor %}
                                       {% endfor %}

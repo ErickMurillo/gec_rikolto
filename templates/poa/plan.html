@@ -44,6 +44,7 @@
                                         <th scope="col">Semestre I</th>
                                         <th scope="col">Semestre II </th>
                                         <th scope="col">Monto presupestado</th>
+                                        <th scope="col">Monto modificado</th>
                                         <th scope="col">Insumos</th>
                                         <th scope="col">Actores</th>
                                         <th scope="col">Responsables</th>
@@ -53,7 +54,7 @@
                                 <tbody>
                                 {% for k,v in value.items %}
                                     <tr class="info">
-                                        <td colspan="9">Producto {{k.identificador}} {{k.descripcion}}</td>
+                                        <td colspan="10">Producto {{k.identificador}} {{k.descripcion}}</td>
                                     </tr>
                                     {% for x,y in v.items %}
                                     <tr class="warning">
@@ -62,6 +63,7 @@
                                         <td></td>
                                         <td></td>
                                         <td>{{x.1|default:"---"|intcomma}}</td>
+                                        <td>{{x.2|default:"---"|intcomma}}</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -74,6 +76,7 @@
                                             <td>{% if sub_act.semestre_1 == True %}<b>x</b>{% endif %}</td>
                                             <td>{% if sub_act.semestre_2 == True %}<b>x</b>{% endif %}</td>
                                             <td>{{sub_act.monto_presupuestado|intcomma}}</td>
+                                            <td>{{sub_act.total|intcomma}}</td>
                                             <td>{{sub_act.insumos|default:"---"}}</td>
                                             <td>{{sub_act.actores|default:"---"}}</td>
                                             <td>{{sub_act.responsable|default:"---"}}</td>

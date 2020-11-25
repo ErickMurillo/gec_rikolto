@@ -34,8 +34,9 @@ def plan_poa(request,id=None,template='poa/plan.html'):
 
 				for act in actividades:
 					sum_sub_act = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('monto_presupuestado'))['total_suma']
+					sum_sub_act_modificado = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('total'))['total_suma']
 					sub_actividades = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act)
-					dict_actividad[act,sum_sub_act] = sub_actividades
+					dict_actividad[act,sum_sub_act,sum_sub_act_modificado] = sub_actividades
 
 	return render(request, template, locals())
 
@@ -66,9 +67,11 @@ def informe_poa(request,id=None,template='poa/informe.html'):
 
 				for act in actividades:
 					sum_sub_act = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('monto_presupuestado'))['total_suma']
+					sum_sub_act_ajuste = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('ajuste'))['total_suma']
+					presupuesto_modificado = sum_sub_act + sum_sub_act_ajuste
 					sub_actividades = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act)
 					sum_sub_act_presupuesto = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('monto_semestre_1'))['total_suma']
-					dict_actividad[act,sum_sub_act,sum_sub_act_presupuesto] = sub_actividades
+					dict_actividad[act,sum_sub_act,sum_sub_act_presupuesto,presupuesto_modificado] = sub_actividades
 
 	return render(request, template, locals())
 
@@ -99,9 +102,11 @@ def informe_poa_anual(request,id=None,template='poa/informe_anual.html'):
 
 				for act in actividades:
 					sum_sub_act = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('monto_presupuestado'))['total_suma']
+					sum_sub_act_ajuste = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('ajuste'))['total_suma']
+					presupuesto_modificado = sum_sub_act + sum_sub_act_ajuste
 					sub_actividades = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act)
 					sum_sub_act_presupuesto = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio,actividad_poa__actividad = act).aggregate(total_suma = Sum('monto_final_anio'))['total_suma']
-					dict_actividad[act,sum_sub_act,sum_sub_act_presupuesto] = sub_actividades
+					dict_actividad[act,sum_sub_act,sum_sub_act_presupuesto,presupuesto_modificado] = sub_actividades
 
 	return render(request, template, locals())
 
@@ -120,6 +125,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 		total_semestre_1 = 0
 		total_semestre_2 = 0
 		acumulado_total = 0
+		total_modificado = 0
 
 		dict = collections.OrderedDict()
 		dict_anios[anio] = dict
@@ -130,6 +136,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 									final_anio = Coalesce(Sum('monto_final_anio'),0.0),
 									acumulado = Sum(Coalesce(F('monto_semestre_1'),0.0) + Coalesce(F('monto_final_anio'),0.0)))
 		dict['Funcionamiento General'] = (fun_general['presupuesto'],
+											'',
 											fun_general['semestre_1'],
 											fun_general['final_anio'],
 											fun_general['acumulado'],
@@ -145,6 +152,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 									acumulado = Sum(Coalesce(F('monto_semestre_1'),0.0) + Coalesce(F('monto_final_anio'),0.0)))
 
 		dict['Costos Administrativos'] = (costo_admin['presupuesto'],
+										 '',
 										 costo_admin['semestre_1'],
 										 costo_admin['final_anio'],
 										 costo_admin['acumulado'],
@@ -160,6 +168,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 										acumulado = Sum(Coalesce(F('monto_semestre_1'),0.0) + Coalesce(F('monto_final_anio'),0.0)))
 
 			dict[obj] = (costo_admin_detalle['presupuesto'],
+						 '',
 						 costo_admin_detalle['semestre_1'],
 						 costo_admin_detalle['final_anio'],
 						 costo_admin_detalle['acumulado'],
@@ -180,6 +189,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 
 		acumulado_programatico = suma_salario['acumulado'] + sum_sub_act['acumulado']
 		dict['Funcionamiento Programático'] = (funcionamiento_programatico,
+												'',
 												suma_salario['semestre_1'] + sum_sub_act['semestre_1'],
 												suma_salario['final_anio'] + sum_sub_act['final_anio'],
 												acumulado_programatico,
@@ -195,6 +205,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 									acumulado = Sum(Coalesce(F('monto_semestre_1'),0.0) + Coalesce(F('monto_final_anio'),0.0)))
 
 		dict['Salario Programático'] = (salario['presupuesto'],
+										 '',
 										 salario['semestre_1'],
 										 salario['final_anio'],
 										 salario['acumulado'],
@@ -210,6 +221,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 										acumulado = Sum(Coalesce(F('monto_semestre_1'),0.0) + Coalesce(F('monto_final_anio'),0.0)))
 
 			dict[obj] = (salario_detalle['presupuesto'],
+						 '',
 						 salario_detalle['semestre_1'],
 						 salario_detalle['final_anio'],
 						 salario_detalle['acumulado'],
@@ -219,11 +231,13 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 		#actividades de programa
 		actividades_programa = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio).aggregate(
 														presupuesto = Coalesce(Sum('monto_presupuestado'),0.0),
+														modificado = Coalesce(Sum('total'),0.0),
 														semestre_1 = Coalesce(Sum('monto_semestre_1'),0.0),
 														final_anio = Coalesce(Sum('monto_final_anio'),0.0),
 														acumulado = Sum(Coalesce(F('monto_semestre_1'),0.0) + Coalesce(F('monto_final_anio'),0.0)))
 
 		dict['ACTIVIDADES DEL PROGRAMA'] = (actividades_programa['presupuesto'],
+											 actividades_programa['modificado'],
 											 actividades_programa['semestre_1'],
 											 actividades_programa['final_anio'],
 											 actividades_programa['acumulado'],
@@ -232,6 +246,7 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 		total_semestre_1 += actividades_programa['semestre_1']
 		total_semestre_2 += actividades_programa['final_anio']
 		acumulado_total += actividades_programa['acumulado']
+		total_modificado +=  actividades_programa['modificado']
 		#Efectos
 		poa_efectos = Poa.objects.filter(proyecto = id,anio = anio).values_list('actividadespoa__actividad__producto__efecto',flat=True).distinct()
 		efectos = Efecto.objects.filter(id__in = poa_efectos)
@@ -243,11 +258,13 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 			nombre_efecto = "Efecto " + str(obj)
 			valores_efecto = efectos_query.aggregate(
 											presupuesto = Coalesce(Sum('actividadespoa__subactividadespoa__monto_presupuestado'),0.0),
+											modificado = Coalesce(Sum('actividadespoa__subactividadespoa__total'),0.0),
 											semestre_1 = Coalesce(Sum('actividadespoa__subactividadespoa__monto_semestre_1'),0.0),
 											final_anio = Coalesce(Sum('actividadespoa__subactividadespoa__monto_final_anio'),0.0),
 											acumulado = Sum(Coalesce(F('actividadespoa__subactividadespoa__monto_semestre_1'),0.0) + Coalesce(F('actividadespoa__subactividadespoa__monto_final_anio'),0.0)))
 
 			dict[nombre_efecto] = (valores_efecto['presupuesto'],
+												 valores_efecto['modificado'],
 												 valores_efecto['semestre_1'],
 												 valores_efecto['final_anio'],
 												 valores_efecto['acumulado'],
@@ -264,11 +281,13 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 				nombre_producto = "Producto " + str(prod)
 				valores_producto = productos_query.aggregate(
 												presupuesto = Coalesce(Sum('actividadespoa__subactividadespoa__monto_presupuestado'),0.0),
+												modificado = Coalesce(Sum('actividadespoa__subactividadespoa__total'),0.0),
 												semestre_1 = Coalesce(Sum('actividadespoa__subactividadespoa__monto_semestre_1'),0.0),
 												final_anio = Coalesce(Sum('actividadespoa__subactividadespoa__monto_final_anio'),0.0),
 												acumulado = Sum(Coalesce(F('actividadespoa__subactividadespoa__monto_semestre_1'),0.0) + Coalesce(F('actividadespoa__subactividadespoa__monto_final_anio'),0.0)))
 
 				dict[nombre_producto] = (valores_producto['presupuesto'],
+										valores_producto['modificado'],
 										valores_producto['semestre_1'],
 										valores_producto['final_anio'],
 										valores_producto['acumulado'],
@@ -285,11 +304,13 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 					nombre_actividad = "Actividad " + str(act)
 					valores_actividad = actividades_query.aggregate(
 													presupuesto = Coalesce(Sum('actividadespoa__subactividadespoa__monto_presupuestado'),0.0),
+													modificado = Coalesce(Sum('actividadespoa__subactividadespoa__total'),0.0),
 													semestre_1 = Coalesce(Sum('actividadespoa__subactividadespoa__monto_semestre_1'),0.0),
 													final_anio = Coalesce(Sum('actividadespoa__subactividadespoa__monto_final_anio'),0.0),
 													acumulado = Sum(Coalesce(F('actividadespoa__subactividadespoa__monto_semestre_1'),0.0) + Coalesce(F('actividadespoa__subactividadespoa__monto_final_anio'),0.0)))
 
 					dict[nombre_actividad] = (valores_actividad['presupuesto'],
+											valores_actividad['modificado'],
 											valores_actividad['semestre_1'],
 											valores_actividad['final_anio'],
 											valores_actividad['acumulado'],
@@ -312,13 +333,15 @@ def ejecucion_financiera(request,id=None,template='poa/ejecucion_financiera.html
 						acumulado = monto_semestre_1 + monto_final_anio
 						###############
 						dict[nombre_sub_actividad] = (sub.monto_presupuestado,
+														sub.total,
 														monto_semestre_1,
 														monto_final_anio,
 														acumulado,
 														saca_porcentajes(acumulado,sub.monto_presupuestado,False))
 		total = fun_general['presupuesto'] + funcionamiento_programatico
-		porcentaje_general = saca_porcentajes(acumulado_total,total,False)
-		dict['TOTAL GENERAL'] = (total,total_semestre_1,total_semestre_2,acumulado_total,porcentaje_general)
+		# porcentaje_general = saca_porcentajes(acumulado_total,total,False)
+		porcentaje_general = saca_porcentajes(acumulado_total,total_modificado,False)
+		dict['TOTAL GENERAL'] = (total,total_modificado,total_semestre_1,total_semestre_2,acumulado_total,porcentaje_general)
 
 	return render(request, template, locals())
 
