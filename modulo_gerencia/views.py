@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.contrib.auth.decorators import login_required
 import collections
+from django.http import HttpResponse
 
 # Create your views here.
 @login_required
@@ -25,7 +26,7 @@ def marco_logico(request,id,template='marco_logico/marco_logico.html'):
 def save_as_xls(request):
 	tabla = request.POST['tabla']
 	response = render(request,'xls.html', {'tabla': tabla, })
-	response['Content-Disposition'] = 'attachment; filename=tabla.xlsx'
+	response['Content-Disposition'] = 'attachment; filename=tabla.xls'
 	response['Content-Type'] = 'application/vnd.ms-excel'
 	response['Charset'] ='UTF-8'
 	return response

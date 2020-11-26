@@ -73,6 +73,8 @@ class InlineCostoAdmin(models.Model):
 	funcionamiento = models.ForeignKey(Funcionamiento, on_delete=models.CASCADE)
 	costo_admin = models.ForeignKey(CostoAdministrativo, on_delete=models.CASCADE)
 	monto_presupuestado = models.FloatField()
+	ajuste = models.FloatField(default=0.0)
+	total = models.FloatField(editable=False)
 	monto_semestre_1 = models.FloatField(verbose_name='Monto ejecutado al I semestre',blank=True,null=True)
 	monto_final_anio = models.FloatField(verbose_name='Monto ejecutado al final del año',blank=True,null=True)
 
@@ -80,13 +82,23 @@ class InlineCostoAdmin(models.Model):
 		verbose_name_plural = 'Costo administrativo'
 		verbose_name = 'Costo administrativo'
 
+	def save(self, *args, **kwargs):
+		self.total = self.monto_presupuestado + self.ajuste
+		return super(InlineCostoAdmin, self).save(*args, **kwargs)
+
 class InlineSalarioProgramatico(models.Model):
 	funcionamiento = models.ForeignKey(Funcionamiento, on_delete=models.CASCADE)
 	salario_programatico = models.ForeignKey(SalarioProgramatico, on_delete=models.CASCADE)
 	monto_presupuestado = models.FloatField()
+	ajuste = models.FloatField(default=0.0)
+	total = models.FloatField(editable=False)
 	monto_semestre_1 = models.FloatField(verbose_name='Monto ejecutado al I semestre',blank=True,null=True)
 	monto_final_anio = models.FloatField(verbose_name='Monto ejecutado al final del año',blank=True,null=True)
 
 	class Meta:
 		verbose_name_plural = 'Salario Programatico'
 		verbose_name = 'Salario Programatico'
+
+	def save(self, *args, **kwargs):
+		self.total = self.monto_presupuestado + self.ajuste
+		return super(InlineSalarioProgramatico, self).save(*args, **kwargs)
