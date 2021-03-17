@@ -109,8 +109,8 @@ class ProductoAdmin(admin.ModelAdmin):
 		return super(ProductoAdmin, self).get_form(request, obj=None, **kwargs)
 
 class ActividadesAdmin(admin.ModelAdmin):
+	ordering = ['identificador','producto']
 	search_fields = ['identificador','descripcion']
-	ordering = ['identificador']
 	list_display = ('proyecto','identificador','descripcion')
 	list_filter = ('proyecto',)
 
