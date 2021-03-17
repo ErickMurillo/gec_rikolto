@@ -25,19 +25,19 @@ def contrapartida(request,id=None,template='contrapartida/contrapartida.html'):
         dict_anios[anio] = lista
         funcionamiento_costo = InlineCostoAdmin.objects.filter(funcionamiento__proyecto = id, funcionamiento__anio = anio)
         #funcionamiento general
-        fun_general = funcionamiento_costo.exclude(costo_admin__nombre = 'Overhead').aggregate(total = Coalesce(Sum('monto_presupuestado'),0.0))['total']
+        fun_general = funcionamiento_costo.exclude(costo_admin__nombre = 'Overhead').aggregate(total = Coalesce(Sum('total'),0.0))['total']
         costo_admin = fun_general
 
         salario_programatico = InlineSalarioProgramatico.objects.filter(funcionamiento__proyecto = id, funcionamiento__anio = anio)
-        sum_sub_act = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio).aggregate(total_suma = Coalesce(Sum('monto_presupuestado'),0.0))['total_suma']
-        suma_salario = salario_programatico.aggregate(total = Coalesce(Sum('monto_presupuestado'),0.0))['total']
+        sum_sub_act = SubActividadesPOA.objects.filter(actividad_poa__poa__proyecto = id,actividad_poa__poa__anio = anio).aggregate(total_suma = Coalesce(Sum('total'),0.0))['total_suma']
+        suma_salario = salario_programatico.aggregate(total = Coalesce(Sum('total'),0.0))['total']
         funcionamiento_programatico = suma_salario + sum_sub_act
 
         efectos = Poa.objects.filter(proyecto = id,anio = anio).aggregate(total = Coalesce(Sum('actividadespoa__subactividadespoa__monto_presupuestado'),0.0))['total']
 
         total_gastos = fun_general + funcionamiento_programatico
 
-        overhead = funcionamiento_costo.filter(costo_admin__nombre = 'Overhead').aggregate(total = Coalesce(Sum('monto_presupuestado'),0.0))['total']
+        overhead = funcionamiento_costo.filter(costo_admin__nombre = 'Overhead').aggregate(total = Coalesce(Sum('total'),0.0))['total']
         total_general = total_gastos + overhead
 
         lista.append((proyecto.financiadores.all(),fun_general,costo_admin,funcionamiento_programatico,suma_salario,efectos,total_gastos,overhead,total_general))
